@@ -11,5 +11,8 @@ Some of these appear to be 'command' IDs; as in, when you post a command onto th
 Last updated 07/13/2025. I will eventually verify these CAN IDs across the entirety of known ECU versions for gen1, but as of right now I've only inspected K, S, U, V and at minimum I need to inspect the remaining Kouki versions (N Q) before I proceed into the Zenki versions (7 9 A B D E F). If your car has an ECU that I didn't list in this paragraph, let me know; I'm definitely missing the 86 GRMN special edition and would love to study it further.
 
 | ECUs | CAN ID | (dec) | Emitter? | Command? | Notes |
+---
 | B..U | 0x3D1  |       | x        |          |  |
+---
 | V    | 0x3D7  |       | x        |          | Replaces 0x3D1; appends one additional value. |
+---
