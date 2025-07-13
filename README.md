@@ -21,6 +21,10 @@ That said, I will *try* to upload definitions where I *believe* that every param
 
 I will note in the comments at the top of each file any applicable caveats.
 
+## Why is this repository archived?
+
+GitHub free account restrictions offer no other way to restrict issues and pull requests. Also to forcibly set expectations around the lack of urgency I have for this work.
+
 ## Why are you doing this?
 
 Kouki's code is more complex and the first generation of Zenki tuners seem to have moved on to other projects rather than decode it. The final era of Zenki ECU software works acceptably on Kouki cars, but the most popular tunes aren't a strict improvement out of the box like they were in the Zenki era, when installing K-series software on a B-series care made it a better vehicle.
@@ -41,7 +45,7 @@ If your current Kouki calibration is between N and V and you're in the US, your 
 
 If you want new features as a car owner, I certainly can't help you. I may choose to develop feature patches but I'm not accepting feature requests.
 
-If you as a tuner have feedback to report, I can be located readily enough in various places, and I'll leave pull requests open; if you want to indicate that I missed an address by commenting it out temporarily, for example, go for it.
+If you as a tuner have feedback to report, I can be located readily enough in various BRZ-adjacent places under this name.
 
 ## Why is S20G included in your work, then?
 
@@ -69,7 +73,7 @@ THESE DEFINITIONS ARE PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRES
 
 I did my due diligence in warning you in all capital letters above. Your actions and their outcomes are yours alone to bear. This is a free-time hobby for my own needs alone, and I do not care about yours. I'm asocial, so attempts to guilt, pressure, or humiliate me are as effective as talking to a park bench.
 
-Contacts that are simply attempts to influence my priorities and urgency, to impose guilt upon me, or that otherwise are such disguised as illegitimate contributions (such as junk PRs) will, whenever I get around to noticing them someday, be reported as spam and/or abuse to whichever platform you used to send them, which could result in the termination of their services to you.
+Contacts that are simply attempts to influence my priorities and urgency, to impose guilt upon me, or that otherwise are such disguised as illegitimate contributions will, whenever I get around to noticing them someday, be reported as spam and/or abuse to whichever platform you used to send them, which could result in the termination of their services to you.
 
 ## Please add a LICENSE to this repository.
 
