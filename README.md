@@ -1,5 +1,14 @@
 # RomRaider XML/DTD definitions for the gen1 Subaru BRZ / FT86 / GT86 / FR-S
 
+## Which definitions are in this repository?
+
+Caveats:
+- I have made no particular effort to document or maintain the CEL codes in these files (e.g. P0300, U0155, etc.) and will be removing those from all files in my next update. DO NOT ATTEMPT TO DISABLE/ENABLE CEL CODES USING THESE DEFINITIONS; it could be harmless, or it could destroy your engine, I can't say for sure.
+
+| Calibration | Modified   | Status       | Notes |
+| ----------- | ---------- | ------------ | ----- |
+| ZA1JS10C    | 2025-07-08 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
+
 ## What are these files?
 
 The tool 'RomRaider' uses them to open and inspect engine control files for the Subaru and Toyota vehicles, Kouki and Zenki series, with calibration IDs ZA1J____.
