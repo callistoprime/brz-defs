@@ -73,8 +73,6 @@ THESE DEFINITIONS ARE PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRES
 
 I did my due diligence in warning you in all capital letters above. Your actions and their outcomes are yours alone to bear. This is a free-time hobby for my own needs alone, and I do not care about yours. I'm asocial, so attempts to guilt, pressure, or humiliate me are as effective as talking to a park bench.
 
-Contacts that are simply attempts to influence my priorities and urgency, to impose guilt upon me, or that otherwise are such disguised as illegitimate contributions will, whenever I get around to noticing them someday, be reported as spam and/or abuse to whichever platform you used to send them, which could result in the termination of their services to you.
-
 ## Please add a LICENSE to this repository.
 
 No.
