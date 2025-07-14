@@ -6,13 +6,49 @@ ECU column is of the format 4..B, using the first unique letter of the ZA1J_... 
 
 Most of them are 'emitter' IDs; as in, the ECU constantly buffers the 'current state' of the engine in various internal memory addresses, and then transmits them on a timer to the CAN bus for the rest of the components to use.
 
-Some of these appear to be 'command' IDs; as in, when you post a command onto the CAN bus in the right format, the ECU listens for and receives it, interprets it, and performs whatever change is directed by that. I identify these by seeing in the ECU software that the pointer to the outbound memory state buffer is zeroed out, indicating that nothing is sent from memory. This does not indicate that the ECU sends nothing - presumably it sends a command success/failure code! - but it does indicate that the ECU isn't generating and writing out data of its own accord without some outside intervention requesting it.
+0x111 (command) disappeared at the same time as 0x3D1 (emitter) appeared; 0x3D1 was later updated to 0x3D7 with an additional value. All other IDs are present in all revisions of the ECU 7..V, indicated with '*' below.
 
-Last updated 07/13/2025. I will eventually verify these CAN IDs across the entirety of known ECU versions for gen1, but as of right now I've only inspected K, S, U, V and at minimum I need to inspect the remaining Kouki versions (N Q) before I proceed into the Zenki versions (7 9 A B D E F). If your car has an ECU that I didn't list in this paragraph, let me know; I'm definitely missing the 86 GRMN special edition and would love to study it further.
+Some of these appear to be 'command' IDs, 0x7__ in their entirety; as in, when you post a command onto the CAN bus in the right format, the ECU listens for and receives it, interprets it, and performs whatever change is directed by that. I identify these by seeing in the ECU software that the pointer to the outbound memory state buffer is zeroed out, indicating that nothing is sent from memory. This does not indicate that the ECU sends nothing - presumably it sends a command success/failure code! - but it does indicate that the ECU isn't generating and writing out data of its own accord without some outside intervention requesting it.
+
+Last updated 07/14/2025. I will eventually verify these CAN IDs across the entirety of known ECU versions for gen1, but as of right now I've only inspected K, S, U, V and at minimum I need to inspect the remaining Kouki versions (N Q) before I proceed into the Zenki versions (7 9 A B D E F). If your car has an ECU that I didn't list in this paragraph, let me know; I'm definitely missing the 86 GRMN special edition and would love to study it further.
+
+WIP: Emitter/Command are not ready.
 
 | ECUs | CAN ID | (dec) | Emitter? | Command? | Notes |
 | ---- | ------ | ----- | -------- | -------- | ----- |
-| B..U | 0x3D1  |       | x        |          |  |
-| V    | 0x3D7  |       | x        |          | Replaces 0x3D1; appends one additional value. |
+| 7..B | 0x111  |       |          | x        | Replaced by 0x3D1 in D. |
+| D..U | 0x3D1  |       | x        |          | Replaced by 0x3D7 in V. Contains ambient temp. |
+| V    | 0x3D7  |       | x        |          | Adds one additional value to the end of 0x3D1. |
+| *    | 0xD0   |       | x        |          |  |
+| *    | 0xD1   |       | x        |          |  |
+| *    | 0xD2   |       | x        |          |  |
+| *    | 0xD3   |       | x        |          |  |
+| *    | 0xD4   |       | x        |          |  |
+| *    | 0x140  |       | x        |          |  |
+| *    | 0x141  |       | x        |          |  |
+| *    | 0x142  |       | x        |          |  |
+| *    | 0x144  |       | x        |          |  |
+| *    | 0x148  |       | x        |          |  |
+| *    | 0x149  |       | x        |          |  |
+| *    | 0x14A  |       | x        |          |  |
+| *    | 0x152  |       | x        |          |  |
+| *    | 0x280  |       | x        |          |  |
+| *    | 0x282  |       | x        |          |  |
+| *    | 0x360  |       | x        |          |  |
+| *    | 0x361  |       | x        |          |  |
+| *    | 0x368  |       | x        |          |  |
+| *    | 0x370  |       | x        |          |  |
+| *    | 0x372  |       | x        |          |  |
+| *    | 0x4C1  |       | x        |          |  |
+| *    | 0x63B  |       | x        |          |  |
+| *    | 0x720  |       |          | x        |  |
+| *    | 0x771  |       |          | x        |  |
+| *    | 0x772  |       |          | x        |  |
+| *    | 0x773  |       |          | x        |  |
+| *    | 0x774  |       |          | x        |  |
+| *    | 0x775  |       |          | x        |  |
+| *    | 0x7DF  |       |          | x        |  |
+| *    | 0x7E0  |       |          | x        |  |
+| *    | 0x7E8  |       |          | x        |  |
 
-ECUs reviewed in full to provide the above table: \[none yet, WIP\]
+ECUs reviewed to provide the above table: 700A, A01G, B00C, D00C, K00G, S10C, U01A, V00C
