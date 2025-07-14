@@ -18,7 +18,7 @@ WIP: Emitter/Command are not ready.
 | ---- | ------ | ----- | -------- | -------- | ----- |
 | 7..B | 0x111  |       |          | x        | Replaced by 0x3D1 in D. |
 | D..U | 0x3D1  |       | x        |          | Replaced by 0x3D7 in V. Contains ambient temp. |
-| V    | 0x3D7  |       | x        |          | Adds one additional value to the end of 0x3D1. |
+| V    | 0x3D7  |       | x        |          | Adds one additional value to the end of 0x3D1. [See also geraldjust's note](https://www.ft86club.com/forums/showpost.php?p=3615127&postcount=5). |
 | *    | 0xD0   |       | x        |          |  |
 | *    | 0xD1   |       | x        |          |  |
 | *    | 0xD2   |       | x        |          |  |
