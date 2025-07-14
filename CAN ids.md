@@ -10,7 +10,7 @@ Most of them are 'emitter' IDs; as in, the ECU constantly buffers the 'current s
 
 Some of these appear to be 'command' IDs, 0x7__ in their entirety; as in, when you post a command onto the CAN bus in the right format, the ECU listens for and receives it, interprets it, and performs whatever change is directed by that. I identify these by seeing in the ECU software that the pointer to the outbound memory state buffer is zeroed out, indicating that nothing is sent from memory. This does not indicate that the ECU sends nothing - presumably it sends a command success/failure code! - but it does indicate that the ECU isn't generating and writing out data of its own accord without some outside intervention requesting it.
 
-Last updated 07/14/2025. I will eventually verify these CAN IDs across the entirety of known ECU versions for gen1, but as of right now I've only inspected K, S, U, V and at minimum I need to inspect the remaining Kouki versions (N Q) before I proceed into the Zenki versions (7 9 A B D E F). If your car has an ECU that I didn't list in this paragraph, let me know; I'm definitely missing the 86 GRMN special edition and would love to study it further.
+Last updated 07/14/2025. I'm definitely missing the 86 GRMN special edition and would love to study it further; it has an additional sensor for the manifold and I'd like to know where they put that in the CAN arrays.
 
 WIP: Emitter/Command are not ready.
 
