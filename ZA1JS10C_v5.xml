@@ -39,6 +39,9 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		Fix, again, one Intake and two Exhaust tables. (New tables were confusing things.)
 		Add some previously-unlisted Closed Loop Fueling, Base Timing, Base Timing Idle, ECT tables.
 -->
+<!-- v5, 2026-03-04:
+		Add various closed loop fueling tables identified during S20G/U01A/V00C research.
+-->
 
 <roms>
 	<rom base="32BITBASE">
@@ -180,6 +183,92 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="113cac" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Unknown F" sizey="6" storageaddress="111b70">
+		</table>
+		<table name="DiPi Fueling ECT Unknown 1 A" sizey="11" storageaddress="115150">
+			<table storageaddress="115124" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 2 A" sizey="11" storageaddress="115200">
+			<table storageaddress="1151d4" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 3 A" sizey="11" storageaddress="1152b0">
+			<table storageaddress="115284" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 4 A" sizey="15" storageaddress="115370">
+			<table storageaddress="115334" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 5 A" sizey="15" storageaddress="1153e8">
+			<table storageaddress="1153ac" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 6 A" sizey="8" storageaddress="115444">
+			<table storageaddress="115424" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 7 A" sizey="15" storageaddress="1154a0">
+			<table storageaddress="115464" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 8 A" sizey="15" storageaddress="115518">
+			<table storageaddress="1154dc" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 9 A" sizey="8" storageaddress="115574">
+			<table storageaddress="115554" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 1 B" sizey="11" storageaddress="1151a8">
+			<table storageaddress="11517c" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 2 B" sizey="11" storageaddress="115258">
+			<table storageaddress="11522c" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 3 B" sizey="11" storageaddress="115308">
+			<table storageaddress="1152dc" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 4 B" sizey="15" storageaddress="1155d0">
+			<table storageaddress="115594" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 5 B" sizey="15" storageaddress="115648">
+			<table storageaddress="11560c" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 6 B" sizey="8" storageaddress="1156a4">
+			<table storageaddress="115684" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 7 B" sizey="15" storageaddress="115700">
+			<table storageaddress="1156c4" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 8 B" sizey="15" storageaddress="11573c">
+			<table storageaddress="115778" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 9 B" sizey="8" storageaddress="1157d4">
+			<table storageaddress="1157b4" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 10" sizey="15" storageaddress="114b20">
+			<table storageaddress="114ae4" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 11 A" sizey="16" storageaddress="113662">
+			<table storageaddress="112344" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 11 B" sizey="2" storageaddress="1136f8">
+			<table storageaddress="1136f0" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 11 C" sizey="16" storageaddress="113682">
+			<table storageaddress="112344" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 12" sizey="2" storageaddress="112a68">
+			<table storageaddress="112a60" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 13" sizex="2" sizey="2" storageaddress="116210">
+			<table storageaddress="116200" type="Y Axis"/>
+			<table storageaddress="116208" type="X Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 14" sizey="16" storageaddress="1136fc">
+			<table storageaddress="112344" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 15" sizey="16" storageaddress="112a40">
+			<table storageaddress="112344" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 16" sizey="16" storageaddress="112a50">
+			<table storageaddress="112344" type="Y Axis"/>
+		</table>
+		<table name="DiPi Fueling ECT Unknown 17" sizex="5" sizey="2" storageaddress="1161f4">
+			<table storageaddress="1161d8" type="X Axis"/>
+			<table storageaddress="1161ec" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Target Compensation A (Load)" sizex="11" sizey="11" storageaddress="119830">
 			<table storageaddress="1197d8" type="X Axis"/>
@@ -1352,7 +1441,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the minimum enrichment (leanest estimated AFR) for active primary open loop fueling. This threshold is compared to the enrichment as determined by the 'Primary Open Loop Fueling' table which is compensated by the 'Primary Open Loop Fueling Compensation (Timing Compensation)' table.</description>
 		</table>
 		<table type="2D" name="CL Fueling Unknown A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" sizex="13" sizey="10" userlevel="4">
-			<scaling units="Unknown" expression="(x*.0001220703125)-4" to_byte="(x+4)/.0001220703125" format="0.000" fineincrement=".01" coarseincrement=".1" />
+			<scaling units="Unknown" expression="(x*.0001220703125)-4.0" to_byte="(x+4.0)/.0001220703125" format="0.000000" fineincrement=".01" coarseincrement=".1" />
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.01" coarseincrement="0.1" />
 			</table>
@@ -1369,6 +1458,334 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 				<data>F6</data>
 			</table>
 			<description>CL Fueling Unknown F (1..6)</description>
+		</table>
+		<table type="2D" name="CL Fueling Unknown F" category="Fueling - Closed Loop" storagetype="float" endian="little" sizex="6" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement=".1" />
+			<table type="Static Y Axis" name="Unknown" sizey="6">
+				<data>F1</data>
+				<data>F2</data>
+				<data>F3</data>
+				<data>F4</data>
+				<data>F5</data>
+				<data>F6</data>
+			</table>
+			<description>CL Fueling Unknown F (1..6)</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 1 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 2 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 3 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 4 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 5 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="100" coarseincrement="500" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 6 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="25" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 7 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 8 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="100" coarseincrement="500" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 9 A" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="25" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 1 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 2 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 3 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.1" coarseincrement="0.2" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 4 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 5 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="100" coarseincrement="500" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 6 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="25" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 7 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 8 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="100" coarseincrement="500" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 9 B" category="Fueling - Closed Loop" storagetype="float" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="0.01" coarseincrement="0.1" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="25" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 10" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="2" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 11 A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.00390625" to_byte="x/0.00390625" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 11 B" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.00390625" to_byte="x/0.00390625" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 11 C" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.00390625" to_byte="x/0.00390625" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 12" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 13" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.015625" to_byte="x/0.015625" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="50" />
+			</table>
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 14" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 15" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 16" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 17" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 18" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 19" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*.0078125" to_byte="x/.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 20" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*.0078125" to_byte="x/.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 21" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 22" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 23" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 24" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 25" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 26" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 27" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10" />
+			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 28 A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 29 A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 28 B" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 29 B" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 28 C" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
+		</table>
+		<table type="2D" name="DiPi Fueling ECT Unknown 29 C" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
+			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10" />
+			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
+				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5" />
+			</table>
+			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="3D" name="CL Fueling Target Compensation (Load)" category="Fueling - Closed Loop" storagetype="uint16" endian="big" sizex="13" sizey="10" userlevel="1">
 			<scaling units="Estimated Air/Fuel Ratio Points (Additive)" expression="(x*.000224304213)-7.35" to_byte="(x+7.35)/.000224304213" format="0.000" fineincrement=".01" coarseincrement=".1" />
