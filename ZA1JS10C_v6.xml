@@ -18,7 +18,6 @@ As always, use at your own risk.
 
 These definitions are created for FREE without any sort of guarantee. The developers cannot be held liable
 for any damage or injury incurred as a result of these definitions. USE AT YOUR OWN RISK!-->
-
 <!-- v1, 2023-03-11:
 		Updated from K00G to S10C, with many additions and removals.
 -->
@@ -44,7 +43,11 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		Fix sizey (10->11) for Exhaust Duty Correction A/B/C/D.
 		Add various closed loop fueling tables identified during S20G/U01A/V00C research.
 -->
-
+<!-- v6, 2026-03-04:
+		Fix x/y axis swap on DiPi Fueling ECT Unknown 13.
+		Fix data address for Base Timing Idle Vehicle Speed Threshold.
+		Fix 3D table definition for DiPi Fueling ECT Unknown 13/17/27.
+-->
 <roms>
 	<rom base="32BITBASE">
 		<romid>
@@ -256,8 +259,8 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="112a60" type="Y Axis"/>
 		</table>
 		<table name="DiPi Fueling ECT Unknown 13" sizex="2" sizey="2" storageaddress="116210">
-			<table storageaddress="116200" type="Y Axis"/>
-			<table storageaddress="116208" type="X Axis"/>
+			<table storageaddress="116200" type="X Axis"/>
+			<table storageaddress="116208" type="Y Axis"/>
 		</table>
 		<table name="DiPi Fueling ECT Unknown 14" sizey="16" storageaddress="1136fc">
 			<table storageaddress="112344" type="Y Axis"/>
@@ -495,7 +498,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Base Timing Idle Unknown C" sizey="16" storageaddress="11cddc">
 			<table storageaddress="11cd9c" type="Y Axis"/>
 		</table>
-		<table name="Base Timing Idle Vehicle Speed Threshold" storageaddress="11831c"/>
+		<table name="Base Timing Idle Vehicle Speed Threshold" storageaddress="11c268"/>
 		<table name="Knock Correction Advance Max A" sizex="14" sizey="23" storageaddress="11f29c">
 			<table storageaddress="11f208" type="X Axis"/>
 			<table storageaddress="11f240" type="Y Axis"/>
@@ -1634,7 +1637,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 13" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 13" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.015625" to_byte="x/0.015625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="50"/>
@@ -1665,7 +1668,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 17" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 17" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
@@ -1737,7 +1740,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 27" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 27" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
