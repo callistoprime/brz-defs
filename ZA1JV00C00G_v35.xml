@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Created by Callisto @ FT86Club. v21, 2025-11-08. See post for details:
+<!-- Created by Callisto @ FT86Club. v35, 2026-03-04. See post for details:
      "V00C00G 17-20 USDM / EDM / JDM hybrid integrated ECU project" -->
 
 <!-- THIS IS NOT GUARANTEED COMPLETE. I HAVE NOT CHECKED MEMORY LOCATIONS FOR CEL DISABLES. SORRY, I KNOW YOU ALL LIKE THOSE, IT WILL TAKE MORE TIME. -->
@@ -28,7 +28,6 @@ As always, use at your own risk.
 
 These definitions are created for FREE without any sort of guarantee. The developers cannot be held liable
 for any damage or injury incurred as a result of these definitions. USE AT YOUR OWN RISK!-->
-
 <roms>
 	<rom base="32BITBASE">
 		<romid>
@@ -181,7 +180,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="126c74" type="Y Axis"/>
 		</table>
 		<table name="Manifold Pressure Sensor Scaling A" storageaddress="12552c"/>
-		<table name="Manifold Pressure Sensor Limits (CEL)" storageaddress="1254fe"/>
+		<table name="Manifold Pressure Sensor Limits (CEL)" storageaddress="1254e8"/>
 		<table name="Manifold Pressure Sensor CEL Delays" storageaddress="12545b"/>
 		<table name="Primary Open Loop Fueling A" sizex="13" sizey="23" storageaddress="116550">
 			<table storageaddress="1164c0" type="X Axis"/>
@@ -460,7 +459,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Tip-in Enrichment Compensation A (ECT)" sizey="16" storageaddress="112fa5">
 			<table storageaddress="1122d8" type="Y Axis"/>
 		</table>
-		<!-- this is now a 3D table in U001, V00C -->
+		<!-- this is now a 3D table in S20G, U001, V00C -->
 		<table name="Tip-in Enrichment Compensation B (ECT)" sizey="3" sizex="16" storageaddress="11b690">
 			<table storageaddress="1122d8" type="X Axis"/>
 			<table storageaddress="11b684" type="Y Axis"/>
@@ -638,7 +637,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Rough Correction Minimum KC Advance Map Value" storageaddress="11c72c"/>
 		<table name="Advance Multiplier (Initial)" storageaddress="11c730"/>
 		<table name="Advance Multiplier Step Value" storageaddress="11c734"/>
-		<table name="Knock Sensor Calibration" storageaddress="1268e4">
+		<table name="Knock Sensor Calibration" storageaddress="1268e4" sizey="87">
 			<table type="Y Axis" storageaddress="126788"/>
 		</table>
 		<table name="Knock Threshold" storageaddress="11dff8"/>
@@ -736,11 +735,11 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="AFR Sensor Heater Protection" sizey="5" storageaddress="1006a8"><!-- unchanged -->
 			<table storageaddress="100694" type="Y Axis"/><!-- unchanged -->
 		</table>
-		<table name="AFR Sensor Heater Duty Cycle A" sizey="4" storageaddress="10077c">
-			<table storageaddress="10076c" type="Y Axis"/>
+		<table name="AFR Sensor Heater Duty Cycle A" sizey="4" storageaddress="100770">
+			<table storageaddress="100760" type="Y Axis"/>
 		</table>
-		<table name="AFR Sensor Heater Duty Cycle B" sizey="4" storageaddress="100794">
-			<table storageaddress="100784" type="Y Axis"/>
+		<table name="AFR Sensor Heater Duty Cycle B" sizey="4" storageaddress="100788">
+			<table storageaddress="100778" type="Y Axis"/>
 		</table>
 		<table name="AFR Sensor Heating Limit" sizex="6" sizey="6" storageaddress="100e38"><!-- unchanged -->
 			<table storageaddress="100e08" type="X Axis"/><!-- unchanged -->
@@ -820,6 +819,10 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="115cbc" type="X Axis"/>
 			<table storageaddress="115cc4" type="Y Axis"/>
 		</table>
+                <table name="GDI Firing Angle Cold Idle (Override)" storageaddress="5ff7c"/>
+                <table name="GDI Firing Angle High Load Hot (Override)" storageaddress="5ff8c"/>
+                <table name="GDI Firing Angle Low Load Cold (Override)" storageaddress="5ff90"/>
+                <table name="GDI Firing Angle Low Load Hot (Override)" storageaddress="5ff94"/>
 		<table name="GDI Pressure Multiplier A" sizex="10" sizey="10" storageaddress="115d20">
 			<table storageaddress="115cd0" type="X Axis"/>
 			<table storageaddress="115cf8" type="Y Axis"/>
@@ -844,18 +847,10 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="115ebc" type="X Axis"/>
 			<table storageaddress="115eec" type="Y Axis"/>
 		</table>
-		<table type="Switch" name="Total Injection Ratio Port Cold (Override)" category="Fueling - Injector Ratio" sizey="4" storageaddress="62230">
-			<description>When enabled, modify the ECU code pointer for the Cold table to refer to the Warm table. See also ZA1JS20G.</description>
-			<state name="Override Cold Table location to Warm Table" data="00 0e 0b ac" /> <!-- V00C -->
-			<state name="Use OEM Cold Table location" data="00 0e 0b c8" /><!-- V00C -->
-		</table>
-		<table type="Switch" name="Total Injection Ratio Port Hot (Override)" category="Fueling - Injector Ratio" sizey="4" storageaddress="62238">
-			<description>When enabled, modify the ECU code pointer for the Hot table to refer to the Warm table. See also ZA1JS20G.</description>
-			<state name="Override Hot Table location to Warm Table" data="00 0e 0b ac" /> <!-- V00C -->
-			<state name="Use OEM Hot Table location" data="00 0e 0b e4" /><!-- V00C -->
-		</table>
+                <table name="Total Injection Ratio Port Cold (Override)" storageaddress="62230"/>
+                <table name="Total Injection Ratio Port Hot (Override)" storageaddress="62238"/>
 		<table name="PI Ratio ECT Compensation (Additive)" sizey="2" storageaddress="112a08">
-			<table storageaddress="112a00" type="X Axis"/>
+			<table storageaddress="112a00" type="Y Axis"/>
 		</table>
 		<table name="PI Ratio ECT Compensation (Load)" sizex="16" sizey="6" storageaddress="1160d0">
 			<table storageaddress="1122d8" type="X Axis"/>
@@ -951,31 +946,31 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="118ca0" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown C" sizey="3" storageaddress="11397c">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown D" sizey="3" storageaddress="113982">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown E" sizey="3" storageaddress="113988">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown F" sizey="3" storageaddress="11398e">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown G" sizey="8" storageaddress="1139b4">
-			<table storageaddress="113994" type="X Axis"/>
+			<table storageaddress="113994" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown H" sizey="8" storageaddress="1139e4">
-			<table storageaddress="1139c4" type="X Axis"/>
+			<table storageaddress="1139c4" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown I" sizey="8" storageaddress="113a14">
-			<table storageaddress="1139f4" type="X Axis"/>
+			<table storageaddress="1139f4" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown J" sizey="8" storageaddress="113a44">
-			<table storageaddress="113a24" type="X Axis"/>
+			<table storageaddress="113a24" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown K" sizey="16" storageaddress="112a72">
-			<table storageaddress="1122d8" type="X Axis"/>
+			<table storageaddress="1122d8" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown L" sizex="13" sizey="3" storageaddress="118830">
 			<table storageaddress="1187fc" type="X Axis"/>
@@ -994,22 +989,22 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="11275c" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown P" sizey="10" storageaddress="112a34">
-			<table storageaddress="112a0c" type="X Axis"/>
+			<table storageaddress="112a0c" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown S" sizey="3" storageaddress="11393a">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown V" sizey="10" storageaddress="112a68">
-			<table storageaddress="112a40" type="X Axis"/>
+			<table storageaddress="112a40" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown W" sizey="3" storageaddress="113934">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown ZA" sizey="3" storageaddress="113946">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown ZD" sizey="3" storageaddress="113940">
-			<table storageaddress="112768" type="X Axis"/>
+			<table storageaddress="112768" type="Y Axis"/>
 		</table>
 		<table name="CL Fueling Transient Unknown ZH" sizex="16" sizey="3" storageaddress="118d58">
 			<table storageaddress="118d0c" type="X Axis"/>
@@ -1250,7 +1245,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Low Pulse Width Fuel Injector Compensation Maximum RPM" storageaddress="111f78"/>
 		<table name="Low Pulse Width Fuel Injector Compensation Maximum IPW" storageaddress="111f7c"/>
 		<table name="Overrun Fueling RPM Resume Threshold" sizey="16" storageaddress="114890">
-			<table storageaddress="1122d8" type="X Axis"/>
+			<table storageaddress="1122d8" type="Y Axis"/>
 		</table>
 		<table name="Overrun Enrich RPM Delta Activation" storageaddress="111fa8"/>
 		<table name="Overrun initial injector enrichment (pulsewidth)" storageaddress="111fac"/>
@@ -1273,11 +1268,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 <!-- For whatever unknown reason, the MY20 USDM instrument and hvac panels expect an additional value in the CANbus packet from the V00C ECU.
      Happily, the additional value is completely ignored by pre-MY20 instrument and HVAC panels, so this simply changes the CAN id from new to old.
 	 This CAN id changes each time the packet structure changes, and was updated to 0x3D1 in B-era ECUs or so. -->
-		<table type="Switch" name="U0155 fix for 2017-2019 USDM" category="Model Year Selection - Prevents U0155" sizey="2" storageaddress="cd12">
-			<description>In 2020 USDM, the instrument cluster and HVAC cluster expect ambient temperature to be sent on CAN id 0x3D7; in prior model years, this data was sent on 0x3D1. Enabling this override changes this 2020 USDM ECU to interact with 0x3D1 rather than 0x3D7; without it, pre-2020 gen1 Kouki facelift cars will code CEL U0155. (Regardless, this ECU is not compatible with gen1 pre-facelift Zenki.)</description>
-			<state name="Override CAN id for pre-2020 gen1 Kouki facelift (0x3D1)" data="03 d1" /><!-- V00C -->
-			<state name="Use unmodified OEM CAN id for MY20 USDM (0x3D7)" data="03 d7" /><!-- V00C -->
-		</table>
+                <table name="U0155 fix for 2017-2019 USDM" storageaddress="cd12"/>
 		<!-- TODO: fix all of these
 		<table name="(P0011) CAMSHAFT POS. - TIMING OVER-ADVANCED 1" storageaddress="120240"/>
 		<table name="(P0014) EXHAUST AVCS SYSTEM 1 RANGE/PERF" storageaddress="120558"/>
@@ -1560,7 +1551,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
-			<description>A certain fueling additive (considering ECT) calculation normally ramps up the additive gradually (ranging from +0.00 to +0.40); however, when throttle is maxed (> 85), the 2019 S10C open loop code seems to (approximately) enforce a minimum threshold before the open loop calculations.</description>
+			<description>A certain fueling additive (considering ECT) calculation normally ramps up the additive gradually (ranging from +0.00 to +0.40); however, when throttle is maxed (&gt; 85), the 2019 S10C open loop code seems to (approximately) enforce a minimum threshold before the open loop calculations.</description>
 		</table>
 		<table type="3D" name="Primary Open Loop Fueling Additive A" category="Fueling - Primary Open Loop" storagetype="uint8" endian="big" sizex="13" sizey="23" userlevel="4">
 			<scaling units="Air/Fuel Ratio Points Additive" expression="((x*7.8125e-3)-1.0)*14.7" to_byte="((x/14.7)+1)/7.8125e-3" format="0.00" fineincrement=".01" coarseincrement=".5"/>
@@ -2653,22 +2644,22 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>no description</description>
 		</table>
-		<table type="Switch" name="GDI Firing Angle Cold Idle (Override)" category="Fueling - GDI" sizey="4" storageaddress="5ff7c">
+		<table type="Switch" name="GDI Firing Angle Cold Idle (Override)" category="Fueling - GDI" sizey="4">
 			<description>When enabled, modify the ECU code pointer for the Cold Idle table to refer to the High Load Cold table. See also ZA1JS20G.</description>
 			<state name="Override Cold Idle Table location to High Load Cold Table" data="00 0e 0a 5c"/> <!-- V00C -->
 			<state name="Use OEM Cold Idle Table location" data="00 0e 0a 40"/><!-- V00C -->
 		</table>
-		<table type="Switch" name="GDI Firing Angle High Load Hot (Override)" category="Fueling - GDI" sizey="4" storageaddress="5ff8c">
+		<table type="Switch" name="GDI Firing Angle High Load Hot (Override)" category="Fueling - GDI" sizey="4">
 			<description>When enabled, modify the ECU code pointer for the High Load Hot table to refer to the High Load Cold table. See also ZA1JS20G.</description>
 			<state name="Override High Load Hot Table location to High Load Cold Table" data="00 0e 0a 5c"/> <!-- V00C -->
 			<state name="Use OEM High Load Hot Table location" data="00 0e 0a 78"/><!-- V00C -->
 		</table>
-		<table type="Switch" name="GDI Firing Angle Low Load Cold (Override)" category="Fueling - GDI" sizey="4" storageaddress="5ff90">
+		<table type="Switch" name="GDI Firing Angle Low Load Cold (Override)" category="Fueling - GDI" sizey="4">
 			<description>When enabled, modify the ECU code pointer for the Low Load Cold table to refer to the High Load Cold table. See also ZA1JS20G.</description>
 			<state name="Override Low Load Cold Table location to High Load Cold Table" data="00 0e 0a 5c"/> <!-- V00C -->
 			<state name="Use OEM Low Load Cold Table location" data="00 0e 0a 94"/><!-- V00C -->
 		</table>
-		<table type="Switch" name="GDI Firing Angle Low Load Hot (Override)" category="Fueling - GDI" sizey="4" storageaddress="5ff94">
+		<table type="Switch" name="GDI Firing Angle Low Load Hot (Override)" category="Fueling - GDI" sizey="4">
 			<description>When enabled, modify the ECU code pointer for the Low Load Hot table to refer to the High Load Cold table. See also ZA1JS20G.</description>
 			<state name="Override Low Load Hot Table location to High Load Cold Table" data="00 0e 0a 5c"/> <!-- V00C -->
 			<state name="Use OEM Low Load Hot Table location" data="00 0e 0a b0"/><!-- V00C -->
@@ -2799,6 +2790,16 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
 			<description>Controls the ratio of port injection (PI) vs direct injection (DI) to deliver the requested volume of fuel. The value in the map is the proportion of PI quantity. 100% means 100% PI and the DI system is never used,.</description>
+		</table>
+		<table type="Switch" name="Total Injection Ratio Port Cold (Override)" category="Fueling - Injector Ratio" sizey="4">
+			<description>When enabled, modify the ECU code pointer for the Cold table to refer to the Warm table. See also ZA1JS20G.</description>
+			<state name="Override Cold Table location to Warm Table" data="00 0e 0b ac"/> <!-- V00C -->
+			<state name="Use OEM Cold Table location" data="00 0e 0b c8"/><!-- V00C -->
+		</table>
+		<table type="Switch" name="Total Injection Ratio Port Hot (Override)" category="Fueling - Injector Ratio" sizey="4">
+			<description>When enabled, modify the ECU code pointer for the Hot table to refer to the Warm table. See also ZA1JS20G.</description>
+			<state name="Override Hot Table location to Warm Table" data="00 0e 0b ac"/> <!-- V00C -->
+			<state name="Use OEM Hot Table location" data="00 0e 0b e4"/><!-- V00C -->
 		</table>
 		<table type="2D" name="PI Ratio ECT Compensation (Additive)" category="Fueling - Injector Ratio" storagetype="uint8" endian="big" sizey="2" userlevel="4">
 			<scaling units="Unknown" expression="x*0.00390625" to_byte="x/0.00390625" format="#" fineincrement="1" coarseincrement="10"/>
@@ -6583,6 +6584,11 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 				<data>Off below</data>
 			</table>
 			<description>no description</description>
+		</table>
+		<table type="Switch" name="U0155 fix for 2017-2019 USDM" category="Model Year Selection - Prevents U0155" sizey="2">
+			<description>In 2020 USDM, the instrument cluster and HVAC cluster expect ambient temperature to be sent on CAN id 0x3D7; in prior model years, this data was sent on 0x3D1. Enabling this override changes this 2020 USDM ECU to interact with 0x3D1 rather than 0x3D7; without it, pre-2020 gen1 Kouki facelift cars will code CEL U0155. (Regardless, this ECU is not compatible with gen1 pre-facelift Zenki.)</description>
+			<state name="Override CAN id for pre-2020 gen1 Kouki facelift (0x3D1)" data="03 d1"/><!-- V00C -->
+			<state name="Use unmodified OEM CAN id for MY20 USDM (0x3D7)" data="03 d7"/><!-- V00C -->
 		</table>
 		<table type="Switch" name="Force Pass Readiness Monitors" category="OBD-II" sizey="2">
 			<description>Off-road and racing use only. Must NEVER be enabled on vehicles that will be driven on public roads.</description>
