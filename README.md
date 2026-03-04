@@ -7,17 +7,22 @@ Caveats:
 
 | Calibration | Modified   | Status       | Notes |
 | ----------- | ---------- | ------------ | ----- |
-| ZA1JS10C    | 2025-07-08 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
+| ZA1JS10C    | 2026-03-04 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
+| ZA1JV00C00G | 2026-03-04 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. SEE CELS WARNING ABOVE. |
 
 ## What are these files?
 
 The tool 'RomRaider' uses them to open and inspect engine control files for the Subaru and Toyota vehicles, Kouki and Zenki series, with calibration IDs ZA1J____.
 
+## How are these files maintained?
+
+I've recently created a tool that lets me combine the memory address labels and the ECU files to 'revise' the RR XML defs to match what my best current understanding is. This has revealed a variety of typos that are fixed in the latest S10C and V00C. It's not a tool that can be run on an ECU file without having invested significant effort in labeling it, but eventually this will allow me to maintain an open spreadsheet of memory locations for each ECU version, and generate both ECU definitions and Tactrix logging configs from that.
+
 ## Are these complete?
 
 There's no such thing, but at the very least, I'm working towards parity with the K-series defs, and documenting whatever I find that's new or unusual along the way. There are tens of thousands parameters in this software and only a fraction of them are visible in RomRaider. I've seen many, many more in my research and it turns out that around half of them have no effect on engine behavior. My theory is that these are for rally tuning, or for the future FA24D gen2 series, or etc. Only Subaru and Toyota know, and they're not telling.
 
-That said, I will *try* to upload definitions where I *believe* that every parameter in the definition is valid for that series; those I haven't confirmed will be commented out and noted as such in the comments. Initially, this will be S10C only, since that's the one I'm most confident in; after that will be S20G, U01A, and V00C00G in no particular order. But if you don't know how to recognize when a tuning table isn't defined correctly, you may want to take a step back and reevaluate how to proceed.
+That said, I will *try* to upload definitions where I *believe* that every parameter in the definition is valid for that series; those I haven't confirmed will be commented out and noted as such in the comments. Initially, this was S10C only, since that's the one I was most confident in; I've added V00C00G since I'm now quite confident in the defs for it; after that, S20G and U01A are planned in no particular order. But if you don't know how to recognize when a tuning table isn't defined correctly, you may want to take a step back and reevaluate how to proceed.
 
 I will note in the comments at the top of each file any applicable caveats.
 
@@ -49,7 +54,9 @@ If you as a tuner have feedback to report, I can be located readily enough in va
 
 ## Why is S20G included in your work, then?
 
-Subaru invested significant effort into improving the direct injection vs. port injection ratio configuration in the 2018 EU BRZ, most likely in response to post-VW emissions legislation; however, those improvements were not carried forward to other countries, and the more general code upgrades made in the S-series successors, U01A and V00C, were never carried forward to the EU. It is my goal to document how to apply the S20G improvements to either U01A (non-US) or V00C (US) for all Kouki facelift owners, so that my 2019 BRZ is OEM+, running the best of both worlds: the final Kouki ECU code with all lessons learned from Kouki incorporated, with the more-detailed injector ratios tune from the EU.
+Subaru invested significant effort into improving the direct injection vs. port injection ratio configuration in the 2018 EU BRZ, most likely in response to post-VW emissions legislation; however, those improvements were not carried forward to other countries, and the more general code upgrades made in the S-series successors, U01A and V00C, were never carried forward to the EU. It was my goal to document how to apply the S20G improvements to either U01A (non-US) or V00C (US) for all Kouki facelift owners, so that my 2019 BRZ is OEM+, running the best of both worlds: the final Kouki ECU code with all lessons learned from Kouki incorporated, with the more-detailed injector ratios tune from the EU.
+
+Unfortunately, it turns out that I'd have to revert significant fueling improvements for the US/JP Kouki, which gain some horsepower versus the S20G models, in order to bring in S20G's more finely-tuned DI/PI ratios — and that I misunderstood how closely DI/PI is tied into AVCS/VVT. So, that part of the project is essentially on hold while I study AVCS/VVT theory and analyze the tune.
 
 ## What about EcuTek and BRZedit?
 
