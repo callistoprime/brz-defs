@@ -92,11 +92,11 @@ DiPi Fueling ECT Unknown 11 A,1135f6,dfd0c,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 B,11368c,dfd70,2,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 C,113616,dfd20,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 12,1129fc,df700,2,,2D,2D,Fueling - Closed Loop
-DiPi Fueling ECT Unknown 13,11608c,e0c1c,2,2,2D,2D,Fueling - Closed Loop
+DiPi Fueling ECT Unknown 13,11608c,e0c1c,2,2,3D,3D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 14,113690,dfd84,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 15,1129d4,df6e0,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 16,1129e4,df6ec,16,,2D,2D,Fueling - Closed Loop
-DiPi Fueling ECT Unknown 17,116070,e0c00,2,5,2D,2D,Fueling - Closed Loop
+DiPi Fueling ECT Unknown 17,116070,e0c00,2,5,3D,3D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 18,1137b0,dfe30,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 19,113870,dfeb4,2,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 20,11387c,dfec8,2,,2D,2D,Fueling - Closed Loop
@@ -106,7 +106,7 @@ DiPi Fueling ECT Unknown 23,113810,dfe64,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 24,113830,dfe78,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 25,113858,dfe8c,2,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 26,113864,dfea0,2,,2D,2D,Fueling - Closed Loop
-DiPi Fueling ECT Unknown 27,1160ac,e0c38,2,5,2D,2D,Fueling - Closed Loop
+DiPi Fueling ECT Unknown 27,1160ac,e0c38,2,5,3D,3D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 28 A,113730,dfde0,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 29 A,113750,dfdf4,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 28 B,1138b8,dff2c,2,,2D,2D,Fueling - Closed Loop

@@ -21,7 +21,7 @@ use XML::LibXML;
 sub warnlevel :prototype($$);
 sub normalize_address;
 
-die "Usage: $0 ./ZA1Jxxxx.xml ./ZA1Jxxxx.bin ./ZA1Jxxxx-symbols.csv\n" unless @ARGV == 3;
+die "Usage: $0 ./ZA1Jxxxx.xml ./ZA1Jxxxx.bin ./ZA1Jxxxx-symbols.csv ./ZA1Jxxxx-2dmtable.txt ./ZA1Jxxxx-3dmtable.txt\n" unless @ARGV == 5;
 
 my $rr = XML::LibXML->load_xml(location => $ARGV[0]) or die "load_xml: $!";
 my @rom = $rr->findnodes('/roms/rom') or die "rom: $!";
@@ -159,7 +159,7 @@ my %typecount;
 map { $typecount{type_generalize $gh_types{$_}}++ } keys %gh_types;
 say "types found: @>> ".join(' ', sort keys %typecount);
 
-open my $table2d, '<', '2dmtable.txt' or die "open 2dm: $!";
+open my $table2d, '<', $ARGV[3] or die "open 2dm: $!";
 my %table2d;
 while (<$table2d>) {
     state($name, $base, $xsize, $xaxis, $data);
@@ -196,7 +196,7 @@ while (<$table2d>) {
     }
 }
 
-open my $table3d, '<', '3dmtable.txt' or die "open 3dm: $!";
+open my $table3d, '<', $ARGV[4] or die "open 3dm: $!";
 my %table3d;
 while (<$table3d>) {
     state($name, $base, $xsize, $ysize, $xaxis, $yaxis, $data);

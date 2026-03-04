@@ -92,8 +92,21 @@ sub hexaddr ($from) {
 
 my $rom0 = ($rr->findnodes('/roms/rom'))[0] or die "no rom0";
 
-for my $t (values %addrs) {
+for my $t (sort { $a->{'name'} cmp $b->{'name'} } values %addrs) {
     my \%t = $t;
+    if ($t{'type2'} eq 'synth2D') {
+        my $r_tbl = $rr->findnodes("//roms/rom[1]/table[\@name='$t{'name'}']")->[0] or die "synth2d lookup fail: $t{'name'}";
+        my $r_addr = $r_tbl->getAttribute('storageaddress'); my $m_addr = 0;
+        if ($r_addr ne $t{'data'}) {
+            warn "synth2d address mismatch: $t{'name'} -- $r_addr ne $t{'data'}";
+            $m_addr = 1;
+        }
+        if ($m_addr) {
+            $r_tbl->setAttribute('storageaddress' => $t{'data'});
+        }
+        say "# synth2d ok? $t{'name'} \[$t{'sizey'}\] \@ $t{'data'}";
+        next;
+    }
     next unless $t{'type'} =~ /^(?:2D|3D)$/;
     my($tabletype, $addr, $xsize, $type, $xaxis, $ysize, $yaxis, $data, $scale, $offset, @notes);
     $addr  = dword unhex substr('00000000' . $t{'table'}, -8, 8);
@@ -107,7 +120,7 @@ for my $t (values %addrs) {
         undef $xaxis; undef $xsize;
     } else {
         $ysize = ushort substr($za1j, $addr + 2, 2);
-        if ($t{'type'} eq '3D' and $ysize > 0) {
+        if ($t{'type2'} eq '3D' and $ysize > 0) {
             $yaxis = hexaddr dword substr($za1j, $addr + 8, 4);
             $data  = hexaddr dword substr($za1j, $addr + 12, 4);
             $type  = dword substr($za1j, $addr + 16, 4);
@@ -127,7 +140,7 @@ for my $t (values %addrs) {
                     undef $tabletype;
                 }
             }
-        } else { # 2D
+        } elsif ($t{'type2'} eq '2D') { # 2D
             $type  = byte   substr($za1j, $addr + 2, 1);
             $ysize = byte   substr($za1j, $addr + 3, 1);
             $data  = hexaddr dword substr($za1j, $addr + 8, 4);
@@ -150,6 +163,8 @@ for my $t (values %addrs) {
                     undef $tabletype;
                 }
             }
+        } else { # unhandled
+            say "# unhandled table: $t{'name'} ($t{'type2'})";
         }
     }
     if (not(defined $yaxis) and ($ysize // 0) > 0) {
@@ -198,7 +213,6 @@ for my $t (values %addrs) {
             $r_xsize = $rr->findnodes("//roms/rom[2]/table[\@name='$t{'name'}']")->[0]->getAttribute('sizey');
             $m_xsize = 1;
         }
-        die "xsize mismatch! $r_xsize != $xsize" if $r_xsize != $xsize;
 
         my($r_xtbl) = $rr->findnodes("//roms/rom[1]/table[\@name='$t{'name'}']/table[\@type='Y Axis']")->[0]; my($m_xtbl) = 0;
         if (not defined $r_xtbl) {
@@ -280,7 +294,7 @@ for my $t (values %addrs) {
         }
 
     } else {
-        # ...
+        print "# unhandled table: $t{'name'}\n";
     }
 }
 

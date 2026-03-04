@@ -60,11 +60,11 @@ DiPi Fueling ECT Unknown 11 A	113662		16		2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 B	1136f8		2		2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 C	113682		16		2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 12	112a68	ddea4	2		2D	Fueling - Closed Loop
-DiPi Fueling ECT Unknown 13	116210	df410	2	2	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 13	116210	df410	2	2	3D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 14	1136fc	de528	16		2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 15	112a40	dde84	16		2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 16	112a50	dde90	16		2D	Fueling - Closed Loop
-DiPi Fueling ECT Unknown 17	1161f4	df3f4	2	5	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 17	1161f4	df3f4	2	5	3D	Fueling - Closed Loop
 CL Fueling Target Compensation A (Load)	119830		11	11	3D	Fueling - Closed Loop
 CL Fueling Target Compensation B (Load)	11997c		11	11	3D	Fueling - Closed Loop
 CL Fueling Target Compensation C (Load)	11bdec		11	11	3D	Fueling - Closed Loop
@@ -137,7 +137,7 @@ Base Timing Idle (Neutral)	11cbe4		8		2D	Ignition Timing - Advance
 Base Timing Idle Unknown A	11cc10	e0484	9		2D	Ignition Timing - Advance
 Base Timing Idle Unknown B	11cc19	e0498	16		2D	Ignition Timing - Advance
 Base Timing Idle Unknown C	11cddc		16		2D	Ignition Timing - Advance
-Base Timing Idle Vehicle Speed Threshold	11831c	11c268	1		2D	Ignition Timing - Advance
+Base Timing Idle Vehicle Speed Threshold	11c268	11c268	1		2D	Ignition Timing - Advance
 Knock Correction Advance Max A	11f29c	e117c	23	14	3D	Ignition Timing - Advance
 Timing Compensation (IAT)	11ce84		16		2D	Ignition Timing - Compensation
 Timing Compensation (IAT) Activation	11e888		5	8	3D	Ignition Timing - Compensation
@@ -538,7 +538,7 @@ DiPi Fueling ECT Unknown 23					2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 24					2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 25					2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 26					2D	Fueling - Closed Loop
-DiPi Fueling ECT Unknown 27					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 27					3D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 28 A					2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 29 A					2D	Fueling - Closed Loop
 DiPi Fueling ECT Unknown 28 B					2D	Fueling - Closed Loop

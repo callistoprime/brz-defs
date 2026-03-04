@@ -60,11 +60,11 @@ DiPi Fueling ECT Unknown 11 A,113662,de4b0,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 B,1136f8,de514,2,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 11 C,113682,de4c4,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 12,112a68,ddea4,2,,2D,2D,Fueling - Closed Loop
-DiPi Fueling ECT Unknown 13,116210,df410,2,2,2D,2D,Fueling - Closed Loop
+DiPi Fueling ECT Unknown 13,116210,df410,2,2,3D,3D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 14,1136fc,de528,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 15,112a40,dde84,16,,2D,2D,Fueling - Closed Loop
 DiPi Fueling ECT Unknown 16,112a50,dde90,16,,2D,2D,Fueling - Closed Loop
-DiPi Fueling ECT Unknown 17,1161f4,df3f4,2,5,2D,2D,Fueling - Closed Loop
+DiPi Fueling ECT Unknown 17,1161f4,df3f4,2,5,3D,3D,Fueling - Closed Loop
 CL Fueling Target Compensation A (Load),119830,dfee0,11,11,3D,3D,Fueling - Closed Loop
 CL Fueling Target Compensation B (Load),11997c,dfefc,11,11,3D,3D,Fueling - Closed Loop
 CL Fueling Target Compensation C (Load),11bdec,e02ec,11,11,3D,3D,Fueling - Closed Loop
@@ -137,7 +137,7 @@ Base Timing Idle (Neutral),11cbe4,e0470,8,,2D,2D,Ignition Timing - Advance
 Base Timing Idle Unknown A,11cc10,e0484,9,,2D,2D,Ignition Timing - Advance
 Base Timing Idle Unknown B,11cc19,e0498,16,,2D,2D,Ignition Timing - Advance
 Base Timing Idle Unknown C,11cddc,e0588,16,,2D,2D,Ignition Timing - Advance
-Base Timing Idle Vehicle Speed Threshold,11831c,11c268,1,,2D,2D,Ignition Timing - Advance
+Base Timing Idle Vehicle Speed Threshold,11c268,11c268,1,,2D,synth2D,Ignition Timing - Advance
 Knock Correction Advance Max A,11f29c,e117c,23,14,3D,3D,Ignition Timing - Advance
 Timing Compensation (IAT),11ce84,e0614,16,,2D,2D,Ignition Timing - Compensation
 Timing Compensation (IAT) Activation,11e888,e0e88,5,8,3D,3D,Ignition Timing - Compensation
@@ -214,7 +214,7 @@ Calculated Torque A,102c44,db244,23,13,3D,3D,Drive-by-Wire Throttle (DBW)
 Calculated Torque B,102f24,db260,23,11,3D,3D,Drive-by-Wire Throttle (DBW)
 Post Cranking Airflow Initial Reference Coolant,104c28,db8cc,16,,2D,2D,Fueling - Cranking
 Post Cranking Load Initial Reference Coolant,104d30,db930,16,,2D,2D,Fueling - Cranking
-Cylinder Fill Percentage,1080ec,dc14c,22,16,3D,3D,Mass Airflow / Engine Load
+Cylinder Fill Percentage,1080ec,dc13c,22,16,3D,3D,Mass Airflow / Engine Load
 Solenoid Control,108acc,dc3f0,5,7,3D,3D,CPC Solenoid
 Solenoid Duty,108b7c,dc40c,13,13,3D,3D,CPC Solenoid
 Misfire Count MAP Threshold A,10a3a6,dc484,13,,2D,2D,Miscellaneous - Thresholds
