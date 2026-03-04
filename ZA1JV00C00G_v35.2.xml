@@ -285,8 +285,8 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="1129f4" type="Y Axis"/>
 		</table>
 		<table name="DiPi Fueling ECT Unknown 13" sizex="2" sizey="2" storageaddress="11608c">
-			<table storageaddress="11607c" type="Y Axis"/>
-			<table storageaddress="116084" type="X Axis"/>
+			<table storageaddress="11607c" type="X Axis"/>
+			<table storageaddress="116084" type="Y Axis"/>
 		</table>
 		<table name="DiPi Fueling ECT Unknown 14" sizey="16" storageaddress="113690">
 			<table storageaddress="1122d8" type="Y Axis"/>
@@ -1761,7 +1761,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 13" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 13" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.015625" to_byte="x/0.015625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="50"/>
@@ -1792,7 +1792,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 17" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 17" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
@@ -1864,7 +1864,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
-		<table type="2D" name="DiPi Fueling ECT Unknown 27" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
+		<table type="3D" name="DiPi Fueling ECT Unknown 27" category="Fueling - Closed Loop" storagetype="uint8" endian="big" userlevel="4">
 			<scaling units="Unknown" expression="x*0.0078125" to_byte="x/0.0078125" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
