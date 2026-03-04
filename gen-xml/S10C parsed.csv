@@ -1,0 +1,938 @@
+name	dataaddr	tableaddr	sizey	sizex	type	category
+PI Ratio Thresholds	111930	111930	2		2D	Fueling - Injector Ratio
+PI Ratio Threshold (RPM)	111928		1		2D	Fueling - Injector Ratio
+PI Ratio Threshold (Load)	11192c		1		2D	Fueling - Injector Ratio
+GDI Pressure Multiplier C	111864	111864	1		2D	Fueling - GDI
+Requested Torque Base	13c528	e20ec	23		2D	Drive-by-Wire Throttle (DBW)
+Cranking Fuel Injector Pulse Width B (ECT)	117e30		3	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width E (ECT)	117e98		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width F (ECT)	117ee0		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width I (ECT)	117f28		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width J (ECT)	117f70		2	16	3D	Fueling - Cranking
+Injector Minimum Open Time	111900	111900	1		2D	Fueling - Port Injectors
+Engine Load Multiplier	111908	111908	1		2D	Mass Airflow / Engine Load
+CPC Duty Multiplier	c64c		1		2D	CPC Solenoid
+Engine Load Limiter A	104c6c		9		2D	Mass Airflow / Engine Load
+Engine Load Limiter B	104ca4		9		2D	Mass Airflow / Engine Load
+AVCS Base/Normal/Safe Hysteresis	1294b8		2		2D	Variable Valve Timing (AVCS)
+Idle Throttle Target for Airflow	13c6f0		34		2D	Idle Control
+Idle Throttle Target B	13c5ec	e213c	7		2D	Idle Control
+Idle Throttle Target C	13c624	e2150	10		2D	Idle Control
+Idle Throttle Target D	13d984	e23dc	13	16	3D	Idle Control
+Failsafe Idle Throttle Target for Airflow	10c214		2		2D	Idle Control
+Failsafe Idle Throttle Target B	10c224	dd114	2		2D	Idle Control
+Failsafe Idle Throttle Target C	10c234	dd120	2		2D	Idle Control
+Failsafe Idle Throttle Target D	110714	ddb10	2	2	3D	Idle Control
+CL to OL Transition with Delay (Injector Load Threshold)	114214		16		2D	Fueling - CL/OL Transition
+Manifold Pressure Sensor Scaling A	1253c4	1253c4	2		2D	Manifold Pressure Sensor
+Manifold Pressure Sensor Limits (CEL)	125396		2		2D	Manifold Pressure Sensor
+Manifold Pressure Sensor CEL Delays	1252f3	1252f3	2		2D	Manifold Pressure Sensor
+Primary Open Loop Fueling (Safe)	1166d4		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling (Base)	116890		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling Minimum	116ea0	df710	23	13	3D	Fueling - Primary Open Loop
+Minimum Active Primary Open Loop Enrichment	111dc0		1		2D	Fueling - Primary Open Loop
+Front Oxygen Sensor Scaling A	126fac		14		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Scaling B	12701c		14		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Rich Limit	52d7c	52d7c	1		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Compensation (Atm. Pressure)	104e20		4		2D	Fueling - O2 Sensor #1
+CL Fueling Unknown A	113cb4	de980	2	13	2D	Fueling - Closed Loop
+CL Fueling Unknown F	111b70		6	6	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 1 A	115150		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 2 A	115200		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 3 A	1152b0		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 4 A	115370		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 5 A	1153e8		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 6 A	115444		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 7 A	1154a0		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 8 A	115518		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 9 A	115574		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 1 B	1151a8		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 2 B	115258		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 3 B	115308		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 4 B	1155d0		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 5 B	115648		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 6 B	1156a4		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 7 B	115700		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 8 B	11573c		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 9 B	1157d4		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 10	114b20	deed8	15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 A	113662		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 B	1136f8		2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 C	113682		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 12	112a68	ddea4	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 13	116210	df410	2	2	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 14	1136fc	de528	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 15	112a40	dde84	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 16	112a50	dde90	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 17	1161f4	df3f4	2	5	2D	Fueling - Closed Loop
+CL Fueling Target Compensation A (Load)	119830		11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (Load)	11997c		11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation C (Load)	11bdec		11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)	11970c		3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)	119778		3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT) Disable	111b44		1		2D	Fueling - Closed Loop
+CL to OL Transition with Delay (Base Pulse Width)	1141b4		16		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)	11c200		6		2D	Fueling - CL/OL Transition
+Injector Latency	118078		3	5	3D	Fueling - Port Injectors
+Injector Flow Scaling	111904	111904	1		2D	Fueling - Port Injectors
+Injector Flow Scaling BRZ	1118d0	1118d0	1		2D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation A	11717c		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation B	11723c		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation C	1172fc		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation D	1173bc		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation E	11747c		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation F	11753c		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation G	1175fc		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation H	1176bc		12	9	3D	Fueling - Port Injectors
+Cranking Fuel IPW Compensation A (RPM)	115ff0		2	2	3D	Fueling - Cranking
+Cranking Fuel IPW Compensation (MAP)	112980		10		2D	Fueling - Cranking
+Cranking Fuel IPW Compensation (Accelerator)	1129a4		6		2D	Fueling - Cranking
+Cranking Fuel IPW Compensation (IAT)	1129c0		5		2D	Fueling - Cranking
+Throttle Tip-in Enrichment A	114780		18		2D	Fueling - Tip-in Enrichment
+Throttle Tip-in Enrichment B	1147ec		18		2D	Fueling - Tip-in Enrichment
+Minimum Tip-in Enrichment Activation	11202c		1		2D	Fueling - Tip-in Enrichment
+Minimum Tip-in Enrichment Activation (Throttle)	112020		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (RPM)	112fd4		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (MRP)	113008		9		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation A (ECT)	113011		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation B (ECT)	114810		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation C (ECT)	114830		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT)	114870		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) Activation	112028		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold A (ECT)	113021		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold B (ECT)	113031		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Applied Counter Reset	1116cc		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold A (ECT)	114890		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold B (ECT)	1148b0		16		2D	Fueling - Tip-in Enrichment
+Tip-in Throttle Cumulative Reset	1116cd		1		2D	Fueling - Tip-in Enrichment
+A/F Learning #1 Limits	111c0c		2		2D	Fueling - AF Correction / Learning
+A/F Learning #1 Airflow Ranges A	115028		5		2D	Fueling - AF Correction / Learning
+A/F Learning #1 Airflow Ranges B	115050		5		2D	Fueling - AF Correction / Learning
+MAF Voltage Limits (CEL)	125396		2		2D	Mass Airflow / Engine Load
+MAF Limit (Maximum)	104770		1		2D	Mass Airflow / Engine Load
+MAF Sensor Scaling	126e9c	e2a0c	54		2D	Mass Airflow / Engine Load
+MAF Compensation (IAT)	105878		10	6	3D	Mass Airflow / Engine Load
+MAF Correction After Start (Neutral)	12347c		8	14	3D	Mass Airflow / Engine Load
+MAF Correction After Start (In Gear)	1235b4		8	14	3D	Mass Airflow / Engine Load
+Engine Load Limit (Maximum)	50868		1		2D	Mass Airflow / Engine Load
+Engine Load Compensation (MP)	105964		24	15	3D	Mass Airflow / Engine Load
+Base Timing A (Safe)	11e2ac		23	14	3D	Ignition Timing - Advance
+Base Timing A (Base)	11e0d4		23	14	3D	Ignition Timing - Advance
+Base Timing B (Safe)	11e65c		23	14	3D	Ignition Timing - Advance
+Base Timing B (Base)	11e484		23	14	3D	Ignition Timing - Advance
+Timing Unknown A	11d4ae	e09d0	16		2D	Ignition Timing - Advance
+Timing Unknown B	11d50e	e0a0c	16		2D	Ignition Timing - Advance
+Timing Unknown C	11d76c	e0b6c	2		2D	Ignition Timing - Advance
+Timing Unknown D1	11d4ee	e09f8	16		2D	Ignition Timing - Advance
+Timing Unknown D2	11d4ce	e09e4	16		2D	Ignition Timing - Advance
+Timing Unknown E1	11cd2c	e04fc	16		2D	Ignition Timing - Advance
+Timing Unknown E2	11cd6c	e0538	4		2D	Ignition Timing - Advance
+Timing Unknown F1	11d52e	e0a20	16		2D	Ignition Timing - Advance
+Timing Unknown G1	11cd44	e0510	2		2D	Ignition Timing - Advance
+Timing Unknown G2	11cd58	e0524	4		2D	Ignition Timing - Advance
+Timing Unknown H	11d54e	e0a34	16		2D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Above Speed Threshold)	11e018		2	10	3D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Below Speed Threshold)	11cbbc		8		2D	Ignition Timing - Advance
+Base Timing Idle (Neutral)	11cbe4		8		2D	Ignition Timing - Advance
+Base Timing Idle Unknown A	11cc10	e0484	9		2D	Ignition Timing - Advance
+Base Timing Idle Unknown B	11cc19	e0498	16		2D	Ignition Timing - Advance
+Base Timing Idle Unknown C	11cddc		16		2D	Ignition Timing - Advance
+Base Timing Idle Vehicle Speed Threshold	11831c	11c268	1		2D	Ignition Timing - Advance
+Knock Correction Advance Max A	11f29c	e117c	23	14	3D	Ignition Timing - Advance
+Timing Compensation (IAT)	11ce84		16		2D	Ignition Timing - Compensation
+Timing Compensation (IAT) Activation	11e888		5	8	3D	Ignition Timing - Compensation
+Timing Compensation A (ECT)	11ce02		16		2D	Ignition Timing - Compensation
+Timing Compensation B (ECT)	11ce12		16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A	11ef24	e109c	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B	11efdc	e10b8	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C	11f094	e10d4	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D	11f14c	e10f0	6	16	3D	Ignition Timing - Compensation
+Timing Comp Minimum Load (Per Cylinder)	11c494		1		2D	Ignition Timing - Compensation
+Timing Comp Maximum RPM (Per Cylinder)	11c490		1		2D	Ignition Timing - Compensation
+Timing Comp Minimum Coolant Temp (Per Cylinder)	11c498		1		2D	Ignition Timing - Compensation
+Feedback Correction Range (RPM)	11c4a4		4		2D	Ignition Timing - Knock Control
+Feedback Correction Minimum Load	11c49c	11c49c	2		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Value	11c4c4	11c4c4	1		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Limit	11c4c0	11c4c0	1		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Value	11c4c8	11c4c8	1		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Delay	11c168	11c168	1		2D	Ignition Timing - Knock Control
+Fine Correction Range (RPM)	11c668		4		2D	Ignition Timing - Knock Control
+Fine Correction Range (Load)	11c678		4		2D	Ignition Timing - Knock Control
+Fine Correction Rows (RPM)	11c604		6		2D	Ignition Timing - Knock Control
+Fine Correction Columns (Load)	11c620		4		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value	11c640	11c640	1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Limit	11c65c	11c65c	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Value	11c63c	11c63c	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Limit	11c638	11c638	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Delay	11c178	11c178	1		2D	Ignition Timing - Knock Control
+Rough Correction Range (RPM)	11c5b4		4		2D	Ignition Timing - Knock Control
+Rough Correction Range (Load)	11c5c4		4		2D	Ignition Timing - Knock Control
+Rough Correction Minimum KC Advance Map Value	11c5d4		1		2D	Ignition Timing - Knock Control
+Advance Multiplier (Initial)	11c5d8		1		2D	Ignition Timing - Knock Control
+Advance Multiplier Step Value	11c5dc	11c5dc	1		2D	Ignition Timing - Knock Control
+Knock Sensor Calibration	12677c	e295c	87		2D	Ignition Timing - Knock Control
+Knock Threshold	11dea0	e0ca4	7	5	3D	Ignition Timing - Knock Control
+Requested Torque A (Accelerator Pedal)	103a4c		18	16	3D	Drive-by-Wire Throttle (DBW)
+Requested Torque B (Accelerator Pedal)	13cd80		23	16	3D	Drive-by-Wire Throttle (DBW)
+Target Throttle Plate Position Maximum (Requested Torque)	13c864		23	21	3D	Drive-by-Wire Throttle (DBW)
+Rev Limit A (Fuel Cut)	1120cc		2		2D	Miscellaneous - Limits
+Rev Limit B	1120d4	1120d4	2		2D	Miscellaneous - Limits
+Rev Limit Fuel Resume (MP)	1120dc		1		2D	Miscellaneous - Limits
+Speed Limiting Enable (Fuel Cut)	1120e4		1		2D	Miscellaneous - Limits
+Speed Limiting Disable (Fuel Cut)	1120e0		1		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle) SI-DRIVE Sport/Sport Sharp	13c344		2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle) SI-DRIVE Sport/Sport Sharp	13c350		2		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle) SI-DRIVE Intelligent	13c35c		2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle) SI-DRIVE Intelligent	13c368		2		2D	Miscellaneous - Limits
+Intake Temp Sensor Scaling	126984	e297c	30		2D	Miscellaneous - Sensor Scalings
+Coolant Temp Sensor Scaling	12689c	e2970	28		2D	Miscellaneous - Sensor Scalings
+Radiator Fan Modes A (ECT)	125278		4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes B (ECT)	125288		4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes (Veh. Speed)	125298		6		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds A	104a18		5		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds B	104a2c		5		2D	Miscellaneous - Thresholds
+Idle Speed Target A	120f60	e176c	16		2D	Idle Control
+Idle Speed Target B	120f80	e1780	16		2D	Idle Control
+Idle Speed Target C	120fa0	e1794	16		2D	Idle Control
+Idle Speed Target D	120fc0	e17a8	16		2D	Idle Control
+Idle Speed Target E	120fe0	e17bc	16		2D	Idle Control
+Idle Speed Target F	121000	e17d0	16		2D	Idle Control
+Idle Speed Target G	121020	e17e4	16		2D	Idle Control
+Idle Speed Target H	121080	e17f8	16		2D	Idle Control
+Idle Speed Target I	1210e0	e180c	16		2D	Idle Control
+Idle Speed Target J	121140	e1820	16		2D	Idle Control
+Idle Speed Target K	1211a0	e1834	16		2D	Idle Control
+Idle Speed Target L	121200	e1848	16		2D	Idle Control
+Idle Speed Stability A	1228e4		11	16	3D	Idle Control
+Idle Speed Stability B	122ab0		11	16	3D	Idle Control
+Idle Speed Stability Additive	12125c		6		2D	Idle Control
+Ignition Dwell	1270a8	e2a30	5	16	3D	Miscellaneous - Sensor Scalings
+AFR Sensor Heater Duty Cycle A	100770	dae5c	4		2D	Fueling - O2 Sensor #1
+AFR Sensor Heater Duty Cycle B	100788	dae70	4		2D	Fueling - O2 Sensor #1
+Fuel Multiplier Display Offset	10272c		5		2D	Miscellaneous - Other
+Calculated Torque A	102c44	db244	23	13	3D	Drive-by-Wire Throttle (DBW)
+Calculated Torque B	102f24	db260	23	11	3D	Drive-by-Wire Throttle (DBW)
+Post Cranking Airflow Initial Reference Coolant	104c28		16		2D	Fueling - Cranking
+Post Cranking Load Initial Reference Coolant	104d30	db930	16		2D	Fueling - Cranking
+Cylinder Fill Percentage	1080ec		22	16	3D	Mass Airflow / Engine Load
+Solenoid Control	108acc	dc3f0	5	7	3D	CPC Solenoid
+Solenoid Duty	108b7c	dc40c	13	13	3D	CPC Solenoid
+Misfire Count MAP Threshold A	10a3a6	dc484	13		2D	Miscellaneous - Thresholds
+Misfire Count MAP Threshold B	10a3b3	dc498	13		2D	Miscellaneous - Thresholds
+Misfire DTC Threshold	10cd20	dd390	19	14	3D	Miscellaneous - Thresholds
+AFR Minimum Correction	112bb8	ddf78	9		2D	Alpha - BRZ
+AFR Maximum Correction	112be8	ddf8c	9		2D	Alpha - BRZ
+Port Injection MRP Compensation	114e74	defd8	8		2D	Fueling - Port Injectors
+Direct Injection Quantity Maximum	114ec4		12		2D	Fueling - GDI
+Direct Injection Quantity Minimum	114f0c		6		2D	Fueling - GDI
+GDI Firing Angle Cold Idle	115ce8	df234	2	2	3D	Fueling - GDI
+GDI Firing Angle High Load Cold	115d5c	df250	17	11	3D	Fueling - GDI
+GDI Firing Angle High Load Hot	115e28	df26c	2	2	3D	Fueling - GDI
+GDI Firing Angle Low Load Cold	115e3c	df288	2	2	3D	Fueling - GDI
+GDI Firing Angle Low Load Hot	115e50	df2a4	2	2	3D	Fueling - GDI
+GDI Pressure Multiplier A	115ea4	df2c0	10	10	3D	Fueling - GDI
+GDI Pressure Target A	115f48	df2f8	2	2	3D	Fueling - GDI
+GDI Pressure Target B	117a2c	df87c	17	15	3D	Fueling - GDI
+Total Injection Ratio Port Cold	1161c0	df3bc	2	2	3D	Fueling - Injector Ratio
+Total Injection Ratio Port Hot	1161d4	df3d8	2	2	3D	Fueling - Injector Ratio
+Total Injection Ratio Port Warm	1160c0	df3a0	20	12	3D	Fueling - Injector Ratio
+PI Ratio ECT Compensation (Additive)	112a74		2		2D	Fueling - Injector Ratio
+PI Ratio ECT Compensation (Load)	116254		6	16	3D	Fueling - Injector Ratio
+PI Ratio ECT Compensation	116378		3	16	3D	Fueling - Injector Ratio
+PI Ratio ECT Unknown	114f54		16		2D	Fueling - Injector Ratio
+ECT Unknown	11411a		16		2D	Fueling - Injector Ratio
+ECT Unknown B	10bf74		2		2D	Fueling - Injector Ratio
+Primary Open Loop Fueling Additive A	116a4c		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling Additive B	116c08		23	13	3D	Fueling - Primary Open Loop
+GDI Pressure Multiplier B	1178e4	df860	10	10	3D	Fueling - GDI
+Input A Rising Load Activation ECT Load 1	118170	dfaa4	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 2	1181d0	dfac0	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 3	118230	dfadc	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 4	11829c	dfaf8	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 5	118308	dfb14	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 6	118368	dfb30	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 7	1183c8	dfb4c	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 8	118428	dfb68	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 9	118494	dfb84	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 10	1184f4	dfba0	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 11	118560	dfbbc	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 12	1185c0	dfbd8	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 13	11862c	dfbf4	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 14	11868c	dfc10	3	16	3D	Fueling - Transient
+TPS Related Fuel Adder Activation Min Load	11b51c	e0148	7	7	3D	Miscellaneous - Other
+GDI Flow Rate	11bf30	e0308	14	6	3D	Fueling - GDI
+Ignition Timing Post Start	11ca16	e036c	16		2D	Ignition Timing - Advance
+Minimum Timing	11ca48	e0380	8		2D	Ignition Timing - Advance
+Ignition Timing Compensation MAP Delta (Clutch Depressed)	11cb10		9		2D	Ignition Timing - Compensation
+AFR Sensor Atmospheric Pressure Compensation	11d280		4		2D	Fueling - O2 Sensor #1
+Minimum CFP Delta for Transient Retard	11ddb4	e0c8c	8		2D	Ignition Timing - Transient
+Ignition Timing Compensation Idle Target Out of Error Range A	11e8e0		2	10	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target In Error Range A	11e918		9	9	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target Load Change A	11e974		2	9	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target In Error Range B	11e9d4		9	10	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target Load Change B	11ea5c		2	9	3D	Ignition Timing - Compensation
+Transient Ignition Retard ECT Threshhold	11c464		1		2D	Ignition Timing - Transient
+Transient Ignition Retard RPM Threshhold	11c468		1		2D	Ignition Timing - Transient
+Transient Ignition Retard TPS Angle Threshhold	11c46c		1		2D	Ignition Timing - Transient
+Transient Ignition Retard Engine Load Threshhold	11c470		1		2D	Ignition Timing - Transient
+Transient Ignition Retard	11edd0	e102c	24	8	3D	Ignition Timing - Transient
+Transient Ignition Retard Temperature Compensation	11ece0		7	16	3D	Ignition Timing - Transient
+Desired Overrun Mass Airflow A	1221e4		16	21	3D	Mass Airflow / Engine Load
+Desired Overrun Mass Airflow C	122494		2	2	3D	Mass Airflow / Engine Load
+Desired Overrun Mass Airflow B	122530		16	21	3D	Mass Airflow / Engine Load
+Intake Cam Advance Angle Normal AVCS	12a9a4	e31c8	27	16	3D	Variable Valve Timing (AVCS)
+Intake Cam Advance Angle Safe AVCS	12a748	e31ac	27	16	3D	Variable Valve Timing (AVCS)
+Intake Cam Advance Angle Base AVCS	12abe4	e31e4	24	12	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Normal AVCS	12b224	e32a8	27	16	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Safe AVCS	12ae18	e328c	27	16	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Base AVCS	12a554	e3158	24	12	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction A	12b96c	e33a4	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction B	12ba6c	e33c0	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction C	12bb6c	e33dc	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction D	12bc6c	e33f8	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction E	12bd30	e3414	2	2	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction F	12bd48	e3430	2	2	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction AC Adjust A	129914	e2e3c	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction AC Adjust B	1298c4	e2e28	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction BD Adjust A	1299b4	e2e64	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction BD Adjust B	129964	e2e50	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction EF Adjust	129a04	e2e78	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction E Adjust	129a1c	e2e8c	2		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction F Adjust	129a28	e2ea0	2		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction A	12be54	e34a0	10	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction B	12bf6c	e34bc	10	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction C	12c084	e34d8	10	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction D	12c19c	e34f4	10	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction E	12bde4	e3468	2	2	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction F	12bdfc	e3484	2	2	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction AC Adjust A	129abc	e2ec8	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction AC Adjust B	129a6c	e2eb4	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction BD Adjust A	129b5c	e2ef0	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction BD Adjust B	129b0c	e2edc	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction EF Adjust	129bac	e2f04	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction E Adjust	129bc4	e2f18	2		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction F Adjust	129bd0	e2f2c	2		2D	Variable Valve Timing (AVCS)
+Minimum Port Injection Quantity	111914	111914	1		2D	Fueling - Port Injectors
+Fuel Injection Ratio ECT Threshold A	111944	111944	2		2D	Fueling - Injector Ratio
+Fuel Injection Ratio ECT Threshold B	111954	111954	2		2D	Fueling - Injector Ratio
+Low Pulse Width Fuel Injector Compensation	112f8c		8		2D	Fueling - Port Injectors
+Low Pulse Width Fuel Injector Compensation Maximum RPM	111fe4		1		2D	Fueling - Port Injectors
+Low Pulse Width Fuel Injector Compensation Maximum IPW	111fe8		1		2D	Fueling - Port Injectors
+Overrun Fueling RPM Resume Threshold	114a14		16		2D	Fueling - Overrun
+Overrun Enrich RPM Delta Activation	112014	112014	1		2D	Fueling - Overrun
+Overrun initial injector enrichment (pulsewidth)	112018		1		2D	Fueling - Overrun
+Overrun Fueling Cut Counter RPM Threshold	1120ac	1120ac	5		2D	Fueling - Overrun
+Hotstart Enrichment Decay Delay	11176e	11176e	1		2D	Fueling - Hotstart Enrichment
+Hotstart Enrichment Decay Step	111e48	111e48	1		2D	Fueling - Hotstart Enrichment
+Initial Hotstart Enrichment (High)	111e34		1		2D	Fueling - Hotstart Enrichment
+Hotstart High Enrichment Activation Threshold (Coolant Temperature)	111e24		1		2D	Fueling - Hotstart Enrichment
+Hotstart High Enrichment Activation Threshold (Intake Air Temperature)	111e28		1		2D	Fueling - Hotstart Enrichment
+Initial Hotstart Enrichment (Low)	111e38		1		2D	Fueling - Hotstart Enrichment
+Hotstart Low Enrichment Activation Threshold (Coolant Temperature)	111e2c		1		2D	Fueling - Hotstart Enrichment
+Maximum Non-Idle Hotstart Enrichment (Post Delay)	111e4c		1		2D	Fueling - Hotstart Enrichment
+Hotstart Minimum Enrichment Limit Runtime	111770	111770	1		2D	Fueling - Hotstart Enrichment
+Hotstart Minimum Enrichment (During Delay and Runtime)	111e44		1		2D	Fueling - Hotstart Enrichment
+A/F #3 CL Target Compensation Limits	69c34		2		2D	Fueling - AF Correction / Learning
+A/F #3 Correction Limits	6a724		2		2D	Fueling - AF Correction / Learning
+(P000A) CAMSHAFT POS. A - TIMING SLOW RESPONSE BANK 1	124e2c		1		Switch	Diagnostic Trouble Codes
+(P000B) CAMSHAFT POS. B - TIMING SLOW RESPONSE BANK 1	124e38		1		Switch	Diagnostic Trouble Codes
+(P000C) CAMSHAFT POS. A - TIMING SLOW RESPONSE BANK 2	124e44		1		Switch	Diagnostic Trouble Codes
+(P000D) CAMSHAFT POS. B - TIMING SLOW RESPONSE BANK 2	124e50		1		Switch	Diagnostic Trouble Codes
+(P0010) CAMSHAFT POS. A ACTUATOR CIRCUIT 1	124fe8		1		Switch	Diagnostic Trouble Codes
+(P0011) CAMSHAFT POS. A - TIMING OVER-ADVANCED 1	1248f8		1		Switch	Diagnostic Trouble Codes
+(P0013) CAMSHAFT POS. B ACTUATOR CIRCUIT / OPEN 1	125000		1		Switch	Diagnostic Trouble Codes
+(P0014) EXHAUST AVCS SYSTEM 1 RANGE/PERF	124c10		1		Switch	Diagnostic Trouble Codes
+(P0016) CRANKSHAFT/CAMSHAFT CORRELATION 1A	124bf8		1		Switch	Diagnostic Trouble Codes
+(P0017) CRANK/CAM TIMING B FAILURE 1	124c34		1		Switch	Diagnostic Trouble Codes
+(P0018) CRANKSHAFT/CAMSHAFT CORRELATION 2A	124bec		1		Switch	Diagnostic Trouble Codes
+(P0019) CRANK/CAM TIMING B FAILURE 2	124c28		1		Switch	Diagnostic Trouble Codes
+(P0020) CAMSHAFT POS. A ACTUATOR CIRCUIT 2	124ff4		1		Switch	Diagnostic Trouble Codes
+(P0021) CAMSHAFT POS. A - TIMING OVER-ADVANCED 2	124904		1		Switch	Diagnostic Trouble Codes
+(P0023) CAMSHAFT POS. B ACTUATOR CIRCUIT / OPEN 2	12500c		1		Switch	Diagnostic Trouble Codes
+(P0024) EXHAUST AVCS SYSTEM 2 RANGE/PERF	124c04		1		Switch	Diagnostic Trouble Codes
+(P0030) FRONT O2 SENSOR RANGE/PERF	124a6c		1		Switch	Diagnostic Trouble Codes
+(P0031) FRONT O2 SENSOR LOW INPUT	1249f4		1		Switch	Diagnostic Trouble Codes
+(P0032) FRONT O2 SENSOR HIGH INPUT	1249dc		1		Switch	Diagnostic Trouble Codes
+(P0037) REAR O2 SENSOR LOW INPUT	1249e8		1		Switch	Diagnostic Trouble Codes
+(P0038) REAR O2 SENSOR HIGH INPUT	1249d0		1		Switch	Diagnostic Trouble Codes
+(P0068) MAP SENSOR RANGE/PERF	124a48		1		Switch	Diagnostic Trouble Codes
+(P0071) AMBIENT AIR TEMP SENSOR RANGE / PERFORMANCE	1248b0		1		Switch	Diagnostic Trouble Codes
+(P0072) AMBIENT AIR TEMP SENSOR LOW INPUT	1248c8		1		Switch	Diagnostic Trouble Codes
+(P0073) AMBIENT AIR TEMP SENSOR HIGH INPUT	1248bc		1		Switch	Diagnostic Trouble Codes
+(P0087) FUEL RAIL / SYSTEM PRESSURE TOO LOW	124f34		1		Switch	Diagnostic Trouble Codes
+(P0088) FUEL RAIL / SYSTEM PRESSURE TOO HIGH	124f40		1		Switch	Diagnostic Trouble Codes
+(P0101) MAF SENSOR RANGE/PERF	124a54		1		Switch	Diagnostic Trouble Codes
+(P0102) MAF SENSOR LOW INPUT	1247b4		1		Switch	Diagnostic Trouble Codes
+(P0103) MAF SENSOR HIGH INPUT	1247c0		1		Switch	Diagnostic Trouble Codes
+(P0107) MAP SENSOR LOW INPUT	124a00		1		Switch	Diagnostic Trouble Codes
+(P0108) MAP SENSOR HIGH INPUT	124a0c		1		Switch	Diagnostic Trouble Codes
+(P0111) IAT SENSOR RANGE/PERF	1249c4		1		Switch	Diagnostic Trouble Codes
+(P0112) IAT SENSOR LOW INPUT	1249ac		1		Switch	Diagnostic Trouble Codes
+(P0113) IAT SENSOR HIGH INPUT	1249b8		1		Switch	Diagnostic Trouble Codes
+(P0116) ENGINE COOLANT TEMPERATURE CIRCUIT RANGE / PERFORMANCE PROBLEM	124ea4		1		Switch	Diagnostic Trouble Codes
+(P0117) COOLANT TEMP SENSOR LOW INPUT	124820		1		Switch	Diagnostic Trouble Codes
+(P0118) COOLANT TEMP SENSOR HIGH INPUT	12482c		1		Switch	Diagnostic Trouble Codes
+(P0122) TPS A LOW INPUT	124808		1		Switch	Diagnostic Trouble Codes
+(P0123) TPS A HIGH INPUT	124814		1		Switch	Diagnostic Trouble Codes
+(P0125) INSUFFICIENT COOLANT TEMP (FUELING)	124838		1		Switch	Diagnostic Trouble Codes
+(P0128) THERMOSTAT MALFUNCTION	124a18		1		Switch	Diagnostic Trouble Codes
+(P0131) FRONT O2 SENSOR LOW INPUT	124988		1		Switch	Diagnostic Trouble Codes
+(P0132) FRONT O2 SENSOR HIGH INPUT	124994		1		Switch	Diagnostic Trouble Codes
+(P0133) FRONT O2 SENSOR SLOW RESPONSE	124934		1		Switch	Diagnostic Trouble Codes
+(P0134) FRONT O2 SENSOR NO ACTIVITY	124a60		1		Switch	Diagnostic Trouble Codes
+(P0137) REAR O2 SENSOR LOW VOLTAGE	12497c		1		Switch	Diagnostic Trouble Codes
+(P0138) REAR O2 SENSOR HIGH VOLTAGE	1249a0		1		Switch	Diagnostic Trouble Codes
+(P013A) O2 SENSOR SLOW RESPONSE RICH TO LEAN B1 S2	124dd8		1		Switch	Diagnostic Trouble Codes
+(P013B) O2 SENSOR SLOW RESPONSE LEAN TO RICH B1 S2	124dcc		1		Switch	Diagnostic Trouble Codes
+(P013E) O2 SENSOR DELAYED RESPONSE RICH TO LEAN B1 S2	124dc0		1		Switch	Diagnostic Trouble Codes
+(P013F) O2 SENSOR DELAYED RESPONSE LEAN TO RICH B1 S2	124db4		1		Switch	Diagnostic Trouble Codes
+(P0140) REAR O2 SENSOR NO ACTIVITY	1251f8		1		Switch	Diagnostic Trouble Codes
+(P0141) REAR O2 SENSOR MALFUNCTION	124928		1		Switch	Diagnostic Trouble Codes
+(P014C) O2 SENSOR SLOW RESPONSE RICH TO LEAN B1 S1	124d48		1		Switch	Diagnostic Trouble Codes
+(P014D) O2 SENSOR SLOW RESPONSE LEAN TO RICH B1 S1	124d3c		1		Switch	Diagnostic Trouble Codes
+(P015A) O2 SENSOR DELAYED RESPONSE RICH TO LEAN B1 S1	124d30		1		Switch	Diagnostic Trouble Codes
+(P015B) O2 SENSOR DELAYED RESPONSE LEAN TO RICH B1 S1	124d24		1		Switch	Diagnostic Trouble Codes
+(P0171) SYSTEM TOO LEAN	124964		1		Switch	Diagnostic Trouble Codes
+(P0172) SYSTEM TOO RICH	124970		1		Switch	Diagnostic Trouble Codes
+(P0191) FUEL RAIL PRESSURE SENSOR CIRCUIT RANGE/PERFORMANCE	125018		1		Switch	Diagnostic Trouble Codes
+(P0192) FUEL RAIL PRESSURE SENSOR CIRCUIT LOW INPUT	124f88		1		Switch	Diagnostic Trouble Codes
+(P0193) FUEL RAIL PRESSURE SENSOR CIRCUIT HIGH INPUT	124f94		1		Switch	Diagnostic Trouble Codes
+(P0196) OIL TEMP SENSOR RANGE/PERF	124b80		1		Switch	Diagnostic Trouble Codes
+(P0197) OIL TEMP SENSOR LOW	124b68		1		Switch	Diagnostic Trouble Codes
+(P0198) OIL TEMP SENSOR HIGH	124b8c		1		Switch	Diagnostic Trouble Codes
+(P0201) INJECTOR CIRCUIT / OPEN - CYLINDER 1	124c40		1		Switch	Diagnostic Trouble Codes
+(P0202) INJECTOR CIRCUIT / OPEN - CYLINDER 2	124c64		1		Switch	Diagnostic Trouble Codes
+(P0203) INJECTOR CIRCUIT / OPEN - CYLINDER 3	124c58		1		Switch	Diagnostic Trouble Codes
+(P0204) INJECTOR CIRCUIT / OPEN - CYLINDER 4	124c4c		1		Switch	Diagnostic Trouble Codes
+(P0222) TPS B LOW INPUT	124a84		1		Switch	Diagnostic Trouble Codes
+(P0223) TPS B HIGH INPUT	124a90		1		Switch	Diagnostic Trouble Codes
+(P0230) FUEL PUMP PRIMARY CIRCUIT	124a3c		1		Switch	Diagnostic Trouble Codes
+(P0327) KNOCK SENSOR 1 LOW INPUT	1247f0		1		Switch	Diagnostic Trouble Codes
+(P0328) KNOCK SENSOR 1 HIGH INPUT	1247fc		1		Switch	Diagnostic Trouble Codes
+(P0332) KNOCK SENSOR 2 LOW INPUT	1247d8		1		Switch	Diagnostic Trouble Codes
+(P0333) KNOCK SENSOR 2 HIGH INPUT	1247e4		1		Switch	Diagnostic Trouble Codes
+(P0335) CRANKSHAFT POS. SENSOR A MALFUNCTION	124790		1		Switch	Diagnostic Trouble Codes
+(P0336) CRANKSHAFT POS. SENSOR A RANGE/PERF	12479c		1		Switch	Diagnostic Trouble Codes
+(P0340) CAMSHAFT POS. SENSOR A MALFUNCTION	124b50		1		Switch	Diagnostic Trouble Codes
+(P0341) CAMSHAFT POS. SENSOR A RANGE/PERF	124f28		1		Switch	Diagnostic Trouble Codes
+(P0345) CAMSHAFT POS. SENSOR A BANK 2	124b44		1		Switch	Diagnostic Trouble Codes
+(P0346) CAMSHAFT POS. SENSOR A RANGE/PERF BANK 2	124f1c		1		Switch	Diagnostic Trouble Codes
+(P0351) IGNITION COIL A PRIMARY / SECONDARY CIRCUIT	124e20		1		Switch	Diagnostic Trouble Codes
+(P0352) IGNITION COIL B PRIMARY / SECONDARY CIRCUIT	124e14		1		Switch	Diagnostic Trouble Codes
+(P0353) IGNITION COIL C PRIMARY / SECONDARY CIRCUIT	124e08		1		Switch	Diagnostic Trouble Codes
+(P0354) IGNITION COIL D PRIMARY / SECONDARY CIRCUIT	124dfc		1		Switch	Diagnostic Trouble Codes
+(P0365) CAMSHAFT POS. SENSOR B BANK 1	124b38		1		Switch	Diagnostic Trouble Codes
+(P0366) CAMSHAFT POS. SENSOR B RANGE / PERFORMANCE BANK 1	124f10		1		Switch	Diagnostic Trouble Codes
+(P0390) CAMSHAFT POS. SENSOR B BANK 2	124b2c		1		Switch	Diagnostic Trouble Codes
+(P0391) CAMSHAFT POS. SENSOR B RANGE / PERFORMANCE BANK 2	124f04		1		Switch	Diagnostic Trouble Codes
+(P0420) CAT EFFICIENCY BELOW THRESHOLD	124940		1		Switch	Diagnostic Trouble Codes
+(P0441) EVAP INCORRECT PURGE FLOW	124d84		1		Switch	Diagnostic Trouble Codes
+(P0455) EVAP LEAK DETECTED (GROSS LEAK)	124d6c		1		Switch	Diagnostic Trouble Codes
+(P0456) EVAP LEAK DETECTED (VERY SMALL)	12494c		1		Switch	Diagnostic Trouble Codes
+(P0458) EVAP PURGE VALVE CIRCUIT LOW	124910		1		Switch	Diagnostic Trouble Codes
+(P0459) EVAP PURGE VALVE CIRCUIT HIGH	12491c		1		Switch	Diagnostic Trouble Codes
+(P0461) FUEL LEVEL SENSOR RANGE/PERF	12485c		1		Switch	Diagnostic Trouble Codes
+(P0462) FUEL LEVEL SENSOR LOW INPUT	124844		1		Switch	Diagnostic Trouble Codes
+(P0463) FUEL LEVEL SENSOR HIGH INPUT	124850		1		Switch	Diagnostic Trouble Codes
+(P0506) IDLE CONTROL RPM LOWER THAN EXPECTED	1248e0		1		Switch	Diagnostic Trouble Codes
+(P0507) IDLE CONTROL RPM HIGH THAN EXPECTED	1248ec		1		Switch	Diagnostic Trouble Codes
+(P050A) COLD START IDLE AIR CONTROL SYSTEM PERFORMANCE	124cd0		1		Switch	Diagnostic Trouble Codes
+(P050B) COLD START IGNITION TIMING PERFORMANCE	124cc4		1		Switch	Diagnostic Trouble Codes
+(P050E)	124c1c		1		Switch	Diagnostic Trouble Codes
+(P0512) STARTER REQUEST CIRCUIT	124e5c		1		Switch	Diagnostic Trouble Codes
+(P0516)	124bc8		1		Switch	Diagnostic Trouble Codes
+(P0517)	124bbc		1		Switch	Diagnostic Trouble Codes
+(P0560) SYSTEM VOLTAGE	124e98		1		Switch	Diagnostic Trouble Codes
+(P0562) SYSTEM VOLTAGE LOW	124a24		1		Switch	Diagnostic Trouble Codes
+(P0563) SYSTEM VOLTAGE HIGH	124a30		1		Switch	Diagnostic Trouble Codes
+(P0604) CONTROL MODULE RAM ERROR	1247a8		1		Switch	Diagnostic Trouble Codes
+(P0605) CONTROL MODULE ROM ERROR	124b5c		1		Switch	Diagnostic Trouble Codes
+(P0606) ECM/PCM PROCESSOR	124eec		1		Switch	Diagnostic Trouble Codes
+(P060A) CONTROL MODULE MONITORING PROCESSOR	124ed4		1		Switch	Diagnostic Trouble Codes
+(P060B) CONTROL MODULE A/D PROCESSING	124ec8		1		Switch	Diagnostic Trouble Codes
+(P0616) STARTER RELAY CIRCUIT LOW	124e68		1		Switch	Diagnostic Trouble Codes
+(P0617) STARTER RELAY CIRCUIT HIGH	124e74		1		Switch	Diagnostic Trouble Codes
+(P062D) FUEL INJECTOR 1 DRIVER CIRCUIT PERFORMANCE	124f4c		1		Switch	Diagnostic Trouble Codes
+(P062F) CONTROL MODULE EEPROM ERROR	124ebc		1		Switch	Diagnostic Trouble Codes
+(P065A) GENERATOR SYSTEM PERFORMANCE	1251bc		1		Switch	Diagnostic Trouble Codes
+(P0685) ECM/PCM POWER RELAY CONTROL CIRCUIT / OPEN	1248d4		1		Switch	Diagnostic Trouble Codes
+(P0700) TRANSMISSION CONTROL SYSTEM	124b74		1		Switch	Diagnostic Trouble Codes
+(P081A) STARTER DISABLE CIRCUIT LOW	124eb0		1		Switch	Diagnostic Trouble Codes
+(P0851) NEUTRAL SWITCH INPUT LOW	124868		1		Switch	Diagnostic Trouble Codes
+(P0852) NEUTRAL SWITCH INPUT HIGH	124874		1		Switch	Diagnostic Trouble Codes
+(P0A3B) GENERATOR OVER TEMPERATURE	1251c8		1		Switch	Diagnostic Trouble Codes
+(P1109) THROTTLE DEPOSIT MALFUNCTION	124fdc		1		Switch	Diagnostic Trouble Codes
+(P1160) ABNORMAL RETURN SPRING	124a9c		1		Switch	Diagnostic Trouble Codes
+(P1170) PORT INJECTOR FUEL PERFORMANCE	124fb8		1		Switch	Diagnostic Trouble Codes
+(P117B) DIRECT INJECTOR FUEL PERFORMANCE	124fac		1		Switch	Diagnostic Trouble Codes
+(P1192) FUEL RAIL PRESSURE SENSOR B CIRCUIT LOW INPUT	12512c		1		Switch	Diagnostic Trouble Codes
+(P1193) FUEL RAIL PRESSURE SENSOR B CIRCUIT HIGH INPUT	125138		1		Switch	Diagnostic Trouble Codes
+(P119E) BANK 1 AFR IMBALANCE FOR PORT INJECTION	124958		1		Switch	Diagnostic Trouble Codes
+(P119F) BANK 1 AFR IMBALANCE FOR DIRECT INJECTION	124bd4		1		Switch	Diagnostic Trouble Codes
+(P1235) HIGH PRESSURE FUEL PUMP CIRCUIT	124fa0		1		Switch	Diagnostic Trouble Codes
+(P1261) DI INJECTOR CIRCUIT / OPEN - CYLINDER 1	124f58		1		Switch	Diagnostic Trouble Codes
+(P1262) DI INJECTOR CIRCUIT / OPEN - CYLINDER 2	124f64		1		Switch	Diagnostic Trouble Codes
+(P1263) DI INJECTOR CIRCUIT / OPEN - CYLINDER 3	124f70		1		Switch	Diagnostic Trouble Codes
+(P1264) DI INJECTOR CIRCUIT / OPEN - CYLINDER 4	124f7c		1		Switch	Diagnostic Trouble Codes
+(P1449) EVAPORATIVE EMISSION CONT. SYS. AIR FILTER CLOG	124d60		1		Switch	Diagnostic Trouble Codes
+(P1451) EVAPORATIVE EMISSION CONT. SYS.	124d54		1		Switch	Diagnostic Trouble Codes
+(P1530) BATTERY CURRENT SENSOR CIRCUIT (LOW)	124bb0		1		Switch	Diagnostic Trouble Codes
+(P1531) BATTERY CURRENT SENSOR CIRCUIT (HIGH)	124ba4		1		Switch	Diagnostic Trouble Codes
+(P1532) CHARGING CONTROL SYSTEM	124b98		1		Switch	Diagnostic Trouble Codes
+(P1603) ENGINE STALL HISTORY	124fc4		1		Switch	Diagnostic Trouble Codes
+(P1604) STARTABILITY MALFUNCTION	124fd0		1		Switch	Diagnostic Trouble Codes
+(P1C00) BATTERY MONITOR MODULE A PERFORMANCE	12515c		1		Switch	Diagnostic Trouble Codes
+(P2096) POST CATALYST TOO LEAN B1	124acc		1		Switch	Diagnostic Trouble Codes
+(P2097) POST CATALYST TOO RICH B1	124b20		1		Switch	Diagnostic Trouble Codes
+(P2101) THROTTLE ACTUATOR CIRCUIT RANGE/PERF	124ac0		1		Switch	Diagnostic Trouble Codes
+(P2102) THROTTLE ACTUATOR CIRCUIT LOW	124aa8		1		Switch	Diagnostic Trouble Codes
+(P2103) THROTTLE ACTUATOR CIRCUIT HIGH	124ab4		1		Switch	Diagnostic Trouble Codes
+(P2109) TPS A MINIMUM STOP PERF	124a78		1		Switch	Diagnostic Trouble Codes
+(P2119) THROTTLE BODY RANGE / PERFORMANCE	124ef8		1		Switch	Diagnostic Trouble Codes
+(P2122) TPS D CIRCUIT LOW INPUT	124afc		1		Switch	Diagnostic Trouble Codes
+(P2123) TPS D CIRCUIT HIGH INPUT	124b08		1		Switch	Diagnostic Trouble Codes
+(P2127) TPS E CIRCUIT LOW INPUT	124ae4		1		Switch	Diagnostic Trouble Codes
+(P2128) TPS E CIRCUIT HIGH INPUT	124af0		1		Switch	Diagnostic Trouble Codes
+(P2135) TPS A/B VOLTAGE	124b14		1		Switch	Diagnostic Trouble Codes
+(P2138) TPS D/E VOLTAGE	124ad8		1		Switch	Diagnostic Trouble Codes
+(P2158) VEHICLE SPEED SENSOR B	124880		1		Switch	Diagnostic Trouble Codes
+(P2195) O2 SENSOR SIGNAL STUCK LEAN B1 S1	124e8c		1		Switch	Diagnostic Trouble Codes
+(P2196) O2 SENSOR SIGNAL STUCK RICH B1 S1	124e80		1		Switch	Diagnostic Trouble Codes
+(P219A) BANK 1 AFR IMBALANCE	124d90		1		Switch	Diagnostic Trouble Codes
+(P2270) O2 SENSOR SIGNAL STUCK LEAN B1 S2	12488c		1		Switch	Diagnostic Trouble Codes
+(P2271) O2 SENSOR SIGNAL STUCK RICH B1 S2	124898		1		Switch	Diagnostic Trouble Codes
+(P2401) EVAP LEAK DETECTION PUMP CONTROL CIRCUIT LOW	124d00		1		Switch	Diagnostic Trouble Codes
+(P2402) EVAP LEAK DETECTION PUMP CONTROL CIRCUIT HIGH	124da8		1		Switch	Diagnostic Trouble Codes
+(P2404) EVAP LEAK DETECTION PUMP SENSE CIRCUIT RANGE/PERFORMANCE	124d9c		1		Switch	Diagnostic Trouble Codes
+(P2419) EVAP SWITCHING VALVE LOW	124cf4		1		Switch	Diagnostic Trouble Codes
+(P2420) EVAP SWITCHING VALVE HIGH	124ce8		1		Switch	Diagnostic Trouble Codes
+(P24B9)	124d78		1		Switch	Diagnostic Trouble Codes
+(P24BA)	124d18		1		Switch	Diagnostic Trouble Codes
+(P24BB)	124d0c		1		Switch	Diagnostic Trouble Codes
+(P2530) IGNITION SWITCH RUN POSITION CIRCUIT	1248a4		1		Switch	Diagnostic Trouble Codes
+(P2610) ECM/PCM INTERNAL ENGINE OFF TIMER PERFORMANCE	124cdc		1		Switch	Diagnostic Trouble Codes
+(C1571)	124c7c		1		Switch	Diagnostic Trouble Codes
+(C1572)	124c70		1		Switch	Diagnostic Trouble Codes
+(C1576)	1247cc		1		Switch	Diagnostic Trouble Codes
+(C1577)	125024		1		Switch	Diagnostic Trouble Codes
+(C1578)	124ee0		1		Switch	Diagnostic Trouble Codes
+(U0073) CAN COMMUNICATION BUS A OFF	124cb8		1		Switch	Diagnostic Trouble Codes
+(U0077) LIN COMMUNICATION BUS ECM/PCM OFF	125144		1		Switch	Diagnostic Trouble Codes
+(U0101) CAN LOST COMMUNICATION WITH TCM	124c94		1		Switch	Diagnostic Trouble Codes
+(U0122) CAN LOST COMMUNICATION WITH VDC	124cac		1		Switch	Diagnostic Trouble Codes
+(U0155) LOST COMMUNICATION WITH INSTRUMENT PANEL CLUSTER (IPC) CONTROL MODULE	124df0		1		Switch	Diagnostic Trouble Codes
+(U0402) CAN INVALID DATA RECEIVED FROM TCM	124c88		1		Switch	Diagnostic Trouble Codes
+(U0416) CAN INVALID DATA RECEIVED FROM VDC	124ca0		1		Switch	Diagnostic Trouble Codes
+(U0423) INVALID DATA RECEIVED FROM INSTRUMENT PANEL CLUSTER CONTROL MODULE	124de4		1		Switch	Diagnostic Trouble Codes
+(U1712) LOST LIN COMMUNICATION WITH BATTERY 1 MONITOR MODULE	125150		1		Switch	Diagnostic Trouble Codes
+(U171F) LOST LIN COMMUNICATION WITH GENERATOR	125168		1		Switch	Diagnostic Trouble Codes
+Launch Control Disable Speed			1		2D	Launch Control/FFS
+Launch Control RPM Delta			1		2D	Launch Control/FFS
+Flat-Foot Shift RPM Delta			1		2D	Launch Control/FFS
+DiPi Fueling ECT Unknown 18					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 19					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 20					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 21					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 22					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 23					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 24					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 25					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 26					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 27					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 A					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 A					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 B					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 B					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 C					2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 C					2D	Fueling - Closed Loop
+CL Fueling Target Compensation (Load)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (Load)(MT)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (Load)(AT)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation D (Load)			11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation Imm. Cruise (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation Imm. Non-Cruise (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)(MT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)(AT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)(MT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)(AT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT) 			16		2D	Fueling - Closed Loop
+CL to OL Delay			9		2D	Fueling - CL/OL Transition
+CL to OL Delay 			1		2D	Fueling - CL/OL Transition
+CL to OL Delay/Switch SI-DRIVE Intelligent			1		2D	Fueling - CL/OL Transition
+CL to OL Delay (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Delay A (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Delay B (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay (Accelerator)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay A (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay B (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay C (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay Throttle Hysteresis			1		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay A (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay B (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay C (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay BPW Hysteresis			1		2D	Fueling - CL/OL Transition
+CL to OL Transition Counter Step Value (MAF)			10		2D	Fueling - CL/OL Transition
+CL Delay Period			3		2D	Fueling - CL/OL Transition
+CL Delay Maximum (EGT)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle)			1		2D	Fueling - CL/OL Transition
+CL Maximum Vehicle Speed			2		2D	Fueling - CL/OL Transition
+CL Delay Minimum (ECT)			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Engine Load)			2		2D	Fueling - CL/OL Transition
+CL Delay Engine Load Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)(MT)			10		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)(AT)			10		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Neutral)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed A			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed B			1		2D	Fueling - CL/OL Transition
+CL Delay Engine Speed B Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) A			1		2D	Fueling - CL/OL Transition
+CL Delay Throttle A Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) B (ECT)			16		2D	Fueling - CL/OL Transition
+CL Delay Throttle Atm. Pressure Thresholds			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) (Low Atm. Pressure)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) (High Atm. Pressure)			2		2D	Fueling - CL/OL Transition
+Per Injector Primary Fuel Offset Compensation A			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation B			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation C			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation D			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation A 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation B 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation C 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation D 			7	8	3D	Fueling - Port Injectors
+Throttle Tip-in Enrichment			18		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (Boost Error)			9		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (ECT)			16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) 			16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) Activation 			1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold			1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold			1		2D	Fueling - Tip-in Enrichment
+A/F #3 Learning Limits			2		2D	Fueling - AF Correction / Learning
+Cranking Fuel Injector Pulse Width A (ECT)			3	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width C (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width D (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width G (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width H (ECT)			2	16	3D	Fueling - Cranking
+Hotstart Low Enrichment Activation Threshold (Intake Air Temperature)			1		2D	Fueling - Hotstart Enrichment
+Hotstart Maximum Non-Idle Enrichment Delay			1		2D	Fueling - Hotstart Enrichment
+Base Timing			18	15	3D	Ignition Timing - Advance
+Base Timing C			18	15	3D	Ignition Timing - Advance
+Base Timing D			18	15	3D	Ignition Timing - Advance
+Base Timing E			18	15	3D	Ignition Timing - Advance
+Base Timing F			18	15	3D	Ignition Timing - Advance
+Base Timing G			18	15	3D	Ignition Timing - Advance
+Base Timing H			18	15	3D	Ignition Timing - Advance
+Base Timing Primary Cruise			18	15	3D	Ignition Timing - Advance
+Base Timing Reference Cruise (AVCS related)			18	15	3D	Ignition Timing - Advance
+Base Timing Primary Non-Cruise			18	15	3D	Ignition Timing - Advance
+Base Timing Reference Non-Cruise (AVCS related)			18	15	3D	Ignition Timing - Advance
+Base Timing Idle			16		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)			16		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)			16		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)			16		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)			16		2D	Ignition Timing - Advance
+Base Timing Idle (Below Speed Threshold)			1		2D	Ignition Timing - Advance
+Base Timing Idle (Below Speed Threshold) 			9		2D	Ignition Timing - Advance
+Base Timing Idle (Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Above Speed Threshold) 2D			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold) 			4	10	3D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(MT) 			4	10	3D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral) 			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral) 			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle Minimum			9		2D	Ignition Timing - Advance
+Base Timing Idle Minimum Vehicle Speed Enable			1		2D	Ignition Timing - Advance
+Base Timing Alternate (ECT)			16		2D	Ignition Timing - Advance
+Knock Correction Advance Max			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max B			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive (Knock Conditions)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive A (Knock Conditions)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive B (Knock Conditions)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary (Knock Conditions High)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary (Knock Conditions Low)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary Cruise (IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Cruise			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary Non-Cruise (IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Non-Cruise			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode 			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode  			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Additive Range (RPM)			4		2D	Ignition Timing - Advance
+Timing Compensation A (IAT)			16		2D	Ignition Timing - Compensation
+Timing Compensation (IAT) Activation 			8	8	3D	Ignition Timing - Compensation
+Timing Compensation A (IAT) Activation			8	8	3D	Ignition Timing - Compensation
+Timing Comp Min Load (IAT)			1		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT)			16		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT) IAM Activation			1		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT) Max Additive			1		2D	Ignition Timing - Compensation
+Timing Compensation (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation C (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation D (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Cruise A (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Cruise B (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Non-Cruise A (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Non-Cruise B (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation (MRP)			3	5	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder E			4	14	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder F			4	14	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (1st)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (2nd)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (3rd)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (4th)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (5th)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear Activation (RPM)			2		2D	Ignition Timing - Compensation
+Timing Compensation Per Gear Activation (Load)			2		2D	Ignition Timing - Compensation
+Feedback Correction Minimum Load 			4		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Value 			13		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Delay 			13		2D	Ignition Timing - Knock Control
+Extended Feedback Correction High RPM Compensation			1		2D	Ignition Timing - Knock Control
+Fine Correction Minimum (RPM)			2		2D	Ignition Timing - Knock Control
+Fine Correction Maximum (RPM)			2		2D	Ignition Timing - Knock Control
+Fine Correction Rows (RPM) 			7		2D	Ignition Timing - Knock Control
+Fine Correction Columns (Load) 			7		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value A			1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value B			1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value 			13		2D	Ignition Timing - Knock Control
+Rough Correction Learning Delay (Increasing)			10		2D	Ignition Timing - Knock Control
+Rough Correction Learning Delay (Increasing) 			10		2D	Ignition Timing - Knock Control
+Target Throttle Plate Position Divider (RPM)			23		2D	Drive-by-Wire Throttle (DBW)
+Speed Limiting (Throttle) 			4		2D	Miscellaneous - Limits
+Speed Limiting (Fuel Cut)			4		2D	Miscellaneous - Limits
+Speed Limiting (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting (Throttle) SI-DRIVE Intelligent			2		2D	Miscellaneous - Limits
+EGT Sensor Scaling			30		2D	Miscellaneous - Sensor Scalings
+Fuel Temp Sensor Scaling			30		2D	Miscellaneous - Sensor Scalings
+Atmospheric Pressure Sensor Scaling			2		2D	Miscellaneous - Sensor Scalings
+Fuel Pump Duty Cycle			2		2D	Miscellaneous - Thresholds
+Radiator Fan Modes (ECT)			4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes C (ECT)			4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes D (ECT)			4		2D	Miscellaneous - Thresholds
+Atmospheric Pressure Sensor Scaling 			2		2D	Miscellaneous - Sensor Scalings
+Gear Determination Thresholds			5		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds C			5		2D	Miscellaneous - Thresholds
+AFR Sensor Heater Protection		dae00	5		2D	Fueling - O2 Sensor #1
+AFR Sensor Heating Limit		daee4	6	6	3D	Fueling - O2 Sensor #1
+OL Fuelling Throttle Compensation			6		2D	Alpha - BRZ
+OL Fuelling Accelerator Compensation			6		2D	Alpha - BRZ
+Catalyst Warm Up Idle		e0f68	3	16	3D	Ignition Timing - Compensation
+Catalyst Warm Up Non-Idle		e0fa0	3	16	3D	Ignition Timing - Compensation
+AFR Sensor Heating Limit A			6	6	3D	Fueling - O2 Sensor #1
+AFR Sensor Heating Limit B			6	6	3D	Fueling - O2 Sensor #1
+Force Pass Readiness Monitors			2		Switch	OBD-II
+Force Pass Readiness Monitors 			2		Switch	OBD-II
+(P0000) PASS CODE (NO DTC DETECTED)			1		Switch	Diagnostic Trouble Codes
+(P0000) PASS CODE (NO DTC DETECTED) 			1		Switch	Diagnostic Trouble Codes
+(P0026) OSV SOLENOID VALVE CIRCUIT RANGE PERF B1			1		Switch	Diagnostic Trouble Codes
+(P0028) OSV SOLENOID VALVE CIRCUIT RANGE PERF B2			1		Switch	Diagnostic Trouble Codes
+(P0043) HO2S CIRCUIT LOW B1 S3			1		Switch	Diagnostic Trouble Codes
+(P0044) HO2S CIRCUIT HIGH B1 S3			1		Switch	Diagnostic Trouble Codes
+(P0050) HO2S CIRCUIT RANGE PERF B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0051) HO2S CIRCUIT LOW B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0052) HO2S CIRCUIT HIGH B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0057) HO2S CIRCUIT LOW B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0058) HO2S CIRCUIT HIGH B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0076) INTAKE VALVE CIRCUIT LOW (BANK 1)			1		Switch	Diagnostic Trouble Codes
+(P0077) INTAKE VALVE CONTROL HIGH (BANK 1)			1		Switch	Diagnostic Trouble Codes
+(P0082) INTAKE VALVE CONTROL LOW (BANK 2)			1		Switch	Diagnostic Trouble Codes
+(P0083) INTAKE VALVE CONTROL HIGH (BANK 2)			1		Switch	Diagnostic Trouble Codes
+(P0121) TPS RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0126) INSUFFICIENT COOLANT TEMP (OPERATION)			1		Switch	Diagnostic Trouble Codes
+(P0129) ATMOS. PRESSURE SENSOR RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0139) REAR O2 SENSOR SLOW RESPONSE			1		Switch	Diagnostic Trouble Codes
+(P0143) O2 SENSOR CIRCUIT LOW B1 S3			1		Switch	Diagnostic Trouble Codes
+(P0144) O2 SENSOR CIRCUIT HIGH B1 S3			1		Switch	Diagnostic Trouble Codes
+(P0145) O2 SENSOR CIRCUIT SLOW RESPONSE B1 S3			1		Switch	Diagnostic Trouble Codes
+(P0151) O2 SENSOR CIRCUIT LOW B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0152) O2 SENSOR CIRCUIT HIGH B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0153) O2 SENSOR CIRCUIT SLOW RESPONSE B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0154) O2 SENSOR CIRCUIT OPEN B2 S1			1		Switch	Diagnostic Trouble Codes
+(P0157) O2 SENSOR CIRCUIT LOW B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0158) O2 SENSOR CIRCUIT HIGH B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0159) O2 SENSOR CIRCUIT SLOW RESPONSE B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0160) O2 SENSOR NO ACTIVITY B2 S2			1		Switch	Diagnostic Trouble Codes
+(P0174) SYSTEM TOO LEAN B2			1		Switch	Diagnostic Trouble Codes
+(P0175) SYSTEM TOO RICH B2			1		Switch	Diagnostic Trouble Codes
+(P0181) FUEL TEMP SENSOR A RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0182) FUEL TEMP SENSOR A LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P0183) FUEL TEMP SENSOR A HIGH INPUT			1		Switch	Diagnostic Trouble Codes
+(P0244) WASTEGATE SOLENOID A RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0245) WASTEGATE SOLENOID A LOW			1		Switch	Diagnostic Trouble Codes
+(P0246) WASTEGATE SOLENOID A HIGH			1		Switch	Diagnostic Trouble Codes
+(P0261) FUEL INJECTOR #1 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0264) FUEL INJECTOR #2 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0267) FUEL INJECTOR #3 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0270) FUEL INJECTOR #4 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0300) RANDOM MULTIPLE CYLINDER MISFIRE DETECTED			1		Switch	Diagnostic Trouble Codes
+(P0301) MISFIRE CYLINDER 1			1		Switch	Diagnostic Trouble Codes
+(P0302) MISFIRE CYLINDER 2			1		Switch	Diagnostic Trouble Codes
+(P0303) MISFIRE CYLINDER 3			1		Switch	Diagnostic Trouble Codes
+(P0304) MISFIRE CYLINDER 4			1		Switch	Diagnostic Trouble Codes
+(P0305) MISFIRE CYLINDER 5			1		Switch	Diagnostic Trouble Codes
+(P0306) MISFIRE CYLINDER 6			1		Switch	Diagnostic Trouble Codes
+(P0350) IGNITION COIL PRIMARY/SECONDARY			1		Switch	Diagnostic Trouble Codes
+(P0400) EGR FLOW			1		Switch	Diagnostic Trouble Codes
+(P0410) SECONDARY AIR PUMP SYSTEM			1		Switch	Diagnostic Trouble Codes
+(P0411) SECONDARY AIR PUMP INCORRECT FLOW			1		Switch	Diagnostic Trouble Codes
+(P0413) SECONDARY AIR PUMP A OPEN			1		Switch	Diagnostic Trouble Codes
+(P0414) SECONDARY AIR PUMP A SHORTED			1		Switch	Diagnostic Trouble Codes
+(P0416) SECONDARY AIR PUMP B OPEN			1		Switch	Diagnostic Trouble Codes
+(P0417) SECONDARY AIR PUMP B SHORTED			1		Switch	Diagnostic Trouble Codes
+(P0418) SECONDARY AIR PUMP RELAY A			1		Switch	Diagnostic Trouble Codes
+(P0442) EVAP LEAK DETECTED (SMALL)			1		Switch	Diagnostic Trouble Codes
+(P0447) EVAP VENT CONTROL CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P0448) EVAP VENT CONTROL CIRCUIT SHORTED			1		Switch	Diagnostic Trouble Codes
+(P0451) EVAP PRESSURE SENSOR RANGE/PERF			1		Switch	Diagnostic Trouble Codes
+(P0452) EVAP PRESSURE SENSOR LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P0453) EVAP PRESSURE SENSOR HIGH INPUT			1		Switch	Diagnostic Trouble Codes
+(P0457) EVAP LEAK DETECTED (FUEL CAP)			1		Switch	Diagnostic Trouble Codes
+(P0464) FUEL LEVEL SENSOR INTERMITTENT			1		Switch	Diagnostic Trouble Codes
+(P0483) RADIATOR FAN RATIONALITY CHECK			1		Switch	Diagnostic Trouble Codes
+(P0500) VEHICLE SPEED SENSOR A			1		Switch	Diagnostic Trouble Codes
+(P0502) VEHICLE SPEED SENSOR LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P0503) VEHICLE SPEED SENSOR INTERMITTENT			1		Switch	Diagnostic Trouble Codes
+(P0508) IDLE CONTROL CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0509) IDLE CONTROL CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P0519) IDLE CONTROL MALFUNCTION (FAIL-SAFE)			1		Switch	Diagnostic Trouble Codes
+(P0545) EGT SENSOR CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0546) EGT SENSOR CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P0558) ALTERNATOR CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0559) ALTERNATOR CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P0565) CRUISE CONTROL SET SIGNAL			1		Switch	Diagnostic Trouble Codes
+(P0600) SERIAL COMMUNICATION LINK			1		Switch	Diagnostic Trouble Codes
+(P0602) CONTROL MODULE PROG. ERROR			1		Switch	Diagnostic Trouble Codes
+(P0607) CONTROL MODULE PERFORMANCE			1		Switch	Diagnostic Trouble Codes
+(P0638) THROTTLE ACTUATOR RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0691) RADIATOR FAN CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0692) RADIATOR FAN CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P0703) BRAKE SWITCH INPUT MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0705) TRANSMISSION RANGE SENSOR MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0710) ATF TEMP SENSOR MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0716) TORQUE CONVERTER TURBINE SPEED RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0720) AT VEHICLE SPEED SENSOR HIGH			1		Switch	Diagnostic Trouble Codes
+(P0726) ENGINE SPEED INPUT RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0731) GEAR 1 INCORRECT RATIO			1		Switch	Diagnostic Trouble Codes
+(P0732) GEAR 2 INCORRECT RATIO			1		Switch	Diagnostic Trouble Codes
+(P0733) GEAR 3 INCORRECT RATIO			1		Switch	Diagnostic Trouble Codes
+(P0734) GEAR 4 INCORRECT RATIO			1		Switch	Diagnostic Trouble Codes
+(P0741) TORQUE CONVERTER CLUTCH MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0743) TORQUE CONVERTER CLUTCH LOCK-UP DUTY SOLENOID			1		Switch	Diagnostic Trouble Codes
+(P0748) PRESSURE CONTROL LINE PRESSURE DUTY SOLENOID			1		Switch	Diagnostic Trouble Codes
+(P0753) SHIFT SOLENOID A ELECTRICAL			1		Switch	Diagnostic Trouble Codes
+(P0758) SHIFT SOLENOID B ELECTRICAL			1		Switch	Diagnostic Trouble Codes
+(P0771) AT LOW CLUTCH TIMING SOLENOID MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0778) AT 2-4 BRAKE PRESSURE SOLENOID MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0785) AT 2-4 BRAKE TIMING SOLENOID MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P0864) TCM COMMUNICATION RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P0865) TCM COMMUNICATION CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P0866) TCM COMMUNICATION CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P1026) VVL SYSTEMS 1 PERFORMANCE			1		Switch	Diagnostic Trouble Codes
+(P1028) VVL SYSTEMS 2 PERFORMANCE			1		Switch	Diagnostic Trouble Codes
+(P1086) TGV POS. 2 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P1087) TGV POS. 2 CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P1088) TGV POS. 1 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P1089) TGV POS. 1 CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P1090) TGV SYSTEM 1 (VALVE OPEN)			1		Switch	Diagnostic Trouble Codes
+(P1091) TGV SYSTEM 1 (VALVE CLOSE)			1		Switch	Diagnostic Trouble Codes
+(P1092) TGV SYSTEM 2 (VALVE OPEN)			1		Switch	Diagnostic Trouble Codes
+(P1093) TGV SYSTEM 2 (VALVE CLOSE)			1		Switch	Diagnostic Trouble Codes
+(P1094) TGV SIGNAL 1 (OPEN)			1		Switch	Diagnostic Trouble Codes
+(P1095) TGV SIGNAL 1 (SHORT)			1		Switch	Diagnostic Trouble Codes
+(P1096) TGV SIGNAL 2 (OPEN)			1		Switch	Diagnostic Trouble Codes
+(P1097) TGV SIGNAL 2 (SHORT)			1		Switch	Diagnostic Trouble Codes
+(P1110) ATMOS. PRESSURE SENSOR LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P1111) ATMOS. PRESSURE SENSOR HIGH INPUT			1		Switch	Diagnostic Trouble Codes
+(P1152) FRONT O2 SENSOR RANGE PERF LOW B1 S1			1		Switch	Diagnostic Trouble Codes
+(P1153) FRONT O2 SENSOR RANGE PERF HIGH B1 S1			1		Switch	Diagnostic Trouble Codes
+(P1154) O2 SENSOR RANGE PERF LOW B2 S1			1		Switch	Diagnostic Trouble Codes
+(P1155) O2 SENSOR RANGE PERF HIGH B2 S1			1		Switch	Diagnostic Trouble Codes
+(P1282) PCV SYSTEM CIRCUIT (OPEN)			1		Switch	Diagnostic Trouble Codes
+(P1301) MISFIRE (HIGH TEMP EXHAUST GAS)			1		Switch	Diagnostic Trouble Codes
+(P1312) EGT SENSOR MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P1400) FUEL TANK PRESSURE SOL. LOW			1		Switch	Diagnostic Trouble Codes
+(P1410) SECONDARY AIR PUMP VALVE STUCK OPEN			1		Switch	Diagnostic Trouble Codes
+(P1418) SECONDARY AIR PUMP CIRCUIT SHORTED			1		Switch	Diagnostic Trouble Codes
+(P1420) FUEL TANK PRESSURE SOL. HIGH INPUT			1		Switch	Diagnostic Trouble Codes
+(P1443) VENT CONTROL SOLENOID FUNCTION PROBLEM			1		Switch	Diagnostic Trouble Codes
+(P1446) FUEL TANK SENSOR CONTROL CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P1447) FUEL TANK SENSOR CONTROL CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P1448) FUEL TANK SENSOR CONTROL RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P1491) PCV (BLOWBY) FUNCTION PROBLEM			1		Switch	Diagnostic Trouble Codes
+(P1492) EGR SOLENOID SIGNAL 1 MALFUNCTION (LOW)			1		Switch	Diagnostic Trouble Codes
+(P1493) EGR SOLENOID SIGNAL 1 MALFUNCTION (HIGH)			1		Switch	Diagnostic Trouble Codes
+(P1494) EGR SOLENOID SIGNAL 2 MALFUNCTION (LOW)			1		Switch	Diagnostic Trouble Codes
+(P1495) EGR SOLENOID SIGNAL 2 MALFUNCTION (HIGH)			1		Switch	Diagnostic Trouble Codes
+(P1496) EGR SIGNAL 3 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P1497) EGR SOLENOID SIGNAL 3 MALFUNCTION (HIGH)			1		Switch	Diagnostic Trouble Codes
+(P1498) EGR SIGNAL 4 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P1499) EGR SIGNAL 4 CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P1518) STARTER SWITCH LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P1519) IMRC STUCK CLOSED			1		Switch	Diagnostic Trouble Codes
+(P1520) IMRC CIRCUIT MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P1544) EGT TOO HIGH			1		Switch	Diagnostic Trouble Codes
+(P1560) BACK-UP VOLTAGE MALFUNCTION			1		Switch	Diagnostic Trouble Codes
+(P1602) CONTROL MODULE PROGRAMMING ERROR			1		Switch	Diagnostic Trouble Codes
+(P1616) SBDS INTERACTIVE CODES			1		Switch	Diagnostic Trouble Codes
+(P1700) TPS CIRCUIT MALFUNCTION (AT)			1		Switch	Diagnostic Trouble Codes
+(P2004) TGV - INTAKE MANIFOLD RUNNER 1 STUCK OPEN			1		Switch	Diagnostic Trouble Codes
+(P2005) TGV - INTAKE MANIFOLD RUNNER 2 STUCK OPEN			1		Switch	Diagnostic Trouble Codes
+(P2006) TGV - INTAKE MANIFOLD RUNNER 1 STUCK CLOSED			1		Switch	Diagnostic Trouble Codes
+(P2007) TGV - INTAKE MANIFOLD RUNNER 2 STUCK CLOSED			1		Switch	Diagnostic Trouble Codes
+(P2008) TGV - INTAKE MANIFOLD RUNNER 1 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2009) TGV - INTAKE MANIFOLD RUNNER 1 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P2011) TGV - INTAKE MANIFOLD RUNNER 2 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2012) TGV - INTAKE MANIFOLD RUNNER 2 CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P2016) TGV - INTAKE MANIFOLD RUNNER 1 POS. SENSOR LOW			1		Switch	Diagnostic Trouble Codes
+(P2017) TGV - INTAKE MANIFOLD RUNNER 1 POS. SENSOR HIGH			1		Switch	Diagnostic Trouble Codes
+(P2021) TGV - INTAKE MANIFOLD RUNNER 2 POS. SENSOR LOW			1		Switch	Diagnostic Trouble Codes
+(P2022) TGV - INTAKE MANIFOLD RUNNER 2 POS. SENSOR HIGH			1		Switch	Diagnostic Trouble Codes
+(P2088) OCV SOLENOID A1 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2089) OCV SOLENOID A1 CIRCUIT SHORT			1		Switch	Diagnostic Trouble Codes
+(P2090) OCV SOLENOID B1 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2091) OCV SOLENOID B1 CIRCUIT SHORT			1		Switch	Diagnostic Trouble Codes
+(P2092) OCV SOLENOID A2 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2093) OCV SOLENOID A2 CIRCUIT SHORT			1		Switch	Diagnostic Trouble Codes
+(P2094) OCV SOLENOID B2 CIRCUIT OPEN			1		Switch	Diagnostic Trouble Codes
+(P2095) OCV SOLENOID B2 CIRCUIT SHORT			1		Switch	Diagnostic Trouble Codes
+(P2098) POST CATALYST TOO LEAN B2			1		Switch	Diagnostic Trouble Codes
+(P2099) POST CATALYST TOO RICH B2			1		Switch	Diagnostic Trouble Codes
+(P2227) BARO. PRESSURE CIRCUIT RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P2228) BARO. PRESSURE CIRCUIT LOW INPUT			1		Switch	Diagnostic Trouble Codes
+(P2229) BARO. PRESSURE CIRCUIT HIGH INPUT			1		Switch	Diagnostic Trouble Codes
+(P2431) SECONDARY AIR PUMP CIRCUIT RANGE PERF			1		Switch	Diagnostic Trouble Codes
+(P2432) SECONDARY AIR PUMP CIRCUIT LOW			1		Switch	Diagnostic Trouble Codes
+(P2433) SECONDARY AIR PUMP CIRCUIT HIGH			1		Switch	Diagnostic Trouble Codes
+(P2440) SECONDARY AIR PUMP VALVE 1 STUCK OPEN			1		Switch	Diagnostic Trouble Codes
+(P2441) SECONDARY AIR PUMP VALVE 1 STUCK CLOSED			1		Switch	Diagnostic Trouble Codes
+(P2442) SECONDARY AIR PUMP VALVE 2 STUCK OPEN			1		Switch	Diagnostic Trouble Codes
+(P2443) SECONDARY AIR PUMP 2 STUCK CLOSED			1		Switch	Diagnostic Trouble Codes
+(P2444) SECONDARY AIR PUMP 1 STUCK ON B1			1		Switch	Diagnostic Trouble Codes
+(P2503) CHARGING SYSTEM VOLTAGE LOW			1		Switch	Diagnostic Trouble Codes
+(P2504) CHARGING SYSTEM VOLTAGE HIGH			1		Switch	Diagnostic Trouble Codes
+Checksum Fix			204		Switch	Checksum Fix
+Checksum Fix 2			24		Switch	Checksum Fix
