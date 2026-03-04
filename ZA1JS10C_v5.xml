@@ -40,6 +40,8 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		Add some previously-unlisted Closed Loop Fueling, Base Timing, Base Timing Idle, ECT tables.
 -->
 <!-- v5, 2026-03-04:
+		Fix typo in address for Tip-in Enrichment Compensation D (ECT).
+		Fix sizey (10->11) for Exhaust Duty Correction A/B/C/D.
 		Add various closed loop fueling tables identified during S20G/U01A/V00C research.
 -->
 
@@ -232,8 +234,8 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="DiPi Fueling ECT Unknown 7 B" sizey="15" storageaddress="115700">
 			<table storageaddress="1156c4" type="Y Axis"/>
 		</table>
-		<table name="DiPi Fueling ECT Unknown 8 B" sizey="15" storageaddress="11573c">
-			<table storageaddress="115778" type="Y Axis"/>
+		<table name="DiPi Fueling ECT Unknown 8 B" sizey="15" storageaddress="115778">
+			<table storageaddress="11573c" type="Y Axis"/>
 		</table>
 		<table name="DiPi Fueling ECT Unknown 9 B" sizey="8" storageaddress="1157d4">
 			<table storageaddress="1157b4" type="Y Axis"/>
@@ -383,7 +385,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="112344" type="Y Axis"/>
 		</table>
 		<table name="Tip-in Enrichment Compensation D (ECT)" sizey="16" storageaddress="114870">
-			<table storageaddress="112344" type="Y Axis"/>
+			<table storageaddress="112384" type="Y Axis"/>
 		</table>
 		<table name="Tip-in Enrichment Compensation D (ECT) Activation" storageaddress="112028"/>
 		<table name="Tip-in Enrichment Disable Applied Counter Threshold A (ECT)" sizey="16" storageaddress="113021">
@@ -550,7 +552,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Rough Correction Minimum KC Advance Map Value" storageaddress="11c5d4"/>
 		<table name="Advance Multiplier (Initial)" storageaddress="11c5d8"/>
 		<table name="Advance Multiplier Step Value" storageaddress="11c5dc"/>
-		<table name="Knock Sensor Calibration" storageaddress="12677c">
+		<table name="Knock Sensor Calibration" storageaddress="12677c" sizey="87">
 			<table type="Y Axis" storageaddress="126620"/>
 		</table>
 		<table name="Knock Threshold" storageaddress="11dea0"/>
@@ -754,7 +756,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table storageaddress="116070" type="Y Axis"/>
 		</table>
 		<table name="PI Ratio ECT Compensation (Additive)" sizey="2" storageaddress="112a74">
-			<table storageaddress="112a6c" type="X Axis"/>
+			<table storageaddress="112a6c" type="Y Axis"/>
 		</table>
 		<table name="PI Ratio ECT Compensation (Load)" sizex="16" sizey="6" storageaddress="116254">
 			<table storageaddress="112344" type="X Axis"/>
@@ -986,19 +988,19 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Intake Duty Correction F Adjust" sizey="2" storageaddress="129a28">
 			<table storageaddress="129a20" type="Y Axis"/>
 		</table>
-		<table name="Exhaust Duty Correction A" sizex="9" sizey="10" storageaddress="12be54">
+		<table name="Exhaust Duty Correction A" sizex="9" sizey="11" storageaddress="12be54">
 			<table storageaddress="12be04" type="X Axis"/>
 			<table storageaddress="12be28" type="Y Axis"/>
 		</table>
-		<table name="Exhaust Duty Correction B" sizex="9" sizey="10" storageaddress="12bf6c">
+		<table name="Exhaust Duty Correction B" sizex="9" sizey="11" storageaddress="12bf6c">
 			<table storageaddress="12bf1c" type="X Axis"/>
 			<table storageaddress="12bf40" type="Y Axis"/>
 		</table>
-		<table name="Exhaust Duty Correction C" sizex="9" sizey="10" storageaddress="12c084">
+		<table name="Exhaust Duty Correction C" sizex="9" sizey="11" storageaddress="12c084">
 			<table storageaddress="12c034" type="X Axis"/>
 			<table storageaddress="12c058" type="Y Axis"/>
 		</table>
-		<table name="Exhaust Duty Correction D" sizex="9" sizey="10" storageaddress="12c19c">
+		<table name="Exhaust Duty Correction D" sizex="9" sizey="11" storageaddress="12c19c">
 			<table storageaddress="12c14c" type="X Axis"/>
 			<table storageaddress="12c170" type="Y Axis"/>
 		</table>
@@ -1040,7 +1042,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="Low Pulse Width Fuel Injector Compensation Maximum RPM" storageaddress="111fe4"/>
 		<table name="Low Pulse Width Fuel Injector Compensation Maximum IPW" storageaddress="111fe8"/>
 		<table name="Overrun Fueling RPM Resume Threshold" sizey="16" storageaddress="114a14">
-			<table storageaddress="112344" type="X Axis"/>
+			<table storageaddress="112344" type="Y Axis"/>
 		</table>
 		<table name="Overrun Enrich RPM Delta Activation" storageaddress="112014"/>
 		<table name="Overrun initial injector enrichment (pulsewidth)" storageaddress="112018"/>
@@ -1411,7 +1413,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
-			<description>A certain fueling additive (considering ECT) calculation normally ramps up the additive gradually (ranging from +0.00 to +0.40); however, when throttle is maxed (> 85), the 2019 S10C open loop code seems to (approximately) enforce a minimum threshold before the open loop calculations.</description>
+			<description>A certain fueling additive (considering ECT) calculation normally ramps up the additive gradually (ranging from +0.00 to +0.40); however, when throttle is maxed (&gt; 85), the 2019 S10C open loop code seems to (approximately) enforce a minimum threshold before the open loop calculations.</description>
 		</table>
 		<table type="3D" name="Primary Open Loop Fueling Additive A" category="Fueling - Primary Open Loop" storagetype="uint8" endian="big" sizex="13" sizey="23" userlevel="4">
 			<scaling units="Air/Fuel Ratio Points Additive" expression="((x*7.8125e-3)-1.0)*14.7" to_byte="((x/14.7)+1)/7.8125e-3" format="0.00" fineincrement=".01" coarseincrement=".5"/>
