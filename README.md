@@ -5,10 +5,11 @@
 Caveats:
 - I have made no particular effort to document or maintain the CEL codes in these files (e.g. P0300, U0155, etc.) and will be removing those from all files in my next update. DO NOT ATTEMPT TO DISABLE/ENABLE CEL CODES USING THESE DEFINITIONS; it could be harmless, or it could destroy your engine, I can't say for sure.
 
-| Calibration | Year      | Modified   | Status       | Notes |
-| ----------- | --------- | ---------- | ------------ | ----- |
-| ZA1JS10C    | 19US | 20260321 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
-| ZA1JU01A    | 20US | 20260321 | Incomplete.  | Work in progress; very useful for diffing against other ECUs, as a majority of known addresses are correct; but NOT READY FOR EDITING until I've identified and fixed the unfinished addresses. SEE CELS WARNING ABOVE. |
+| Calibration | Year | Modified   | Status       | Notes |
+| ----------- | ---- | -------- | ------------ | ----- |
+| ZA1JS10C    | 18US | 20260321 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
+| ZA1JS20G    | 18EU | 20260321 | Incomplete.  | Work in progress; very useful for diffing against other ECUs, but most addresses are incorrect; NOT READY FOR TUNE EDITING until I've finished work on it. SEE CELS WARNING ABOVE. |
+| ZA1JU01A    | 20US | 20260321 | Incomplete.  | Work in progress; very useful for diffing against other ECUs, as a majority of known addresses are correct; but NOT READY FOR TUNE EDITING until I've identified and fixed the unfinished addresses. SEE CELS WARNING ABOVE. |
 | ZA1JV00C00G | 20JP  | 20260321 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. This is my everyday. SEE CELS WARNING ABOVE. |
 
 ## What are these files?
