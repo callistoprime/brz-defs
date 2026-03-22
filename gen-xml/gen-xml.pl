@@ -29,19 +29,10 @@ state %types2d = (
     8 => 'USHORT', # 2dm
 );
 
-state %types2dm = map { $_ => $types2d{$_} } (
-    4,
-    8,
-);
-
 state %types3d = (
+            0 => 'UNDEFINED', # 3d
      67108864 => 'BYTE', # 3dm
     134217728 => 'USHORT', # 3dm
-);
-
-state %types3dm = map { $_ => $types2d{$_} } (
-     67108864,
-    134217728,
 );
 
 sub warnlevel :prototype($$);
@@ -128,7 +119,7 @@ for my $t (sort { $a->{'name'} cmp $b->{'name'} } values %addrs) {
                 push @notes, 'yaxis was not loaded successfully';
                 undef $xaxis; undef $xsize; undef $yaxis; undef $ysize; undef $type; undef $data;
             } else {
-                if (exists $types3dm{$type}) {
+                if ($type > 0) {
                     push @notes, $tabletype = '3dmtable';
                     $scale  = unpack "f>", substr($za1j, $addr + 20, 4);
                     $offset = unpack "f>", substr($za1j, $addr + 24, 4);
@@ -151,7 +142,7 @@ for my $t (sort { $a->{'name'} cmp $b->{'name'} } values %addrs) {
                 push @notes, 'ysize/yaxis mismatch';
                 undef $xaxis; undef $xsize; undef $yaxis; undef $ysize; undef $type; undef $data;
             } else {
-                if (exists $types2dm{$type}) {
+                if ($type > 0) {
                     push @notes, $tabletype = '2dmtable';
                     $scale  = unpack "f>", substr($za1j, $addr + 12, 4);
                     $offset = unpack "f>", substr($za1j, $addr + 16, 4);
@@ -188,7 +179,7 @@ for my $t (sort { $a->{'name'} cmp $b->{'name'} } values %addrs) {
             print "+ $offset ";
         }
     }
-    print "(type $type=" . ($types2d{$type} // $types3d{$type} // 'UNKNOWN') . ") " if length($type // '') > 0;
+    print "(type $type=" . ((defined($yaxis) ? $types3d{$type} : $types2d{$type}) // 'UNKNOWN') . ") " if length($type // '') > 0;
     print "-- $notes" if length($notes // '') > 0;
     print "\n";
     if (($xsize//0) > 0 and not defined($xaxis)) { die "unhandled 1" }
@@ -295,6 +286,74 @@ for my $t (sort { $a->{'name'} cmp $b->{'name'} } values %addrs) {
 
     } else {
         print "# unhandled table: $t{'name'}\n";
+    }
+
+    if ($tabletype =~ /^[23]dm?table/) {
+        my($r_scaling) = $rr->findnodes("//roms/rom[2]/table[\@name='$t{'name'}']/scaling")->[0];
+
+        my($expr, $to_byte);
+        if ($tabletype =~ /^.dmtable/) {
+            # try to deal with percentages
+            if ($r_scaling->getAttribute('units') =~ /\%/) {
+                $scale *= 100;
+                $offset *= 100;
+            }
+
+            # turn it into a decimal, truncate at 20 places (zero is up around 40)
+            $scale = sprintf('%.20f', $scale);
+            $offset = sprintf('%.20f', $offset);
+
+            # FIXME: deal with 2dtable_short
+            if ($scale =~ /^0(\.0+)?$/) {
+                # bail out for 2dtable_short for now
+                $expr = 'x';
+                $to_byte = 'x';
+            } else {
+                # strip trailing zeroes
+                $scale =~ s/\.0+$//; $scale =~ s/(?<=[^0])0+$// if $scale =~ /\./;
+                $offset =~ s/\.0+$//; $offset =~ s/(?<=[^0])0+$// if $offset =~ /\./;
+
+                # scales of 1 and offsets of 0 don't need to be expressed
+                my($has_scale) = (0+$scale) != 1;
+                my($has_offset) = (0+$offset) != 0;
+
+                # strip leading zeroes
+                $scale =~ s/^0\././;
+                $offset =~ s/^0\././;
+
+                # construct the unpack/pack functions for RR scaling
+                $expr    = ($has_scale ? ($has_offset ? "(x*$scale)" : "x*$scale") : 'x') . ($has_offset ? ($offset < 0 ? "$offset" : "+$offset") : '');
+                $to_byte = ($has_offset ? ($has_scale ? '(' : '') . 'x' . ($offset < 0 ? "+" . (-1*$offset) : "-$offset") . ($has_scale ? ')' : '') : 'x') . ($has_scale ? "/$scale" : '');
+
+                # fix sign/operator overlaps to maintain parity with existing RR defs
+                $expr =~ s/\)\+-/\)\-/;
+                $to_byte =~ s/x--/x+/;
+            }
+        } else {
+            $expr = 'x';
+            $to_byte = 'x';
+        }
+        my($r_expr)    = $r_scaling->getAttribute('expression'); my $m_expr = 0;
+        if ($r_expr ne $expr) {
+            $r_expr =~ s/([\*\/])0\./$1./;
+            if ($r_expr ne $expr) {
+                $m_expr = 1;
+            }
+        }
+        my($r_to_byte) = $r_scaling->getAttribute('to_byte'); my $m_to_byte = 0;
+        if ($r_to_byte ne $to_byte) {
+            $r_to_byte =~ s/([\*\/])0\./$1./;
+            if ($r_to_byte ne $to_byte) {
+                $m_to_byte = 1;
+            }
+        }
+
+        if ($m_expr) {
+            $r_scaling->setAttribute(expression => $expr);
+        }
+        if ($m_to_byte) {
+            $r_scaling->setAttribute(to_byte => $to_byte);
+        }
     }
 }
 
