@@ -7,9 +7,9 @@ Caveats:
 
 | Calibration | Year      | Modified   | Status       | Notes |
 | ----------- | --------- | ---------- | ------------ | ----- |
-| ZA1JS10C    | 2019 USDM | 2026.03.21 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
-| ZA1JU01A    | 2020 USDM | 2026.03.21 | Incomplete.  | Work in progress; very useful for diffing against other ECUs, as a majority of known addresses are correct; but NOT READY FOR EDITING until I've identified and fixed the unfinished addresses. SEE CELS WARNING ABOVE. |
-| ZA1JV00C00G | 2020 JDM  | 2026.03.21 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. SEE CELS WARNING ABOVE. |
+| ZA1JS10C    | 2019 US | 20260321 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
+| ZA1JU01A    | 2020 US | 20260321 | Incomplete.  | Work in progress; very useful for diffing against other ECUs, as a majority of known addresses are correct; but NOT READY FOR EDITING until I've identified and fixed the unfinished addresses. SEE CELS WARNING ABOVE. |
+| ZA1JV00C00G | 2020 JP  | 20260321 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. SEE CELS WARNING ABOVE. |
 
 ## What are these files?
 
