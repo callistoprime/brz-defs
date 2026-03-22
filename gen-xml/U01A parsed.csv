@@ -1,0 +1,618 @@
+name	dataaddr	tableaddr	sizey	sizex	type	category
+PI Ratio Thresholds	10de50	10de50	2		2D	Fueling - Injector Ratio
+PI Ratio Threshold (RPM)	10de48		1		2D	Fueling - Injector Ratio
+PI Ratio Threshold (Load)	10de4c		1		2D	Fueling - Injector Ratio
+PI Ratio Threshold (Unknown)	10de60		1		2D	Fueling - Injector Ratio
+GDI Pressure Multiplier C	10dd84	10dd84	1		2D	Fueling - GDI
+Requested Torque Base	13c528		23		2D	Drive-by-Wire Throttle (DBW)
+Cranking Fuel Injector Pulse Width B (ECT)	1141dc		3	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width E (ECT)	114244		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width F (ECT)	11428c		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width I (ECT)	1142d4		2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width J (ECT)	11431c		2	16	3D	Fueling - Cranking
+Injector Minimum Open Time	10de20	10de20	1		2D	Fueling - Port Injectors
+Engine Load Multiplier	10de28	10de28	1		2D	Mass Airflow / Engine Load
+CPC Duty Multiplier	c64c		1		2D	CPC Solenoid
+Engine Load Limiter A	104240		9		2D	Mass Airflow / Engine Load
+Engine Load Limiter B	104278		9		2D	Mass Airflow / Engine Load
+AVCS Base/Normal/Safe Hysteresis	1294b8		2		2D	Variable Valve Timing (AVCS)
+Idle Throttle Target for Airflow	13c6f0		34		2D	Idle Control
+Idle Throttle Target B	13c5ec	c1d5c	7		2D	Idle Control
+Idle Throttle Target C	13c624	c1d70	10		2D	Idle Control
+Idle Throttle Target D	13d984	c1ffc	13	16	3D	Idle Control
+Failsafe Idle Throttle Target for Airflow	10a7b8		2		2D	Idle Control
+Failsafe Idle Throttle Target B	10a7c8	bd1d8	2		2D	Idle Control
+Failsafe Idle Throttle Target C	10a7d8	bd1e4	2		2D	Idle Control
+Failsafe Idle Throttle Target D	10db2c	bd8f0	2	2	3D	Idle Control
+CL to OL Transition with Delay (Injector Load Threshold)	110638		16		2D	Fueling - CL/OL Transition
+5V Sensor Limits (CEL) 0	121b30		2		2D	5V Sensor
+5V Sensor Limits (CEL) 1	121b34		2		2D	5V Sensor
+5V Sensor Limits (CEL) 2	121b38		2		2D	5V Sensor
+5V Sensor Limits (CEL) 3	121b3c		2		2D	5V Sensor
+5V Sensor Limits (CEL) 4	121b12		2		2D	5V Sensor
+5V Sensor Limits (CEL) 5	121b16		2		2D	5V Sensor
+5V Sensor Limits (CEL) 6	121b1a		2		2D	5V Sensor
+5V Sensor Limits (CEL) 8	121b2c		2		2D	5V Sensor
+5V Sensor Limits (CEL) 9	121b40		2		2D	5V Sensor
+5V Sensor Limits (CEL) 10	10848e		2		2D	5V Sensor
+5V Sensor Limits (CEL) 11	121b20		2		2D	5V Sensor
+5V Sensor Limits (CEL) 12	1000d8		2		2D	5V Sensor
+5V Sensor Scaling 0 Multiplier	1000a0		1		2D	5V Sensor
+5V Sensor Scaling 0 Offset	1000a4		1		2D	5V Sensor
+5V Sensor Scaling 1 Multiplier	1000a8		1		2D	5V Sensor
+5V Sensor Scaling 1 Offset	1000ac		1		2D	5V Sensor
+5V Sensor Scaling 2 Multiplier	121b54		1		2D	5V Sensor
+5V Sensor Scaling 2 Offset	1000b0		1		2D	5V Sensor
+5V Sensor Scaling 3 Multiplier	121b58		1		2D	5V Sensor
+5V Sensor Scaling 3 Offset	1000b4		1		2D	5V Sensor
+5V Sensor Scaling 5 Multiplier	1000c0		1		2D	5V Sensor
+5V Sensor Scaling 5 Offset	1000c4		1		2D	5V Sensor
+5V Sensor Scaling 6 Multiplier	121b64		1		2D	5V Sensor
+5V Sensor Scaling 6 Offset	121b68		1		2D	5V Sensor
+5V Sensor Scaling 7 Multiplier	1000dc		1		2D	5V Sensor
+5V Sensor Scaling 7 Offset	1000e0		1		2D	5V Sensor
+5V Sensor Scaling 8 Multiplier	1000ec		1		2D	5V Sensor
+5V Sensor Scaling 8 Offset	1000f0		1		2D	5V Sensor
+5V Sensor Scaling Table 3	1231dc		31		2D	5V Sensor
+5V Sensor Scaling Table 4	123264		3		2D	5V Sensor
+5V Sensor Scaling Table 5	1000d4		1		2D	5V Sensor
+Manifold Pressure Sensor Scaling A	121b4c	121b4c	2		2D	Manifold Pressure Sensor
+Manifold Pressure Sensor Limits (CEL)	121b12		2		2D	Manifold Pressure Sensor
+Manifold Pressure Sensor CEL Delays	121a8f	121a8f	2		2D	Manifold Pressure Sensor
+Primary Open Loop Fueling A	112a80		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling B	112c3c		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling Minimum	11324c	bf324	23	13	3D	Fueling - Primary Open Loop
+Minimum Active Primary Open Loop Enrichment	111dc0		1		2D	Fueling - Primary Open Loop
+Front Oxygen Sensor Scaling A	123668		14		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Scaling B	1236d8		14		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Rich Limit	4f760	4f760	1		2D	Fueling - O2 Sensor #1
+Front Oxygen Sensor Compensation (Atm. Pressure)	1043f4		4		2D	Fueling - O2 Sensor #1
+CL Fueling Unknown A	1100d8	be5d4	2	13	2D	Fueling - Closed Loop
+CL Fueling Unknown F	10e094		6	6	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 1 A	111524		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 2 A	1115d4		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 3 A	111684		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 4 A	111744		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 5 A	1117bc		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 6 A	111818		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 7 A	111874		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 8 A	1118ec		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 9 A	111948		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 1 B	11157c		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 2 B	11162c		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 3 B	1116dc		11		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 4 B	1119a4		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 5 B	111a1c		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 6 B	111a78		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 7 B	111ad4		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 8 B	111b4c		15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 9 B	111ba8		8		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 10	110f0c	beb20	15		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 A	10fa66		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 B	10fafc		2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 11 C	10fa86		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 12	10ee34	bdae0	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 13	1125bc	bf024	2	2	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 14	10fb00	be170	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 15	10ee0c	bdac0	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 16	10ee1c	bdacc	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 17	1125a0	bf008	2	5	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 18	10fc20	be21c	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 19	10fce0	be2a0	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 20	10fcec	be2b4	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 21	10fcf8	be2c8	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 22	10fd04	be2dc	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 23	10fc80	be250	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 24	10fca0	be264	16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 25	10fcc8	be278	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 26	10fcd4	be28c	2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 27	1125dc	bf040	2	5	2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 A	10fba0		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 A	10fbc0		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 B	10fd28		2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 B	10fd34		2		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 28 C	10fbe0		16		2D	Fueling - Closed Loop
+DiPi Fueling ECT Unknown 29 C	10fc00		16		2D	Fueling - Closed Loop
+CL Fueling Target Compensation A (Load)	115c48		11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (Load)	115d94		11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)	115b24		3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)	115b90		3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT) Disable	10e068		1		2D	Fueling - Closed Loop
+CL to OL Transition with Delay (Base Pulse Width)	1105d8		16		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)	1186fc		6		2D	Fueling - CL/OL Transition
+Injector Latency	114424		3	5	3D	Fueling - Port Injectors
+Injector Flow Scaling	10de24	10de24	1		2D	Fueling - Port Injectors
+Injector Flow Scaling BRZ	10ddf0	10ddf0	1		2D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation A	113528		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation B	1135e8		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation C	1136a8		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation D	113768		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation E	113828		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation F	1138e8		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation G	1139a8		12	9	3D	Fueling - Port Injectors
+Per Injector Pulse Width Compensation H	113a68		12	9	3D	Fueling - Port Injectors
+Cranking Fuel IPW Compensation A (RPM)	11239c		2	2	3D	Fueling - Cranking
+Cranking Fuel IPW Compensation (MAP)	10ed4c		10		2D	Fueling - Cranking
+Cranking Fuel IPW Compensation (Accelerator)	10ed70		6		2D	Fueling - Cranking
+Cranking Fuel IPW Compensation (IAT)	10ed8c		5		2D	Fueling - Cranking
+Throttle Tip-in Enrichment A	117a88		3	18	3D	Fueling - Tip-in Enrichment
+Throttle Tip-in Enrichment B	117b48		3	18	3D	Fueling - Tip-in Enrichment
+Minimum Tip-in Enrichment Activation	10e548		1		2D	Fueling - Tip-in Enrichment
+Minimum Tip-in Enrichment Activation (Throttle)	10e53c		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (RPM)	10f3a0		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (MRP)	10f3d4		9		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation A (ECT)	10f3dd		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation B (ECT)	117bc0		3	16	3D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation C (ECT)	117c2c		3	16	3D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT)	110c94		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) Activation	10e544		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold A (ECT)	10f3ed		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold B (ECT)	10f3fd		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Applied Counter Reset	10db7e		1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold A (ECT)	110cb4		16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold B (ECT)	110cd4		16		2D	Fueling - Tip-in Enrichment
+Tip-in Throttle Cumulative Reset	10db7f		1		2D	Fueling - Tip-in Enrichment
+A/F Learning #1 Limits	10e130		2		2D	Fueling - AF Correction / Learning
+A/F Learning #1 Airflow Ranges A	1113fc		5		2D	Fueling - AF Correction / Learning
+A/F Learning #1 Airflow Ranges B	111424		5		2D	Fueling - AF Correction / Learning
+MAF Voltage Limits (CEL)	121b26		2		2D	Mass Airflow / Engine Load
+MAF Limit (Maximum)	103d4c		1		2D	Mass Airflow / Engine Load
+MAF Sensor Scaling	123558	c25f0	54		2D	Mass Airflow / Engine Load
+MAF Compensation (IAT)	104e4c		10	6	3D	Mass Airflow / Engine Load
+MAF Correction After Start (Neutral)	11fd70		8	14	3D	Mass Airflow / Engine Load
+MAF Correction After Start (In Gear)	11fea8		8	14	3D	Mass Airflow / Engine Load
+Engine Load Limit (Maximum)	4d254		1		2D	Mass Airflow / Engine Load
+Engine Load Compensation (MP)	104f38		24	15	3D	Mass Airflow / Engine Load
+Base Timing A1	11a738		23	14	3D	Ignition Timing - Advance
+Base Timing A2	11a560		23	14	3D	Ignition Timing - Advance
+Base Timing B1	11aae8		23	14	3D	Ignition Timing - Advance
+Base Timing B2	11a910		23	14	3D	Ignition Timing - Advance
+Timing Unknown A	11999a	c0640	16		2D	Ignition Timing - Advance
+Timing Unknown B	1199fa	c067c	16		2D	Ignition Timing - Advance
+Timing Unknown C	119c38	c07d0	2		2D	Ignition Timing - Advance
+Timing Unknown D1	1199da	c0668	16		2D	Ignition Timing - Advance
+Timing Unknown D2	1199ba	c0654	16		2D	Ignition Timing - Advance
+Timing Unknown E1	119218	c016c	16		2D	Ignition Timing - Advance
+Timing Unknown E2	119258	c01a8	4		2D	Ignition Timing - Advance
+Timing Unknown F1	119a1a	c0690	16		2D	Ignition Timing - Advance
+Timing Unknown G1	119230	c0180	2		2D	Ignition Timing - Advance
+Timing Unknown G2	119244	c0194	4		2D	Ignition Timing - Advance
+Timing Unknown H	119a3a	c06a4	16		2D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Above Speed Threshold)	11a4a4		2	10	3D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Below Speed Threshold)	1190a8		8		2D	Ignition Timing - Advance
+Base Timing Idle (Neutral)	1190d0		8		2D	Ignition Timing - Advance
+Base Timing Idle Unknown A	1190fc	c00f4	9		2D	Ignition Timing - Advance
+Base Timing Idle Unknown B	119105	c0108	16		2D	Ignition Timing - Advance
+Base Timing Idle Unknown C	1192c8		16		2D	Ignition Timing - Advance
+Base Timing Idle Vehicle Speed Threshold	118764	118764	1		2D	Ignition Timing - Advance
+Knock Correction Advance Max A	11b808	c0dd4	23	14	3D	Ignition Timing - Advance
+Timing Compensation (IAT)	119370		16		2D	Ignition Timing - Compensation
+Timing Compensation (IAT) Activation	11ad14		5	8	3D	Ignition Timing - Compensation
+Timing Compensation A (ECT)	1192ee		16		2D	Ignition Timing - Compensation
+Timing Compensation B (ECT)	1192fe		16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A	11b490	c0cf4	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B	11b548	c0d10	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C	11b600	c0d2c	6	16	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D	11b6b8	c0d48	6	16	3D	Ignition Timing - Compensation
+Timing Comp Minimum Load (Per Cylinder)	1189a8		1		2D	Ignition Timing - Compensation
+Timing Comp Maximum RPM (Per Cylinder)	1189a4		1		2D	Ignition Timing - Compensation
+Timing Comp Minimum Coolant Temp (Per Cylinder)	1189ac		1		2D	Ignition Timing - Compensation
+Feedback Correction Range (RPM)	1189b8		4		2D	Ignition Timing - Knock Control
+Feedback Correction Minimum Load	1189b0	1189b0	2		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Value	1189d8	1189d8	1		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Limit	1189d4	1189d4	1		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Value	1189dc	1189dc	1		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Delay	118664	118664	1		2D	Ignition Timing - Knock Control
+Fine Correction Range (RPM)	118b7c		4		2D	Ignition Timing - Knock Control
+Fine Correction Range (Load)	118b8c		4		2D	Ignition Timing - Knock Control
+Fine Correction Rows (RPM)	118b18		6		2D	Ignition Timing - Knock Control
+Fine Correction Columns (Load)	118b34		4		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value	118b54	118b54	1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Limit	118b70	118b70	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Value	118b50	118b50	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Limit	118b4c	118b4c	1		2D	Ignition Timing - Knock Control
+Fine Correction Advance Delay	118674	118674	1		2D	Ignition Timing - Knock Control
+Rough Correction Range (RPM)	118ac8		4		2D	Ignition Timing - Knock Control
+Rough Correction Range (Load)	118ad8		4		2D	Ignition Timing - Knock Control
+Rough Correction Minimum KC Advance Map Value	118ae8		1		2D	Ignition Timing - Knock Control
+Advance Multiplier (Initial)	118aec		1		2D	Ignition Timing - Knock Control
+Advance Multiplier Step Value	118af0	118af0	1		2D	Ignition Timing - Knock Control
+Knock Sensor Calibration	122ee0	c257c	87		2D	Ignition Timing - Knock Control
+Knock Threshold	11a32c	c08fc	7	5	3D	Ignition Timing - Knock Control
+Requested Torque A (Accelerator Pedal)	10302c		18	16	3D	Drive-by-Wire Throttle (DBW)
+Requested Torque B (Accelerator Pedal)	13cd80		23	16	3D	Drive-by-Wire Throttle (DBW)
+Target Throttle Plate Position Maximum (Requested Torque)	13c864		23	21	3D	Drive-by-Wire Throttle (DBW)
+Rev Limit A (Fuel Cut)	10e5e8		2		2D	Miscellaneous - Limits
+Rev Limit B	10e5f0	10e5f0	2		2D	Miscellaneous - Limits
+Rev Limit Fuel Resume (MP)	10e5f8		1		2D	Miscellaneous - Limits
+Speed Limiting Enable (Fuel Cut)	1120e4		1		2D	Miscellaneous - Limits
+Speed Limiting Disable (Fuel Cut)	1120e0		1		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle) SI-DRIVE Sport/Sport Sharp	13c344		2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle) SI-DRIVE Sport/Sport Sharp	13c350		2		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle) SI-DRIVE Intelligent	13c35c		2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle) SI-DRIVE Intelligent	13c368		2		2D	Miscellaneous - Limits
+Intake Temp Sensor Scaling	1230e8	c259c	30		2D	Miscellaneous - Sensor Scalings
+Coolant Temp Sensor Scaling	123000	c2590	28		2D	Miscellaneous - Sensor Scalings
+Radiator Fan Modes A (ECT)	121a14		4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes B (ECT)	121a24		4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes (Veh. Speed)	121a34		6		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds A	103fd4		5		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds B	103fe8		5		2D	Miscellaneous - Thresholds
+Idle Speed Target A	11d33c	c138c	16		2D	Idle Control
+Idle Speed Target B	11d35c	c13a0	16		2D	Idle Control
+Idle Speed Target C	11d37c	c13b4	16		2D	Idle Control
+Idle Speed Target D	11d39c	c13c8	16		2D	Idle Control
+Idle Speed Target E	11d3bc	c13dc	16		2D	Idle Control
+Idle Speed Target F	11d3dc	c13f0	16		2D	Idle Control
+Idle Speed Target G	11d3fc	c1404	16		2D	Idle Control
+Idle Speed Target H	11d45c	c1418	16		2D	Idle Control
+Idle Speed Target I	11d4bc	c142c	16		2D	Idle Control
+Idle Speed Target J	11d51c	c1440	16		2D	Idle Control
+Idle Speed Target K	11d57c	c1454	16		2D	Idle Control
+Idle Speed Target L	11d5dc	c1468	16		2D	Idle Control
+Idle Speed Stability A	11f1d8		11	16	3D	Idle Control
+Idle Speed Stability B	11f3a4		11	16	3D	Idle Control
+Idle Speed Stability Additive	11d638		6		2D	Idle Control
+Ignition Dwell	123944	c2644	5	16	3D	Miscellaneous - Sensor Scalings
+AFR Sensor Heater Protection	1006b4	bb404	5		2D	Fueling - O2 Sensor #1
+AFR Sensor Heater Duty Cycle A	100770		4		2D	Fueling - O2 Sensor #1
+AFR Sensor Heater Duty Cycle B	100788		4		2D	Fueling - O2 Sensor #1
+AFR Sensor Heating Limit	100e44		6	6	3D	Fueling - O2 Sensor #1
+Fuel Multiplier Display Offset	101cf8		5		2D	Miscellaneous - Other
+Calculated Torque A	102210	bb6ec	23	13	3D	Drive-by-Wire Throttle (DBW)
+Calculated Torque B	1024f0	bb708	23	11	3D	Drive-by-Wire Throttle (DBW)
+Post Cranking Airflow Initial Reference Coolant	1041fc		16		2D	Fueling - Cranking
+Post Cranking Load Initial Reference Coolant	104304	bbdd8	16		2D	Fueling - Cranking
+Cylinder Fill Percentage	1076c0		22	16	3D	Mass Airflow / Engine Load
+Solenoid Control	1080a0	bc898	5	7	3D	CPC Solenoid
+Solenoid Duty	108150	bc8b4	13	13	3D	CPC Solenoid
+Misfire Count MAP Threshold A	109246	bc8f8	13		2D	Miscellaneous - Thresholds
+Misfire Count MAP Threshold B	109253	bc90c	13		2D	Miscellaneous - Thresholds
+Misfire DTC Threshold	10ace4	bd28c	19	14	3D	Miscellaneous - Thresholds
+AFR Minimum Correction	10ef84	bdbb4	9		2D	Alpha - BRZ
+AFR Maximum Correction	10efb4	bdbc8	9		2D	Alpha - BRZ
+Port Injection MRP Compensation	111248	bebf8	8		2D	Fueling - Port Injectors
+Direct Injection Quantity Maximum	111298		12		2D	Fueling - GDI
+Direct Injection Quantity Minimum	1112e0		6		2D	Fueling - GDI
+GDI Firing Angle Cold Idle	112094	bee48	2	2	3D	Fueling - GDI
+GDI Firing Angle High Load Cold	112108	bee64	17	11	3D	Fueling - GDI
+GDI Firing Angle High Load Hot	1121d4	bee80	2	2	3D	Fueling - GDI
+GDI Firing Angle Low Load Cold	1121e8	bee9c	2	2	3D	Fueling - GDI
+GDI Firing Angle Low Load Hot	1121fc	beeb8	2	2	3D	Fueling - GDI
+GDI Pressure Multiplier A	112250	beed4	10	10	3D	Fueling - GDI
+GDI Pressure Target A	1122f4	bef0c	2	2	3D	Fueling - GDI
+GDI Pressure Target B	113dd8	bf490	17	15	3D	Fueling - GDI
+Total Injection Ratio Port Cold	11256c	befd0	2	2	3D	Fueling - Injector Ratio
+Total Injection Ratio Port Hot	112580	befec	2	2	3D	Fueling - Injector Ratio
+Total Injection Ratio Port Warm	11246c	befb4	20	12	3D	Fueling - Injector Ratio
+PI Ratio ECT Compensation (Additive)	10ee40		2		2D	Fueling - Injector Ratio
+PI Ratio ECT Compensation (Load)	112600		6	16	3D	Fueling - Injector Ratio
+PI Ratio ECT Compensation	112724		3	16	3D	Fueling - Injector Ratio
+PI Ratio ECT Unknown	111328		16		2D	Fueling - Injector Ratio
+ECT Unknown	11053e		16		2D	Fueling - Injector Ratio
+ECT Unknown B	10a4e0	bd0e8	16		2D	Fueling - Injector Ratio
+Primary Open Loop Fueling Additive A	112df8		23	13	3D	Fueling - Primary Open Loop
+Primary Open Loop Fueling Additive B	112fb4		23	13	3D	Fueling - Primary Open Loop
+GDI Pressure Multiplier B	113c90	bf474	10	10	3D	Fueling - GDI
+Input A Rising Load Activation ECT Load 1	11451c	bf6b8	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 2	11457c	GLOB(0x95bff97b0)	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 3	1145dc	bf6f0	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 4	114648	bf70c	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 5	1146b4	bf728	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 6	114714	bf744	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 7	114774	bf760	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 8	1147d4	bf77c	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 9	114840	bf798	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 10	1148a0	bf7b4	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 11	11490c	bf7d0	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 12	11496c	bf7ec	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 13	1149d8	bf808	3	16	3D	Fueling - Transient
+Input A Rising Load Activation ECT Load 14	114a38	bf824	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown B	1151dc	bf9c8	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown C	10fdec	be458	3		2D	Fueling - Transient
+CL Fueling Transient Unknown D	10fdf2	be46c	3		2D	Fueling - Transient
+CL Fueling Transient Unknown E	10fdf8	be480	3		2D	Fueling - Transient
+CL Fueling Transient Unknown F	10fdfe	be494	3		2D	Fueling - Transient
+CL Fueling Transient Unknown G	10fe24	be4a8	8		2D	Fueling - Transient
+CL Fueling Transient Unknown H	10fe54	be4bc	8		2D	Fueling - Transient
+CL Fueling Transient Unknown I	10fe84	be4d0	8		2D	Fueling - Transient
+CL Fueling Transient Unknown J	10feb4	be4e4	8		2D	Fueling - Transient
+CL Fueling Transient Unknown K	10eeaa	bdb30	16		2D	Fueling - Transient
+CL Fueling Transient Unknown L	114d60	bf8cc	3	13	3D	Fueling - Transient
+CL Fueling Transient Unknown M	114cdc	bf8b0	3	13	3D	Fueling - Transient
+CL Fueling Transient Unknown N	114b98	bf85c	8	8	3D	Fueling - Transient
+CL Fueling Transient Unknown O	114c7c	bf894	3	7	3D	Fueling - Transient
+CL Fueling Transient Unknown P	10ee6c	bdb08	10		2D	Fueling - Transient
+CL Fueling Transient Unknown S	10fdaa	be408	3		2D	Fueling - Transient
+CL Fueling Transient Unknown V	10eea0	bdb1c	10		2D	Fueling - Transient
+CL Fueling Transient Unknown W	10fda4	be3f4	3		2D	Fueling - Transient
+CL Fueling Transient Unknown ZA	10fdb6	be430	3		2D	Fueling - Transient
+CL Fueling Transient Unknown ZD	10fdb0	be41c	3		2D	Fueling - Transient
+CL Fueling Transient Unknown ZH	115288	bf9dc	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZI	115334	bf9f8	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZJ	1153e0	bfa14	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZK	11548c	bfa30	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZL	1127a0	bf0b0	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZM	115538	bfa4c	3	16	3D	Fueling - Transient
+CL Fueling Transient Unknown ZN	1155e4	bfa68	3	16	3D	Fueling - Transient
+TPS Related Fuel Adder Activation Min Load	117934	bfd70	7	7	3D	Miscellaneous - Other
+TPS Related Fuel Adder Activation Min Load B	1179d0	bfd8c	7	7	3D	Miscellaneous - Other
+GDI Flow Rate	11846c	bffa0	14	6	3D	Fueling - GDI
+Ignition Timing Post Start	118f02	bffdc	16		2D	Ignition Timing - Advance
+Minimum Timing	118f34	bfff0	8		2D	Ignition Timing - Advance
+Ignition Timing Compensation MAP Delta (Clutch Depressed)	118ffc		9		2D	Ignition Timing - Compensation
+AFR Sensor Atmospheric Pressure Compensation	11976c		4		2D	Fueling - O2 Sensor #1
+Minimum CFP Delta for Transient Retard	11a240	c08e4	8		2D	Ignition Timing - Transient
+Ignition Timing Compensation Idle Target Out of Error Range A	11ad6c		2	10	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target In Error Range A	11ada4		9	9	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target Load Change A	11ae00		2	9	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target In Error Range B	11ae60		9	10	3D	Ignition Timing - Compensation
+Ignition Timing Compensation Idle Target Load Change B	11aee8		2	9	3D	Ignition Timing - Compensation
+Transient Ignition Retard ECT Threshhold	118958		1		2D	Ignition Timing - Transient
+Transient Ignition Retard RPM Threshhold	11895c		1		2D	Ignition Timing - Transient
+Transient Ignition Retard TPS Angle Threshhold	118960		1		2D	Ignition Timing - Transient
+Transient Ignition Retard Engine Load Threshhold	118964		1		2D	Ignition Timing - Transient
+Transient Ignition Retard	11b1ac	c0c4c	24	8	3D	Ignition Timing - Transient
+Transient Ignition Retard Temperature Compensation	11b0bc		7	16	3D	Ignition Timing - Transient
+Desired Overrun Mass Airflow A	11ead8		16	21	3D	Mass Airflow / Engine Load
+Desired Overrun Mass Airflow C	11ed88		2	2	3D	Mass Airflow / Engine Load
+Desired Overrun Mass Airflow B	11ee24		16	21	3D	Mass Airflow / Engine Load
+Intake Cam Advance Angle Normal AVCS	1271f4	c2dd4	27	16	3D	Variable Valve Timing (AVCS)
+Intake Cam Advance Angle Safe AVCS	126f98	c2db8	27	16	3D	Variable Valve Timing (AVCS)
+Intake Cam Advance Angle Base AVCS	127434	c2df0	24	12	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Normal AVCS	127a74	c2eb4	27	16	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Safe AVCS	127668	c2e98	27	16	3D	Variable Valve Timing (AVCS)
+Exhaust Cam Retard Angle Base AVCS	126da4	c2d64	24	12	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction A	1281bc	c2fb0	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction B	1282bc	c2fcc	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction C	1283bc	c2fe8	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction D	1284bc	c3004	10	9	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction E	128580	c3020	2	2	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction F	128598	c303c	2	2	3D	Variable Valve Timing (AVCS)
+Intake Duty Correction AC Adjust A	126164	c2a48	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction AC Adjust B	126114	c2a34	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction BD Adjust A	126204	c2a70	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction BD Adjust B	1261b4	c2a5c	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction EF Adjust	126254	c2a84	16		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction E Adjust	12626c	c2a98	2		2D	Variable Valve Timing (AVCS)
+Intake Duty Correction F Adjust	126278	c2aac	2		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction A	1286a4	c30ac	11	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction B	1287bc	c30c8	11	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction C	1288d4	c30e4	11	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction D	1289ec	c3100	11	9	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction E	128634	c3074	2	2	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction F	12864c	c3090	2	2	3D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction AC Adjust A	12630c	c2ad4	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction AC Adjust B	1262bc	c2ac0	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction BD Adjust A	1263ac	c2afc	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction BD Adjust B	12635c	c2ae8	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction EF Adjust	1263fc	c2b10	16		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction E Adjust	126414	c2b24	2		2D	Variable Valve Timing (AVCS)
+Exhaust Duty Correction F Adjust	126420	c2b38	2		2D	Variable Valve Timing (AVCS)
+Minimum Port Injection Quantity	10de34	10de34	1		2D	Fueling - Port Injectors
+Fuel Injection Ratio ECT Threshold A	10de64	10de64	2		2D	Fueling - Injector Ratio
+Low Pulse Width Fuel Injector Compensation	10f358		8		2D	Fueling - Port Injectors
+Low Pulse Width Fuel Injector Compensation Maximum RPM	10e500		1		2D	Fueling - Port Injectors
+Low Pulse Width Fuel Injector Compensation Maximum IPW	10e504		1		2D	Fueling - Port Injectors
+Overrun Fueling RPM Resume Threshold	110e38		16		2D	Fueling - Overrun
+Overrun Enrich RPM Delta Activation	10e530	10e530	1		2D	Fueling - Overrun
+Overrun initial injector enrichment (pulsewidth)	10e534		1		2D	Fueling - Overrun
+Overrun Fueling Cut Counter RPM Threshold	10e5c8	10e5c8	5		2D	Fueling - Overrun
+Hotstart Enrichment Decay Delay	10dc26	10dc26	1		2D	Fueling - Hotstart Enrichment
+Hotstart Enrichment Decay Step	10e364	10e364	1		2D	Fueling - Hotstart Enrichment
+Initial Hotstart Enrichment (High)	10e350		1		2D	Fueling - Hotstart Enrichment
+Hotstart High Enrichment Activation Threshold (Coolant Temperature)	10e340		1		2D	Fueling - Hotstart Enrichment
+Hotstart High Enrichment Activation Threshold (Intake Air Temperature)	10e344		1		2D	Fueling - Hotstart Enrichment
+Initial Hotstart Enrichment (Low)	10e354		1		2D	Fueling - Hotstart Enrichment
+Hotstart Low Enrichment Activation Threshold (Coolant Temperature)	10e348		1		2D	Fueling - Hotstart Enrichment
+Maximum Non-Idle Hotstart Enrichment (Post Delay)	10e368		1		2D	Fueling - Hotstart Enrichment
+Hotstart Minimum Enrichment Limit Runtime	10dc28	10dc28	1		2D	Fueling - Hotstart Enrichment
+Hotstart Minimum Enrichment (During Delay and Runtime)	10e360		1		2D	Fueling - Hotstart Enrichment
+A/F #3 CL Target Compensation Limits	64700		2		2D	Fueling - AF Correction / Learning
+A/F #3 Correction Limits	65084		2		2D	Fueling - AF Correction / Learning
+Launch Control Disable Speed			1		2D	Launch Control/FFS
+Launch Control RPM Delta			1		2D	Launch Control/FFS
+Flat-Foot Shift RPM Delta			1		2D	Launch Control/FFS
+CL Fueling Target Compensation (Load)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (Load)(MT)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (Load)(AT)			10	13	3D	Fueling - Closed Loop
+CL Fueling Target Compensation C (Load)			11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation D (Load)			11	11	3D	Fueling - Closed Loop
+CL Fueling Target Compensation Imm. Cruise (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation Imm. Non-Cruise (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)(MT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation A (ECT)(AT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)(MT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation B (ECT)(AT)			3	16	3D	Fueling - Closed Loop
+CL Fueling Target Compensation (ECT) 			16		2D	Fueling - Closed Loop
+CL to OL Delay			9		2D	Fueling - CL/OL Transition
+CL to OL Delay 			1		2D	Fueling - CL/OL Transition
+CL to OL Delay/Switch SI-DRIVE Intelligent			1		2D	Fueling - CL/OL Transition
+CL to OL Delay (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Delay A (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Delay B (Atm. Pressure)			7		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay (Accelerator)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay A (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay B (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay C (Throttle)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay Throttle Hysteresis			1		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay A (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay B (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay C (Base Pulse Width)			16		2D	Fueling - CL/OL Transition
+CL to OL Transition with Delay BPW Hysteresis			1		2D	Fueling - CL/OL Transition
+CL to OL Transition Counter Step Value (MAF)			10		2D	Fueling - CL/OL Transition
+CL Delay Period			3		2D	Fueling - CL/OL Transition
+CL Delay Maximum (EGT)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle)			1		2D	Fueling - CL/OL Transition
+CL Maximum Vehicle Speed			2		2D	Fueling - CL/OL Transition
+CL Delay Minimum (ECT)			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Engine Load)			2		2D	Fueling - CL/OL Transition
+CL Delay Engine Load Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)(MT)			10		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Per Gear)(AT)			10		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed (Neutral)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed A			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum Engine Speed B			1		2D	Fueling - CL/OL Transition
+CL Delay Engine Speed B Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) A			1		2D	Fueling - CL/OL Transition
+CL Delay Throttle A Counter Threshold			1		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) B (ECT)			16		2D	Fueling - CL/OL Transition
+CL Delay Throttle Atm. Pressure Thresholds			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) (Low Atm. Pressure)			2		2D	Fueling - CL/OL Transition
+CL Delay Maximum (Throttle) (High Atm. Pressure)			2		2D	Fueling - CL/OL Transition
+Per Injector Primary Fuel Offset Compensation A			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation B			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation C			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation D			14	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation A 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation B 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation C 			7	8	3D	Fueling - Port Injectors
+Per Injector Primary Fuel Offset Compensation D 			7	8	3D	Fueling - Port Injectors
+Throttle Tip-in Enrichment			18		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (Boost Error)			9		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation (ECT)			16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) 			16		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Compensation D (ECT) Activation 			1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Applied Counter Threshold			1		2D	Fueling - Tip-in Enrichment
+Tip-in Enrichment Disable Throttle Cumulative Threshold			1		2D	Fueling - Tip-in Enrichment
+A/F #3 Learning Limits			2		2D	Fueling - AF Correction / Learning
+Cranking Fuel Injector Pulse Width A (ECT)			3	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width C (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width D (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width G (ECT)			2	16	3D	Fueling - Cranking
+Cranking Fuel Injector Pulse Width H (ECT)			2	16	3D	Fueling - Cranking
+Hotstart Low Enrichment Activation Threshold (Intake Air Temperature)			1		2D	Fueling - Hotstart Enrichment
+Hotstart Maximum Non-Idle Enrichment Delay			1		2D	Fueling - Hotstart Enrichment
+Base Timing			18	15	3D	Ignition Timing - Advance
+Base Timing C			18	15	3D	Ignition Timing - Advance
+Base Timing D			18	15	3D	Ignition Timing - Advance
+Base Timing E			18	15	3D	Ignition Timing - Advance
+Base Timing F			18	15	3D	Ignition Timing - Advance
+Base Timing G			18	15	3D	Ignition Timing - Advance
+Base Timing H			18	15	3D	Ignition Timing - Advance
+Base Timing Primary Cruise			18	15	3D	Ignition Timing - Advance
+Base Timing Reference Cruise (AVCS related)			18	15	3D	Ignition Timing - Advance
+Base Timing Primary Non-Cruise			18	15	3D	Ignition Timing - Advance
+Base Timing Reference Non-Cruise (AVCS related)			18	15	3D	Ignition Timing - Advance
+Base Timing Idle			16		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)			16		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)			16		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)			16		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)			16		2D	Ignition Timing - Advance
+Base Timing Idle (Below Speed Threshold)			1		2D	Ignition Timing - Advance
+Base Timing Idle (Below Speed Threshold) 			9		2D	Ignition Timing - Advance
+Base Timing Idle (Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle (In-Gear)(Above Speed Threshold) 2D			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Above Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold) 			4	10	3D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(MT) 			4	10	3D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Above Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (In-Gear)(Below Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (In-Gear)(Below Speed Threshold)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral) 			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle A (Neutral)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral) 			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)(MT)			9		2D	Ignition Timing - Advance
+Base Timing Idle B (Neutral)(AT)			9		2D	Ignition Timing - Advance
+Base Timing Idle Minimum			9		2D	Ignition Timing - Advance
+Base Timing Idle Minimum Vehicle Speed Enable			1		2D	Ignition Timing - Advance
+Base Timing Alternate (ECT)			16		2D	Ignition Timing - Advance
+Knock Correction Advance Max			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max B			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive (Knock Conditions)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive A (Knock Conditions)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Additive B (Knock Conditions)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary (Knock Conditions High)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary (Knock Conditions Low)(IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary Cruise (IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Cruise			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Primary Non-Cruise (IAM)			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Max Non-Cruise			18	16	3D	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode 			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Alternate Mode  			1		Switch	Ignition Timing - Advance
+Knock Correction Advance Additive Range (RPM)			4		2D	Ignition Timing - Advance
+Timing Compensation A (IAT)			16		2D	Ignition Timing - Compensation
+Timing Compensation (IAT) Activation 			8	8	3D	Ignition Timing - Compensation
+Timing Compensation A (IAT) Activation			8	8	3D	Ignition Timing - Compensation
+Timing Comp Min Load (IAT)			1		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT)			16		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT) IAM Activation			1		2D	Ignition Timing - Compensation
+Timing Compensation B (IAT) Max Additive			1		2D	Ignition Timing - Compensation
+Timing Compensation (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation C (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation D (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Cruise A (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Cruise B (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Non-Cruise A (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation Imm. Non-Cruise B (ECT)			16		2D	Ignition Timing - Compensation
+Timing Compensation (MRP)			3	5	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D  			14		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder A 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder B 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder C 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder D 			16		2D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder E			4	14	3D	Ignition Timing - Compensation
+Timing Compensation Per Cylinder F			4	14	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (1st)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (2nd)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (3rd)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (4th)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear (5th)			3	4	3D	Ignition Timing - Compensation
+Timing Compensation Per Gear Activation (RPM)			2		2D	Ignition Timing - Compensation
+Timing Compensation Per Gear Activation (Load)			2		2D	Ignition Timing - Compensation
+Feedback Correction Minimum Load 			4		2D	Ignition Timing - Knock Control
+Feedback Correction Retard Value 			13		2D	Ignition Timing - Knock Control
+Feedback Correction Negative Advance Delay 			13		2D	Ignition Timing - Knock Control
+Extended Feedback Correction High RPM Compensation			1		2D	Ignition Timing - Knock Control
+Fine Correction Minimum (RPM)			2		2D	Ignition Timing - Knock Control
+Fine Correction Maximum (RPM)			2		2D	Ignition Timing - Knock Control
+Fine Correction Rows (RPM) 			7		2D	Ignition Timing - Knock Control
+Fine Correction Columns (Load) 			7		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value A			1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value B			1		2D	Ignition Timing - Knock Control
+Fine Correction Retard Value 			13		2D	Ignition Timing - Knock Control
+Rough Correction Learning Delay (Increasing)			10		2D	Ignition Timing - Knock Control
+Rough Correction Learning Delay (Increasing) 			10		2D	Ignition Timing - Knock Control
+Target Throttle Plate Position Divider (RPM)			23		2D	Drive-by-Wire Throttle (DBW)
+5V Sensor Scaling 4 Multiplier			1		2D	5V Sensor
+5V Sensor Scaling 4 Offset			1		2D	5V Sensor
+5V Sensor Scaling 9 Multiplier			1		2D	5V Sensor
+5V Sensor Scaling 9 Offset			1		2D	5V Sensor
+Speed Limiting (Throttle) 			4		2D	Miscellaneous - Limits
+Speed Limiting (Fuel Cut)			4		2D	Miscellaneous - Limits
+Speed Limiting (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting A (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting B (Throttle)			2		2D	Miscellaneous - Limits
+Speed Limiting (Throttle) SI-DRIVE Intelligent			2		2D	Miscellaneous - Limits
+EGT Sensor Scaling			30		2D	Miscellaneous - Sensor Scalings
+Fuel Temp Sensor Scaling			30		2D	Miscellaneous - Sensor Scalings
+Atmospheric Pressure Sensor Scaling			2		2D	Miscellaneous - Sensor Scalings
+Fuel Pump Duty Cycle			2		2D	Miscellaneous - Thresholds
+Radiator Fan Modes (ECT)			4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes C (ECT)			4		2D	Miscellaneous - Thresholds
+Radiator Fan Modes D (ECT)			4		2D	Miscellaneous - Thresholds
+Atmospheric Pressure Sensor Scaling 			2		2D	Miscellaneous - Sensor Scalings
+Gear Determination Thresholds			5		2D	Miscellaneous - Thresholds
+Gear Determination Thresholds C			5		2D	Miscellaneous - Thresholds
+OL Fuelling Throttle Compensation			6		2D	Alpha - BRZ
+OL Fuelling Accelerator Compensation			6		2D	Alpha - BRZ
+Catalyst Warm Up Idle			3	16	3D	Ignition Timing - Compensation
+Catalyst Warm Up Non-Idle			3	16	3D	Ignition Timing - Compensation
+AFR Sensor Heating Limit A			6	6	3D	Fueling - O2 Sensor #1
+AFR Sensor Heating Limit B			6	6	3D	Fueling - O2 Sensor #1
+Fuel Injection Ratio ECT Threshold B		10de74	2		2D	Fueling - Injector Ratio
