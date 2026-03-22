@@ -8,7 +8,7 @@ Caveats:
 | Calibration | Modified   | Status       | Notes |
 | ----------- | ---------- | ------------ | ----- |
 | ZA1JS10C    | 2026-03-04 | Mostly done. | Should have parity with K00G, where possible; e.g. Base Timing logic is more complex now, some tables are gone forever, etc. SEE CELS WARNING ABOVE. |
-| ZA1JV00C00G | 2026-03-04 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. SEE CELS WARNING ABOVE. |
+| ZA1JV00C00G | 2026-03-21 | Mostly done. | Nearly as confident as S10C. I built tooling to find and fix most typos in tabledefs. SEE CELS WARNING ABOVE. |
 
 ## What are these files?
 
