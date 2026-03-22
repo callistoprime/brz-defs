@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Created by Callisto @ FT86Club. v35, 2026-03-04. See post for details:
+<!-- Created by Callisto @ FT86Club. v36, 2026-03-21. See post for details:
      "V00C00G 17-20 USDM / EDM / JDM hybrid integrated ECU project" -->
 
 <!-- THIS IS NOT GUARANTEED COMPLETE. I HAVE NOT CHECKED MEMORY LOCATIONS FOR CEL DISABLES. SORRY, I KNOW YOU ALL LIKE THOSE, IT WILL TAKE MORE TIME. -->
@@ -490,6 +490,8 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		<table name="A/F Learning #1 Limits" storageaddress="111ba0"/>
 		<table name="A/F Learning #1 Airflow Ranges A" storageaddress="114ea4"/>
 		<table name="A/F Learning #1 Airflow Ranges B" storageaddress="114ecc"/>
+		<table name="A/F Learning #2 Airflow Ranges A" storageaddress="114ef0"/>
+		<table name="A/F Learning #2 Airflow Ranges B" storageaddress="114f10"/>
 		<table name="MAF Voltage Limits (CEL)" storageaddress="1254fe"/>
 		<table name="MAF Limit (Maximum)" storageaddress="104770"/>
 		<table name="MAF Sensor Scaling" sizey="54" storageaddress="127004">
@@ -1415,14 +1417,14 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This table sets the required RPM delta for launch control to activate: redline (7600) - delta = FFS activated RPM</description>
 		</table>
 		<table type="2D" name="Engine Load Limiter A" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizey="9" userlevel="3">
-			<scaling units="Engine Speed (RPM)" expression="x*0.0000610351563" to_byte="x/0.0000610351563" format="0.00" fineincrement="0.1" coarseincrement="1"/>
+			<scaling units="Engine Speed (RPM)" expression="x*.00006103515625" to_byte="x/.00006103515625" format="0.00" fineincrement="0.1" coarseincrement="1"/>
 			<table type="Y Axis" name="Engine Load" storagetype="float" endian="little" logparam="P2">
 				<scaling units="" expression="x" to_byte="x" format="#" fineincrement="100" coarseincrement="500"/>
 			</table>
 			<description>Engine load limit against RPM.</description>
 		</table>
 		<table type="2D" name="Engine Load Limiter B" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizey="9" userlevel="3">
-			<scaling units="Engine Speed (RPM)" expression="x*0.0000610351563" to_byte="x/0.0000610351563" format="0.00" fineincrement="0.1" coarseincrement="1"/>
+			<scaling units="Engine Speed (RPM)" expression="x*.00006103515625" to_byte="x/.00006103515625" format="0.00" fineincrement="0.1" coarseincrement="1"/>
 			<table type="Y Axis" name="Engine Load" storagetype="float" endian="little" logparam="P2">
 				<scaling units="" expression="x" to_byte="x" format="#" fineincrement="100" coarseincrement="500"/>
 			</table>
@@ -1499,7 +1501,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the compensation of engine load based on RPM and manifold pressure.</description>
 		</table>
 		<table type="3D" name="MAF Correction After Start (In Gear)" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizex="11" sizey="8" userlevel="4">
-			<scaling units="g/s" expression="x*0.004577637" to_byte="x/0.004577637" format="0.0" fineincrement="0.1" coarseincrement="1"/>
+			<scaling units="g/s" expression="x*.00457763671875" to_byte="x/.00457763671875" format="0.0" fineincrement="0.1" coarseincrement="1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="0.0" fineincrement="1" coarseincrement="10"/>
 			</table>
@@ -1508,7 +1510,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</table>
 		</table>
 		<table type="3D" name="MAF Correction After Start (Neutral)" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizex="11" sizey="8" userlevel="4">
-			<scaling units="g/s" expression="x*0.004577637" to_byte="x/0.004577637" format="0.0" fineincrement="0.1" coarseincrement="1"/>
+			<scaling units="g/s" expression="x*.00457763671875" to_byte="x/.00457763671875" format="0.0" fineincrement="0.1" coarseincrement="1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="0.0" fineincrement="1" coarseincrement="10"/>
 			</table>
@@ -1582,7 +1584,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 		</table>
 		<!-- V00C00G has a non-zero, negative, offset; U01A has none-->
 		<table type="2D" name="CL Fueling Unknown A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" sizex="13" sizey="10" userlevel="1">
-			<scaling units="Unknown" expression="(x*.0001220703125)-4.0" to_byte="(x+4.0)/.0001220703125" format="0.000000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.0001220703125)-4" to_byte="(x+4)/.0001220703125" format="0.000000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0.0" fineincrement="0.01" coarseincrement="0.1"/>
 			</table>
@@ -1823,42 +1825,42 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 21" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 22" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 23" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.00000095367431640625" to_byte="x/.00000095367431640625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 24" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.00000095367431640625" to_byte="x/.00000095367431640625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 25" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.00000095367431640625" to_byte="x/.00000095367431640625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 26" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.00000095367431640625" to_byte="x/.00000095367431640625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -1875,42 +1877,42 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 28 A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 29 A" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 28 B" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 29 B" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 28 C" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>DiPi Fueling ECT Unknown ???</description>
 		</table>
 		<table type="2D" name="DiPi Fueling ECT Unknown 29 C" category="Fueling - Closed Loop" storagetype="uint16" endian="big" userlevel="4">
-			<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*.000244140625" to_byte="x/.000244140625" format="0.000" fineincrement="1" coarseincrement="10"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little" logparam="P8">
 				<scaling units="???" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2665,7 +2667,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<state name="Use OEM Low Load Hot Table location" data="00 0e 0a b0"/><!-- V00C -->
 		</table>
 		<table type="3D" name="GDI Firing Angle Cold Idle" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="11" sizey="17" userlevel="5">
-			<scaling units="Unknown" expression="x*2.0" to_byte="x/2.0" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2675,7 +2677,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="GDI Firing Angle High Load Cold" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="11" sizey="17" userlevel="5">
-			<scaling units="Unknown" expression="x*2.0" to_byte="x/2.0" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2685,7 +2687,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="GDI Firing Angle High Load Hot" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="11" sizey="17" userlevel="5">
-			<scaling units="Unknown" expression="x*2.0" to_byte="x/2.0" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2695,7 +2697,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="GDI Firing Angle Low Load Cold" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="11" sizey="17" userlevel="5">
-			<scaling units="Unknown" expression="x*2.0" to_byte="x/2.0" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2705,7 +2707,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="GDI Firing Angle Low Load Hot" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="11" sizey="17" userlevel="5">
-			<scaling units="Unknown" expression="x*2.0" to_byte="x/2.0" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2715,7 +2717,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="GDI Pressure Multiplier A" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Unknown" expression="x*1.5625e-2" to_byte="x/1.5625e-2" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.015625" to_byte="x/.015625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Rail Pressure" storagetype="float" endian="big">
 				<scaling units="MPa" expression="x" to_byte="x" format="0.0" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2725,7 +2727,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This map is a compensation table to adjust the quantity of DI fuel injected against fuel rail pressure.</description>
 		</table>
 		<table type="3D" name="GDI Pressure Multiplier B" category="Fueling - GDI" storagetype="uint16" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Unknown" expression="x*9.765625e-4" to_byte="x/9.765625e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0009765625" to_byte="x/.0009765625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Rail Pressure" storagetype="float" endian="big">
 				<scaling units="MPa" expression="x" to_byte="x" format="0.0" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2742,7 +2744,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Multiplies GDI Pressure Multipliers A and B before passing value to GDI Flow Table.</description>
 		</table>
 		<table type="3D" name="GDI Pressure Target A" category="Fueling - GDI" storagetype="uint8" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Unknown" expression="x*9.765625e-2" to_byte="x/9.765625e-2" format="0.0" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.09765625" to_byte="x/.09765625" format="0.0" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="BPWx85" storagetype="float" endian="big">
 				<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2752,7 +2754,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the requested fuel pressure that is supplied to the DI system, the DI fuel pump is a mechanical unit and therefore has limitations as to what it can deliver.</description>
 		</table>
 		<table type="3D" name="GDI Pressure Target B" category="Fueling - GDI" storagetype="uint16" endian="big" sizex="15" sizey="17" userlevel="4"> <!-- uint8->16 -->
-			<scaling units="Unknown" expression="x*3.8146973E-4" to_byte="x/3.8146973e-4" format="0.0" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0003814697265625" to_byte="x/.0003814697265625" format="0.0" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="BPWx85" storagetype="float" endian="big">
 				<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -2836,7 +2838,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>A certain memory location is set to true if the PI ratio's ECT result in this table is greater than the other ECT Unknown table's result.</description>
 		</table>
 		<table type="2D" name="ECT Unknown" category="Fueling - Injector Ratio" storagetype="uint16" endian="little" sizey="16" userlevel="5">
-			<scaling units="Unknown" expression="x" to_byte="x" format="0" fineincrement="1" coarseincrement="10"/>
+			<scaling units="Unknown" expression="x*2" to_byte="x/2" format="0" fineincrement="1" coarseincrement="10"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3038,14 +3040,14 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>When the applied tip-in enrichment cumulative throttle value is greater than or equal to this table's value, tip-in enrichment is disabled. The current throttle tip-in is added to the applied tip-in enrichment cumulative throttle value when tip-in enrichment is applied and cleared when tip-in throttle is negative or when the last applied counter threshold exceeded the 'Tip-in Throttle Cumulative Reset' threshold.</description>
 		</table>
 		<table type="2D" name="Tip-in Enrichment Disable Throttle Cumulative Threshold A (ECT)" category="Fueling - Tip-in Enrichment" storagetype="uint16" endian="big" sizey="16" userlevel="4">
-			<scaling units="cumulative throttle angle change" expression="x*.001907349" to_byte="x/.001907349" format="0.00" fineincrement=".1" coarseincrement="1"/>
+			<scaling units="cumulative throttle angle change" expression="x*.0019073486328125" to_byte="x/.0019073486328125" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>When the applied tip-in enrichment cumulative throttle value is greater than or equal to this table's value, tip-in enrichment is disabled. The current throttle tip-in is added to the applied tip-in enrichment cumulative throttle value when tip-in enrichment is applied and cleared when tip-in throttle is negative or when the last applied counter threshold exceeded the 'Tip-in Throttle Cumulative Reset' threshold.</description>
 		</table>
 		<table type="2D" name="Tip-in Enrichment Disable Throttle Cumulative Threshold B (ECT)" category="Fueling - Tip-in Enrichment" storagetype="uint16" endian="big" sizey="16" userlevel="4">
-			<scaling units="cumulative throttle angle change" expression="x*.001907349" to_byte="x/.001907349" format="0.00" fineincrement=".1" coarseincrement="1"/>
+			<scaling units="cumulative throttle angle change" expression="x*.0019073486328125" to_byte="x/.0019073486328125" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3087,6 +3089,26 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 				<data> Max Range E / Min Range F </data>
 			</table>
 			<description>These are the airflow ranges in which the different long-term fuel trims are calculated in closed loop and applied to the same airflow ranges for both closed loop and open loop.</description>
+		</table>
+		<table type="2D" name="A/F Learning #2 Airflow Ranges A" category="Fueling - AF Correction / Learning" storagetype="float" endian="little" sizey="4" userlevel="4">
+			<scaling units="Mass Airflow (g/s)" expression="x" to_byte="x" format="0.00" fineincrement=".1" coarseincrement="1"/>
+			<table type="Static Y Axis" name="A/F Learning Store/Apply Ranges" sizey="4">
+				<data> Max Range A / Min Range B </data>
+				<data> Max Range B / Min Range C </data>
+				<data> Max Range C / Min Range D </data>
+				<data> Max Range D / Min Range E </data>
+			</table>
+			<description>These are the airflow ranges in which the different long-term fuel trims are calculated in closed loop and applied to the same airflow ranges for both closed loop and open loop. Their calculations are stored in the secondary LTFT array.</description>
+		</table>
+		<table type="2D" name="A/F Learning #2 Airflow Ranges B" category="Fueling - AF Correction / Learning" storagetype="float" endian="little" sizey="4" userlevel="4">
+			<scaling units="Mass Airflow (g/s)" expression="x" to_byte="x" format="0.00" fineincrement=".1" coarseincrement="1"/>
+			<table type="Static Y Axis" name="A/F Learning Store/Apply Ranges" sizey="4">
+				<data> Max Range A / Min Range B </data>
+				<data> Max Range B / Min Range C </data>
+				<data> Max Range C / Min Range D </data>
+				<data> Max Range D / Min Range E </data>
+			</table>
+			<description>These are the airflow ranges in which the different long-term fuel trims are calculated in closed loop and applied to the same airflow ranges for both closed loop and open loop. Their calculations are stored in the secondary LTFT array.</description>
 		</table>
 		<table type="2D" name="A/F #3 CL Target Compensation Limits" category="Fueling - AF Correction / Learning" storagetype="float" endian="little" sizey="2" userlevel="2">
 			<scaling units="Lambda" expression="x" to_byte="x" format="0.00" fineincrement=".01" coarseincrement="1"/>
@@ -3134,7 +3156,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the rich limit for the front oxygen sensor. Regardless of the scaling of the front oxygen sensor, it will not read richer than this value.</description>
 		</table>
 		<table type="2D" name="Front Oxygen Sensor Compensation (Atm. Pressure)" category="Fueling - O2 Sensor #1" storagetype="uint16" endian="big" sizey="4" userlevel="4">
-			<scaling units="Front Oxygen Sensor Compensation" expression="x*.00003051758" to_byte="x/.00003051758" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Front Oxygen Sensor Compensation" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Atmospheric Pressure" storagetype="float" endian="little" logparam="P24">
 				<scaling units="bar" expression="x*.001333223" to_byte="x/.001333223" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			</table>
@@ -3304,14 +3326,14 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the change to the 'Cranking Fuel Injector Pulse Width (ECT)', based on the accelerator pedal.</description>
 		</table>
 		<table type="2D" name="Post Cranking Airflow Initial Reference Coolant" category="Fueling - Cranking" storagetype="uint16" endian="big" sizey="16" userlevel="4">
-			<scaling units="Mass Airflow (g/s)" expression="x*4.57763672e-3" to_byte="x/4.57763672e-3" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Mass Airflow (g/s)" expression="x*.00457763671875" to_byte="x/.00457763671875" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="Post Cranking Load Initial Reference Coolant" category="Fueling - Cranking" storagetype="uint16" endian="big" sizey="16" userlevel="4">
-			<scaling units="Engine Load (g/rev)" expression="x*6.10351562e-5" to_byte="x/6.10351562e-5" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Engine Load (g/rev)" expression="x*.00006103515625" to_byte="x/.00006103515625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3402,7 +3424,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Determines how long the minimum enrichment limit is enabled.</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 1" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3412,7 +3434,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 2" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3422,7 +3444,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 3" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3432,7 +3454,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 4" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3442,7 +3464,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 5" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3452,7 +3474,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 6" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3462,7 +3484,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 7" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3472,7 +3494,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 8" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3482,7 +3504,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 9" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3492,7 +3514,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 10" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3502,7 +3524,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 11" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3512,7 +3534,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 12" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3522,7 +3544,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 13" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3532,7 +3554,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Input A Rising Load Activation ECT Load 14" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Enrichment Adder Multiplier" expression="x*4.8828125e-4" to_byte="x/4.8828125e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Enrichment Adder Multiplier" expression="x*.00048828125" to_byte="x/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3580,28 +3602,28 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="2D" name="CL Fueling Transient Unknown G" category="Fueling - Transient" storagetype="uint16" endian="big" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.000030517578)-1" to_byte="(x+1)/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.000030517578125)-1" to_byte="(x+1)/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="CL Fueling Transient Unknown H" category="Fueling - Transient" storagetype="uint16" endian="big" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.000030517578)-1" to_byte="(x+1)/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.000030517578125)-1" to_byte="(x+1)/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="CL Fueling Transient Unknown I" category="Fueling - Transient" storagetype="uint16" endian="big" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.000030517578)-1" to_byte="(x+1)/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.000030517578125)-1" to_byte="(x+1)/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="CL Fueling Transient Unknown J" category="Fueling - Transient" storagetype="uint16" endian="big" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.000030517578)-1" to_byte="(x+1)/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.000030517578125)-1" to_byte="(x+1)/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
@@ -3615,7 +3637,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="CL Fueling Transient Unknown L" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.00048828125)-16.0" to_byte="(x+16.0)/0.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.00048828125)-16" to_byte="(x+16)/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="MAP Delta" storagetype="float" endian="big">
 				<scaling units="MAP Delta" expression="x" to_byte="x" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			</table>
@@ -3625,7 +3647,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="CL Fueling Transient Unknown M" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="(x*0.00048828125)-16.0" to_byte="(x+16.0)/0.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.00048828125)-16" to_byte="(x+16)/.00048828125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="MAP Delta" storagetype="float" endian="big">
 				<scaling units="MAP Delta" expression="x" to_byte="x" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			</table>
@@ -3747,7 +3769,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="CL Fueling Transient Unknown ZM" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="x*0.000030517578" to_byte="x/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3757,7 +3779,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="CL Fueling Transient Unknown ZN" category="Fueling - Transient" storagetype="uint16" endian="big" sizex="16" sizey="3" userlevel="4">
-			<scaling units="Unknown" expression="x*0.000030517578" to_byte="x/0.000030517578" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3917,7 +3939,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the base level of reference timing during non-cruise conditions. Cruise and non-cruise conditions are determined by a number of factors including engine speed, requested torque, MAF, vehicle speed, IAT, idle mode, ECT, and SI-Drive mode (if applicable). The ECU will ramp between the cruise and non-cruise map values when conditions dictate the switch. The actual base timing is determined as follows: during a period after initial start (related to AVCS warm-up and other factors), the ECU will calculate Base Timing as primary - min0(primary - reference), with min0 being a function limiting the (primary - reference) result to zero. If you do not want the base timing to follow this behavior, set the primary and reference maps to the same values (separated by cruise/non-cruise). Total timing = base timing + knock correction advance + other timing compensations. Knock correction advance = (knock correction advance max map value * current advance multiplier) + feedback knock correction + fine knock correction.</description>
 		</table>
 		<table type="2D" name="Timing Unknown A" category="Ignition Timing - Advance" storagetype="uint16" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Engine RPM Threshold" expression="(x*.030517578)+0" to_byte="(x+0)/.030517578" format="0" fineincrement="100" coarseincrement="1000"/>
+			<scaling units="Engine RPM Threshold" expression="x*.030517578125" to_byte="x/.030517578125" format="0" fineincrement="100" coarseincrement="1000"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3925,7 +3947,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown B" category="Ignition Timing - Advance" storagetype="uint16" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Engine RPM Threshold" expression="(x*.030517578)+0" to_byte="(x+0)/.030517578" format="0" fineincrement="100" coarseincrement="1000"/>
+			<scaling units="Engine RPM Threshold" expression="x*.030517578125" to_byte="x/.030517578125" format="0" fineincrement="100" coarseincrement="1000"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3941,7 +3963,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown D1" category="Ignition Timing - Advance" storagetype="uint16" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Unknown" expression="(x*.00076293945)+0" to_byte="(x+0)/.00076293945" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Unknown" expression="x*.000762939453125" to_byte="x/.000762939453125" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3949,7 +3971,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown D2" category="Ignition Timing - Advance" storagetype="uint16" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Unknown" expression="(x*.00076293945)+0" to_byte="(x+0)/.00076293945" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Unknown" expression="x*.000762939453125" to_byte="x/.000762939453125" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3965,7 +3987,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown E2" category="Ignition Timing - Advance" storagetype="uint8" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Timing E1 Multiplier" expression="(x*.0039215689)-0" to_byte="(x+0)/.0039215689" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Timing E1 Multiplier" expression="x*.0039215688593685627" to_byte="x/.0039215688593685627" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Manifold Pressure" storagetype="float" endian="little" logparam="E51">
 				<scaling units="Manifold Abs Pressure Bar" expression="x*.001333224" to_byte="x/.001333224" format="#0.000" fineincrement=".001" coarseincrement="0.01"/>
 			</table>
@@ -3973,7 +3995,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown F1" category="Ignition Timing - Advance" storagetype="uint8" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Unknown" expression="(x*.00076293945)+0" to_byte="(x+0)/.00076293945" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Unknown" expression="x*.000762939453125" to_byte="x/.000762939453125" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -3989,7 +4011,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown G2" category="Ignition Timing - Advance" storagetype="uint8" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Timing G1 Multiplier" expression="(x*.0039215689)-0" to_byte="(x+0)/.0039215689" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Timing G1 Multiplier" expression="x*.0039215688593685627" to_byte="x/.0039215688593685627" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Manifold Pressure" storagetype="float" endian="little" logparam="E51">
 				<scaling units="Manifold Abs Pressure Bar" expression="x*.001333224" to_byte="x/.001333224" format="#0.000" fineincrement=".001" coarseincrement="0.01"/>
 			</table>
@@ -3997,7 +4019,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			</description>
 		</table>
 		<table type="2D" name="Timing Unknown H" category="Ignition Timing - Advance" storagetype="uint8" endian="big" userlevel="4" logparam="E53">
-			<scaling units="Unknown" expression="(x*.00076293945)+0" to_byte="(x+0)/.00076293945" format="0.00" fineincrement=".2" coarseincrement="1"/>
+			<scaling units="Unknown" expression="x*.000762939453125" to_byte="x/.000762939453125" format="0.00" fineincrement=".2" coarseincrement="1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="little" logparam="P2">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -4449,7 +4471,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This is the change in total ignition timing based on input from the air intake temperature sensor.</description>
 		</table>
 		<table type="3D" name="Timing Compensation (IAT) Activation" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="8" sizey="8" userlevel="3">
-			<scaling units="Timing Compensation Intake Temp Map Target Compensation (%)" expression="(x*.78125)" to_byte="x/.78125" format="0.0" fineincrement=".4" coarseincrement="1"/>
+			<scaling units="Timing Compensation Intake Temp Map Target Compensation (%)" expression="x*.78125" to_byte="x/.78125" format="0.0" fineincrement=".4" coarseincrement="1"/>
 			<table type="X Axis" name="Engine Speed" storagetype="float" endian="little" logparam="P8">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="50" coarseincrement="100"/>
 			</table>
@@ -5132,7 +5154,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Minimum Cylinder Fill Pressure Delta?</description>
 		</table>
 		<table type="3D" name="Intake Cam Advance Angle Base AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint8" endian="big" sizex="12" sizey="21" userlevel="4">
-			<scaling units="Advance (degrees)" expression="x-4.0e1" to_byte="x+4.0e1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Advance (degrees)" expression="x-40" to_byte="x+40" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5142,7 +5164,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Base map is used when the IAM is low.</description>
 		</table>
 		<table type="3D" name="Intake Cam Advance Angle Normal AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint8" endian="big" sizex="16" sizey="24" userlevel="4">
-			<scaling units="Advance (degrees)" expression="x-4.0e1" to_byte="x+4.0e1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Advance (degrees)" expression="x-40" to_byte="x+40" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5152,7 +5174,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Normal map is used when IAM is between base and safe hysteresis.</description>
 		</table>
 		<table type="3D" name="Intake Cam Advance Angle Safe AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint8" endian="big" sizex="16" sizey="24" userlevel="4">
-			<scaling units="Advance (degrees)" expression="x-4.0e1" to_byte="x+4.0e1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Advance (degrees)" expression="x-40" to_byte="x+40" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5162,7 +5184,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Safe map is used when the IAM is high.</description>
 		</table>
 		<table type="3D" name="Exhaust Cam Retard Angle Base AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint8" endian="big" sizex="12" sizey="21" userlevel="4">
-			<scaling units="Retard (degrees)" expression="x-4.0e1" to_byte="x+4.0e1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Retard (degrees)" expression="x-40" to_byte="x+40" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5172,7 +5194,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Base map is used when the IAM is low.</description>
 		</table>
 		<table type="3D" name="Exhaust Cam Retard Angle Normal AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="16" sizey="24" userlevel="4">
-			<scaling units="Retard (degrees)" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Retard (degrees)" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5182,7 +5204,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Normal map is used when IAM is between base and safe hysteresis.</description>
 		</table>
 		<table type="3D" name="Exhaust Cam Retard Angle Safe AVCS" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="16" sizey="24" userlevel="4">
-			<scaling units="Retard (degrees)" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Retard (degrees)" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5200,7 +5222,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>These values specify which of the base, normal or dafe maps will be used. </description>
 		</table>
 		<table type="3D" name="Intake Duty Correction A" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5210,7 +5232,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Intake Duty Correction B" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5220,7 +5242,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Intake Duty Correction C" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5230,7 +5252,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Intake Duty Correction D" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="10" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5240,7 +5262,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Intake Duty Correction E" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Mass Airflow" storagetype="float" endian="little">
 				<scaling units="g/s" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5250,7 +5272,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Intake Duty Correction F" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Mass Airflow" storagetype="float" endian="little">
 				<scaling units="g/s" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5309,7 +5331,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction A" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="11" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5319,7 +5341,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction B" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="11" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5329,7 +5351,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction C" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="11" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5339,7 +5361,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction D" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="9" sizey="11" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Intake VVT Error" storagetype="float" endian="big">
 				<scaling units="Degrees Delta" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5349,7 +5371,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction E" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Mass Airflow" storagetype="float" endian="little">
 				<scaling units="g/s" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5359,7 +5381,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Exhaust Duty Correction F" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Correction (Degrees)" expression="(x*3.05175781e-3)-1.0e2" to_byte="(x+1.0e2)/3.05175781e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Correction (Degrees)" expression="(x*.0030517578125)-100" to_byte="(x+100)/.0030517578125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Mass Airflow" storagetype="float" endian="little">
 				<scaling units="g/s" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5418,7 +5440,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="AVCS Unknown ECT A1" category="Variable Valve Timing (AVCS)" storagetype="uint16" endian="big" sizex="16" sizey="21" userlevel="4">
-			<scaling units="Unknown" expression="x*0.0015258789-40" to_byte="(x+40)/0.0015258789" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="(x*.00152587890625)-40" to_byte="(x+40)/.00152587890625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5567,14 +5589,14 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Help!</description>
 		</table>
 		<table type="2D" name="Idle Throttle Target B" category="Idle Control" storagetype="uint16" endian="big" sizey="7" userlevel="5">
-			<scaling units="Unknown" expression="x*3.05175781e-5" to_byte="x/3.05175781e-5" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Unknown" storagetype="float" endian="little">
 				<scaling units="Unknown" expression="x" to_byte="x" format="0.000" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>Help!</description>
 		</table>
 		<table type="2D" name="Idle Throttle Target C" category="Idle Control" storagetype="uint16" endian="big" sizey="10" userlevel="5">
-			<scaling units="Unknown" expression="x*3.05175781e-5" to_byte="x/3.05175781e-5" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Coolant Temp" storagetype="float" endian="little">
 				<scaling units="Temperature (Degrees C)" expression="x" to_byte="x" format="0" fineincrement="10" coarseincrement="1"/>
 			</table>
@@ -5611,7 +5633,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This table contains a MAP related correction to idle airflow based on the delta between target idle and actual idle.</description>
 		</table>
 		<table type="2D" name="Idle Speed Stability Additive" category="Idle Control" storagetype="uint16" endian="big" sizey="6" userlevel="5">
-			<scaling units="Unknown" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Calculated RPM" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -5662,7 +5684,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>This map is used to calculate the percentage of maximum torque.</description>
 		</table>
 		<table type="3D" name="Calculated Torque A" category="Drive-by-Wire Throttle (DBW)" storagetype="uint16" endian="big" sizex="12" sizey="23" userlevel="4">
-			<scaling units="Unknown" expression="x*7.8125e-3" to_byte="x/7.8125e-3" format="0.0" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0078125" to_byte="x/.0078125" format="0.0" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="g/rev" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -5672,7 +5694,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Calculated Torque B" category="Drive-by-Wire Throttle (DBW)" storagetype="uint16" endian="big" sizex="11" sizey="23" userlevel="4">
-			<scaling units="Engine Torque" expression="x*7.8125e-3" to_byte="x/7.8125e-3" format="0.0" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Engine Torque" expression="x*.0078125" to_byte="x/.0078125" format="0.0" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Load" storagetype="float" endian="big">
 				<scaling units="Engine Load" expression="x" to_byte="x" format="0.00" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6309,7 +6331,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Solenoid Control" category="CPC Solenoid" storagetype="uint16" endian="big" sizex="7" sizey="5" userlevel="4">
-			<scaling units="Solenoid Airflow" expression="x*1.52587891e-4" to_byte="x/1.52587891e-4" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Solenoid Airflow" expression="x*.000152587890625" to_byte="x/.000152587890625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Manifold Relative Pressure" storagetype="float" endian="little" logparam="P25">
 				<scaling units="bar" expression="x*.001333223" to_byte="x/.001333223" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			</table>
@@ -6319,7 +6341,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>Canister purge control solenoid valve airflow map, no need to adjust.</description>
 		</table>
 		<table type="3D" name="Solenoid Duty" category="CPC Solenoid" storagetype="uint16" endian="big" sizex="13" sizey="13" userlevel="4">
-			<scaling units="Unknown" expression="x*3.05175781e-5" to_byte="x/3.05175781e-5" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.000030517578125" to_byte="x/.000030517578125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Manifold Relative Pressure" storagetype="float" endian="little" logparam="P25">
 				<scaling units="bar" expression="x*.001333223" to_byte="x/.001333223" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			</table>
@@ -6336,7 +6358,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>The operating frequency of the solenoid valve. On turbo BRZ/FR-S/86 models where the CPC valve is replaced with a fast switching wastegate duty solenoid valve then we suggest you set the frequency value to either 30% or 50%. This will vary depending on the type of valve used.</description>
 		</table>
 		<table type="2D" name="AFR Sensor Heater Protection" category="Fueling - O2 Sensor #1" storagetype="uint8" endian="big" sizey="5" userlevel="5">
-			<scaling units="Unknown" expression="x*7.8125e-3" to_byte="x/7.8125e-3" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0078125" to_byte="x/.0078125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Volts" storagetype="float" endian="big">
 				<scaling units="Volts" expression="x" to_byte="x" format="0.0" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6357,7 +6379,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>The duty cycle of the AFR sensor heater control against sensor heater element resistance.</description>
 		</table>
 		<table type="3D" name="AFR Sensor Heating Limit" category="Fueling - O2 Sensor #1" storagetype="uint16" endian="big" sizex="6" sizey="6" userlevel="5">
-			<scaling units="Unknown" expression="x*3.05175781e-3" to_byte="x/3.05175781e-3" format="#" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0030517578125" to_byte="x/.0030517578125" format="#" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -6391,7 +6413,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="2D" name="AFR Maximum Correction" category="Alpha - BRZ" storagetype="uint8" endian="big" sizey="9" userlevel="5">
-			<scaling units="Unknown" expression="x*7.8125e-3" to_byte="x/7.8125e-3" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.0078125" to_byte="x/.0078125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Axis 0x10F080" storagetype="float" endian="big">
 				<scaling units="Unknown" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6422,35 +6444,35 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>The amount of time it takes for the DI system to flow 1cc</description>
 		</table>
 		<table type="2D" name="Ignition Timing Post Start" category="Ignition Timing - Advance" storagetype="uint8" endian="big" sizey="16" userlevel="4">
-			<scaling units="Ignition Timing (degrees BTDC)" expression="(x*3.515625e-1)-2.0e1" to_byte="(x+2.0e1)/3.515625e-1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing (degrees BTDC)" expression="(x*.3515625)-20" to_byte="(x+20)/.3515625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Coolant Temperature" storagetype="float" endian="big">
 				<scaling units="Degrees C" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="Minimum Timing" category="Ignition Timing - Advance" storagetype="uint8" endian="big" sizey="8" userlevel="4">
-			<scaling units="Ignition Timing (degrees BTDC)" expression="(x*3.515625e-1)-2.0e1" to_byte="(x+2.0e1)/3.515625e-1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing (degrees BTDC)" expression="(x*.3515625)-20" to_byte="(x+20)/.3515625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Engine Speed" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="Ignition Timing Compensation MAP Delta (Clutch Depressed)" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizey="9" userlevel="4">
-			<scaling units="Ignition Timing Correction (degrees)" expression="x*3.515625e-1" to_byte="x/3.515625e-1" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Correction (degrees)" expression="x*.3515625" to_byte="x/.3515625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Manifold Pressure" storagetype="float" endian="little" logparam="E52">
 				<scaling units="Manifold Abs Pressure Bar" expression="x*.001333224" to_byte="x/.001333224" format="#0.000" fineincrement=".001" coarseincrement="0.01"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="2D" name="AFR Sensor Atmospheric Pressure Compensation" category="Fueling - O2 Sensor #1" storagetype="uint8" endian="big" sizey="4" userlevel="5">
-			<scaling units="Atmospheric Pressure Multiplier" expression="(x*3.515625e-1)-3.0e1" to_byte="(x+3.0e1)/3.515625e-1" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Atmospheric Pressure Multiplier" expression="(x*.3515625)-30" to_byte="(x+30)/.3515625" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="Y Axis" name="Atmospheric Pressure" storagetype="float" endian="little" logparam="P24">
 				<scaling units="bar" expression="x*.001333223" to_byte="x/.001333223" format="0.00" fineincrement=".1" coarseincrement="1"/>
 			</table>
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Ignition Timing Compensation Idle Target Out of Error Range A" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="10" sizey="2" userlevel="4">
-			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*7.8125e-2)-1.0e1" to_byte="(x+1.0e1)/7.8125e-2" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*.078125)-10" to_byte="(x+10)/.078125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Idle Speed Error" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6460,7 +6482,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Ignition Timing Compensation Idle Target In Error Range A" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="9" sizey="9" userlevel="4">
-			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*7.8125e-2)-1.0e1" to_byte="(x+1.0e1)/7.8125e-2" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*.078125)-10" to_byte="(x+10)/.078125" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Idle Speed Error" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6470,7 +6492,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Ignition Timing Compensation Idle Target Load Change A" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="9" sizey="2" userlevel="4">
-			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*7.8125e-2)-1.0e1" to_byte="(x+1.0e1)/7.8125e-2" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*.078125)-10" to_byte="(x+10)/.078125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed Delta" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -6480,7 +6502,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Ignition Timing Compensation Idle Target In Error Range B" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="9" sizey="9" userlevel="4">
-			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*7.8125e-2)-1.0e1" to_byte="(x+1.0e1)/7.8125e-2" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*.15625)-10" to_byte="(x+10)/.15625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Idle Speed Error" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="1" coarseincrement="5"/>
 			</table>
@@ -6490,7 +6512,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Ignition Timing Compensation Idle Target Load Change B" category="Ignition Timing - Compensation" storagetype="uint8" endian="big" sizex="9" sizey="2" userlevel="4">
-			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*7.8125e-2)-1.0e1" to_byte="(x+1.0e1)/7.8125e-2" format="0.000" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Ignition Timing Compensation (Degrees)" expression="(x*.078125)-10" to_byte="(x+10)/.078125" format="0.000" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed Delta" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -6520,7 +6542,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>no description</description>
 		</table>
 		<table type="3D" name="Desired Overrun Mass Airflow A" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizex="21" sizey="16" userlevel="4">
-			<scaling units="Unknown" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -6530,7 +6552,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>The closed loop desired mass airflow during deceleration condition. Reducing these values will decrease throttle angle for greater engine braking during Overrun.</description>
 		</table>
 		<table type="3D" name="Desired Overrun Mass Airflow B" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizex="21" sizey="16" userlevel="4">
-			<scaling units="Unknown" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
@@ -6540,7 +6562,7 @@ for any damage or injury incurred as a result of these definitions. USE AT YOUR 
 			<description>The closed loop desired mass airflow during deceleration condition. Reducing these values will decrease throttle angle for greater engine braking during Overrun.</description>
 		</table>
 		<table type="3D" name="Desired Overrun Mass Airflow C" category="Mass Airflow / Engine Load" storagetype="uint16" endian="big" sizex="2" sizey="2" userlevel="4">
-			<scaling units="Unknown" expression="x*1.52587891e-3" to_byte="x/1.52587891e-3" format="0.00" fineincrement=".01" coarseincrement=".1"/>
+			<scaling units="Unknown" expression="x*.00152587890625" to_byte="x/.00152587890625" format="0.00" fineincrement=".01" coarseincrement=".1"/>
 			<table type="X Axis" name="Engine Speed" storagetype="float" endian="big">
 				<scaling units="RPM" expression="x" to_byte="x" format="#" fineincrement="10" coarseincrement="100"/>
 			</table>
